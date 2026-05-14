@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora Estratégica | Diversa</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css" rel="stylesheet">
+
+<style>
+  :root {
+    /* Paleta Deep Corporate Agro */
+    --bg-dark: #030914;
+    --bg-panel: rgba(15, 30, 50, 0.6);
+    --bg-glass: rgba(255, 255, 255, 0.03);
+    
+    --brand-blue: #0F2A4A;
+    --brand-blue-light: #1C4473;
+    --brand-green: #10B981;
+    --brand-green-glow: rgba(16, 185, 129, 0.4);
+    
+    --text-main: #F8FAFC;
+    --text-muted: #94A3B8;
+    --border-color: rgba(255, 255, 255, 0.08);
+    
+    --font-heading: 'Gilroy', 'Montserrat', sans-serif;
+    --font-body: 'Montserrat', sans-serif;
+    
+    --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    min-height: 100vh;
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  /* --- ANIMATED GRID BACKGROUND --- */
+  .animated-bg {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    z-index: -1;
+    background-image: 
+      linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
+    transform: perspective(500px) rotateX(60deg) translateY(-100px) translateZ(-200px);
+    animation: gridMove 20s linear infinite;
+  }
+  .bg-glow {
+    position: fixed; top: -20%; right: -10%; width: 70vw; height: 70vh;
+    background: radial-gradient(circle, var(--brand-green-glow) 0%, transparent 60%);
+    filter: blur(80px); opacity: 0.5; z-index: -1; animation: pulseGlow 8s ease-in-out infinite alternate;
+  }
+
+  @keyframes gridMove { 0% { background-position: 0 0; } 100% { background-position: 0 60px; } }
+  @keyframes pulseGlow { 0% { transform: scale(1) translate(0, 0); opacity: 0.3; } 100% { transform: scale(1.1) translate(-20px, 20px); opacity: 0.6; } }
+
+  /* --- LAYOUT --- */
+  .layout-wrapper {
+    display: flex;
+    min-height: 100vh;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    gap: 60px;
+  }
+
+  .sidebar-hero { flex: 1; max-width: 450px; display: flex; flex-direction: column; justify-content: center; position: sticky; top: 40px; height: calc(100vh - 80px); }
+  .main-content { flex: 1.5; display: flex; flex-direction: column; justify-content: center; }
+
+  @media (max-width: 992px) {
+    .layout-wrapper { flex-direction: column; height: auto; gap: 40px; }
+    .sidebar-hero { position: relative; height: auto; top: 0; max-width: 100%; text-align: center; }
+  }
+
+  /* --- BRAND & TYPOGRAPHY --- */
+  .brand-tag {
+    display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-heading); font-size: 13px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brand-green); margin-bottom: 24px; padding: 8px 16px; background: rgba(16,185,129,0.1); border-radius: 30px; border: 1px solid rgba(16,185,129,0.2); width: fit-content;
+  }
+  @media (max-width: 992px) { .brand-tag { margin: 0 auto 24px auto; } }
+
+  .hero-title { font-family: var(--font-heading); font-size: clamp(2.5rem, 4vw, 4rem); font-weight: 800; line-height: 1.1; margin-bottom: 20px; letter-spacing: -0.02em; }
+  .hero-title span { background: linear-gradient(135deg, #fff 0%, #a5b4fc 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .hero-subtitle { font-size: 17px; color: var(--text-muted); line-height: 1.7; max-width: 90%; }
+  @media (max-width: 992px) { .hero-subtitle { margin: 0 auto; } }
+
+  /* --- PROGRESS INDICATOR --- */
+  .progress-tracker { display: flex; gap: 10px; margin-bottom: 40px; }
+  .progress-dot { flex: 1; height: 4px; background: var(--border-color); border-radius: 2px; transition: var(--transition-smooth); position: relative; overflow: hidden; }
+  .progress-dot::after { content: ''; position: absolute; top: 0; left: 0; height: 100%; width: 0%; background: var(--brand-green); transition: width 0.4s ease; }
+  .progress-dot.active::after { width: 100%; }
+
+  /* --- WIZARD GLASS PANEL --- */
+  .wizard-panel {
+    background: var(--bg-panel); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border: 1px solid var(--border-color); border-radius: 24px; padding: 48px; box-shadow: 0 30px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1); position: relative; overflow: hidden;
+  }
+  @media (max-width: 600px) { .wizard-panel { padding: 30px 20px; } }
+
+  .step-container { display: none; animation: slideUpFade 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; transform: translateY(20px); }
+  .step-container.active { display: block; }
+
+  @keyframes slideUpFade { to { opacity: 1; transform: translateY(0); } }
+
+  .step-header { margin-bottom: 32px; }
+  .step-title { font-family: var(--font-heading); font-size: 1.8rem; font-weight: 700; margin-bottom: 8px; }
+  .step-desc { color: var(--text-muted); font-size: 14px; }
+
+  /* --- FORMS & INPUTS --- */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  @media (max-width: 768px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+
+  .input-group { display: flex; flex-direction: column; gap: 8px; position: relative; }
+  .input-group label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); }
+  
+  .input-wrapper { position: relative; }
+  .input-wrapper input, .input-wrapper select {
+    width: 100%; background: rgba(0,0,0,0.2); border: 1px solid var(--border-color); border-radius: 12px; padding: 18px 20px; color: #fff; font-family: var(--font-body); font-size: 16px; font-weight: 500; transition: var(--transition-smooth); outline: none; appearance: none;
+  }
+  .input-wrapper input:focus, .input-wrapper select:focus { border-color: var(--brand-green); background: rgba(16,185,129,0.05); box-shadow: 0 0 0 4px rgba(16,185,129,0.1); }
+  .input-wrapper input::placeholder { color: #475569; }
+
+  /* --- CUSTOM TOGGLE SWITCHES --- */
+  .commodity-selector { display: flex; gap: 16px; margin-bottom: 32px; }
+  @media (max-width: 600px) { .commodity-selector { flex-direction: column; } }
+  .comm-card {
+    flex: 1; background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); border-radius: 16px; padding: 24px; text-align: center; cursor: pointer; transition: var(--transition-smooth); display: flex; flex-direction: column; align-items: center; gap: 12px;
+  }
+  .comm-card .icon { font-size: 32px; filter: grayscale(1); opacity: 0.5; transition: var(--transition-smooth); }
+  .comm-card span { font-weight: 600; font-size: 15px; color: var(--text-muted); }
+  
+  .comm-card:hover { border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); }
+  .comm-card.active { border-color: var(--brand-green); background: rgba(16,185,129,0.1); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+  .comm-card.active .icon { filter: grayscale(0); opacity: 1; transform: scale(1.1); }
+  .comm-card.active span { color: var(--brand-green); }
+
+  .dyn-fields { display: none; }
+  .dyn-fields.active { display: block; animation: slideUpFade 0.4s forwards; }
+
+  /* --- SLIDERS --- */
+  .range-container { margin-top: 10px; }
+  .range-header { display: flex; justify-content: space-between; margin-bottom: 12px; }
+  .range-val { font-family: var(--font-heading); font-size: 20px; font-weight: 700; color: var(--brand-green); }
+  input[type=range] {
+    -webkit-appearance: none; width: 100%; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; outline: none; margin: 10px 0;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none; width: 24px; height: 24px; border-radius: 50%; background: #fff; cursor: pointer; border: 4px solid var(--brand-green); box-shadow: 0 0 10px rgba(16,185,129,0.5); transition: transform 0.2s;
+  }
+  input[type=range]::-webkit-slider-thumb:hover { transform: scale(1.2); }
+
+  /* --- BUTTONS & CONTROLS --- */
+  .wizard-controls { display: flex; justify-content: space-between; margin-top: 48px; gap: 16px; border-top: 1px solid var(--border-color); padding-top: 32px; }
+  
+  .btn {
+    padding: 18px 32px; border-radius: 12px; font-family: var(--font-heading); font-size: 15px; font-weight: 700; cursor: pointer; transition: var(--transition-smooth); display: inline-flex; align-items: center; justify-content: center; gap: 10px; border: none; text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  .btn-prev { background: transparent; color: var(--text-muted); border: 1px solid var(--border-color); }
+  .btn-prev:hover { background: rgba(255,255,255,0.05); color: #fff; }
+  
+  .btn-next { background: var(--brand-green); color: #fff; box-shadow: 0 10px 20px rgba(16,185,129,0.2); margin-left: auto; }
+  .btn-next:hover { background: #059669; transform: translateY(-2px); box-shadow: 0 15px 30px rgba(16,185,129,0.3); }
+  .btn-next:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
+
+  /* --- ERROR MSG --- */
+  .error-box { background: rgba(239, 68, 68, 0.1); border-left: 4px solid var(--alerta); padding: 16px; border-radius: 8px; color: #FCA5A5; font-size: 13px; font-weight: 600; margin-top: 24px; display: none; }
+
+  /* --- LOADING STATE --- */
+  .loader-wrapper { display: none; text-align: center; padding: 60px 0; flex-direction: column; align-items: center; gap: 24px; }
+  .cyber-spinner {
+    width: 60px; height: 60px; border: 3px solid rgba(255,255,255,0.05); border-radius: 50%; border-top-color: var(--brand-green); border-right-color: var(--brand-green); animation: spin 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+  }
+  .loader-wrapper h3 { font-family: var(--font-heading); font-size: 24px; }
+  .loader-wrapper p { color: var(--text-muted); }
+
+  /* --- RESULT DASHBOARD --- */
+  .result-dashboard { display: none; animation: slideUpFade 0.8s forwards; }
+  .dash-hero { background: linear-gradient(135deg, rgba(16,185,129,0.1) 0%, rgba(15,42,74,0.4) 100%); border: 1px solid var(--brand-green-glow); border-radius: 20px; padding: 48px; text-align: center; position: relative; overflow: hidden; margin-bottom: 24px; }
+  
+  .dash-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at top right, rgba(255,255,255,0.05), transparent); pointer-events: none; }
+
+  .dash-label { font-size: 14px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); font-weight: 700; margin-bottom: 16px; }
+  .dash-number { font-family: var(--font-heading); font-size: clamp(4rem, 8vw, 6rem); font-weight: 800; line-height: 1; color: var(--text-main); text-shadow: 0 10px 30px rgba(0,0,0,0.5); margin-bottom: 8px; }
+  .dash-unit { font-size: 18px; color: var(--brand-green); font-weight: 600; }
+
+  .dash-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 40px; }
+  @media (max-width: 768px) { .dash-grid { grid-template-columns: 1fr; } }
+  
+  .metric-box { background: rgba(0,0,0,0.2); border: 1px solid var(--border-color); border-radius: 16px; padding: 24px; text-align: center; }
+  .metric-val { font-family: var(--font-heading); font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+  .metric-lbl { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+
+  /* --- BENTO BOX HEDGE SECTION --- */
+  .bento-section { margin-top: 40px; }
+  .bento-header { text-align: center; margin-bottom: 32px; }
+  .bento-header h3 { font-family: var(--font-heading); font-size: 2rem; font-weight: 800; margin-bottom: 12px; }
+  .bento-header p { color: var(--text-muted); max-width: 500px; margin: 0 auto; }
+
+  .bento-grid { display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: auto auto; gap: 16px; }
+  @media (max-width: 768px) { .bento-grid { grid-template-columns: 1fr; } }
+
+  .bento-card { background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); border-radius: 20px; padding: 32px; transition: var(--transition-smooth); position: relative; overflow: hidden; }
+  .bento-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, transparent, rgba(255,255,255,0.03)); opacity: 0; transition: var(--transition-smooth); }
+  .bento-card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,0.1); background: rgba(255,255,255,0.04); }
+  .bento-card:hover::after { opacity: 1; }
+  
+  .bento-card.wide { grid-column: span 2; display: flex; align-items: center; justify-content: space-between; background: linear-gradient(135deg, var(--brand-blue) 0%, rgba(15,42,74,0.2) 100%); border-color: var(--brand-green-glow); padding: 40px; }
+  @media (max-width: 768px) { .bento-card.wide { grid-column: span 1; flex-direction: column; text-align: center; gap: 24px; } }
+
+  .bento-icon { width: 56px; height: 56px; border-radius: 16px; background: rgba(16,185,129,0.1); color: var(--brand-green); display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 24px; border: 1px solid rgba(16,185,129,0.2); }
+  .bento-card h4 { font-family: var(--font-heading); font-size: 1.2rem; font-weight: 700; margin-bottom: 12px; }
+  .bento-card p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+
+  .btn-whatsapp-bento { background: #25D366; color: #fff; padding: 18px 40px; border-radius: 12px; text-decoration: none; font-family: var(--font-heading); font-weight: 700; font-size: 1.1rem; display: inline-flex; align-items: center; gap: 12px; transition: var(--transition-smooth); box-shadow: 0 10px 25px rgba(37, 211, 102, 0.2); white-space: nowrap; }
+  .btn-whatsapp-bento:hover { transform: scale(1.02); box-shadow: 0 15px 35px rgba(37, 211, 102, 0.3); }
+
+  .restart-link { display: block; text-align: center; margin-top: 40px; color: var(--text-muted); font-weight: 600; text-decoration: none; cursor: pointer; transition: color 0.2s; }
+  .restart-link:hover { color: #fff; }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+
+<div class="animated-bg"></div>
+<div class="bg-glow"></div>
+
+<div class="layout-wrapper">
+  
+  <div class="sidebar-hero">
+    <div class="brand-tag">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2zm0 4.5l6.5 13h-13L12 6.5z"/></svg>
+      Diversa Institucional
+    </div>
+    <h1 class="hero-title">O cálculo exato do seu <span>Futuro Agro</span></h1>
+    <p class="hero-subtitle">Projete o volume de produção necessário para consolidar sua independência financeira, integrando dados reais da sua operação com as cotações institucionais de mercado.</p>
+  </div>
+
+  <div class="main-content">
+    
+    <div class="progress-tracker" id="progressTracker">
+      <div class="progress-dot active"></div>
+      <div class="progress-dot"></div>
+      <div class="progress-dot"></div>
+    </div>
+
+    <div class="wizard-panel" id="wizardPanel">
+      
+      <div class="step-container active" id="step1">
+        <div class="step-header">
+          <h2 class="step-title">Matriz Produtiva</h2>
+          <p class="step-desc">Selecione sua cultura principal e insira suas premissas operacionais atuais.</p>
+        </div>
+
+        <div class="commodity-selector">
+          <div class="comm-card active" onclick="setCommodity('boi')">
+            <div class="icon">🐂</div><span>Boi Gordo</span>
+          </div>
+          <div class="comm-card" onclick="setCommodity('soja')">
+            <div class="icon">🌱</div><span>Soja</span>
+          </div>
+          <div class="comm-card" onclick="setCommodity('milho')">
+            <div class="icon">🌽</div><span>Milho</span>
+          </div>
+        </div>
+
+        <div class="dyn-fields active" id="fields-boi">
+          <div class="grid-3">
+            <div class="input-group">
+              <label>Peso Abate (@)</label>
+              <div class="input-wrapper"><input type="number" id="boi-arrobas" value="20"></div>
+            </div>
+            <div class="input-group">
+              <label>Volume/Ano</label>
+              <div class="input-wrapper"><input type="number" id="boi-animais-ano" value="200"></div>
+            </div>
+            <div class="input-group">
+              <label>Custo Total/@</label>
+              <div class="input-wrapper"><input type="number" id="boi-custo-arroba" value="180"></div>
+            </div>
+          </div>
+          <div class="range-container" style="margin-top: 32px;">
+            <div class="range-header">
+              <label style="font-size: 12px; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Taxa de Reinvestimento (%)</label>
+              <span class="range-val" id="boi-reinvest-val">30%</span>
+            </div>
+            <input type="range" id="boi-reinvest" min="0" max="100" value="30" oninput="document.getElementById('boi-reinvest-val').textContent=this.value+'%'">
+          </div>
+        </div>
+
+        <div class="dyn-fields" id="fields-soja">
+          <div class="grid-3">
+            <div class="input-group"><label>Área (ha)</label><div class="input-wrapper"><input type="number" id="soja-area" value="500"></div></div>
+            <div class="input-group"><label>Produtividade (sc)</label><div class="input-wrapper"><input type="number" id="soja-produtividade" value="65"></div></div>
+            <div class="input-group"><label>Custo (R$/sc)</label><div class="input-wrapper"><input type="number" id="soja-custo-sc" value="85"></div></div>
+          </div>
+          <div class="grid-2" style="margin-top: 24px; align-items: end;">
+            <div class="range-container">
+              <div class="range-header"><label style="font-size: 12px; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Reinvestimento</label><span class="range-val" id="soja-reinvest-val">40%</span></div>
+              <input type="range" id="soja-reinvest" min="0" max="100" value="40" oninput="document.getElementById('soja-reinvest-val').textContent=this.value+'%'">
+            </div>
+            <div class="input-group"><label>Safras/ano</label><div class="input-wrapper"><select id="soja-safras"><option value="1">1 Safra</option><option value="2">2 Safras</option></select></div></div>
+          </div>
+        </div>
+
+        <div class="dyn-fields" id="fields-milho">
+          <div class="grid-3">
+            <div class="input-group"><label>Área (ha)</label><div class="input-wrapper"><input type="number" id="milho-area" value="500"></div></div>
+            <div class="input-group"><label>Produtividade (sc)</label><div class="input-wrapper"><input type="number" id="milho-produtividade" value="110"></div></div>
+            <div class="input-group"><label>Custo (R$/sc)</label><div class="input-wrapper"><input type="number" id="milho-custo-sc" value="45"></div></div>
+          </div>
+          <div class="grid-2" style="margin-top: 24px; align-items: end;">
+            <div class="range-container">
+              <div class="range-header"><label style="font-size: 12px; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Reinvestimento</label><span class="range-val" id="milho-reinvest-val">35%</span></div>
+              <input type="range" id="milho-reinvest" min="0" max="100" value="35" oninput="document.getElementById('milho-reinvest-val').textContent=this.value+'%'">
+            </div>
+            <div class="input-group"><label>Safras/ano</label><div class="input-wrapper"><select id="milho-safras"><option value="1">1 Safra</option><option value="2">2 Safras</option></select></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-container" id="step2">
+        <div class="step-header">
+          <h2 class="step-title">Horizonte Financeiro</h2>
+          <p class="step-desc">Defina seu objetivo de rentabilidade futura para o cálculo do capital alvo.</p>
+        </div>
+        <div class="grid-2">
+          <div class="input-group">
+            <label>Renda Mensal Desejada (R$)</label>
+            <div class="input-wrapper"><input type="number" id="rendaMensal" placeholder="Ex: 25000" min="1000"></div>
+          </div>
+          <div class="range-container">
+            <div class="range-header">
+              <label style="font-size: 12px; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Prazo de Acumulação</label>
+              <span class="range-val" id="anosVal">10 anos</span>
+            </div>
+            <input type="range" id="anosSlider" min="1" max="30" value="10" oninput="document.getElementById('anosVal').textContent=this.value + ' anos'">
+          </div>
+        </div>
+      </div>
+
+      <div class="step-container" id="step3">
+        <div class="step-header">
+          <h2 class="step-title">Relatório Executivo</h2>
+          <p class="step-desc">Insira seus dados para gerar a projeção estratégica da sua operação.</p>
+        </div>
+        <div class="grid-2">
+          <div class="input-group">
+            <label>Nome Completo</label>
+            <div class="input-wrapper"><input type="text" id="nome" placeholder="Como devemos chamá-lo?"></div>
+          </div>
+          <div class="input-group">
+            <label>WhatsApp</label>
+            <div class="input-wrapper">
+              <input type="tel" id="whatsapp" placeholder="(00) 00000-0000" maxlength="15" oninput="this.value = maskPhone(this.value)">
+            </div>
+            <div class="privacy-note" style="margin-top: 8px; font-size: 11px; color: var(--brand-green); display: flex; align-items: center; gap: 4px;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-4-4 1.41-1.41L11 14.17l6.59-6.59L19 9l-8 8z"/></svg>
+              Criptografia End-to-End
+            </div>
+          </div>
+        </div>
+        <div class="error-box" id="errorMsg">⚠️ Por favor, preencha todos os campos obrigatórios corretamente.</div>
+      </div>
+
+      <div class="wizard-controls" id="wizardControls">
+        <button class="btn btn-prev" id="btnPrev" style="display:none;" onclick="changeStep(-1)">Voltar</button>
+        <button class="btn btn-next" id="btnNext" onclick="changeStep(1)">Próxima Etapa <span>→</span></button>
+      </div>
+
+      <div class="loader-wrapper" id="loaderState">
+        <div class="cyber-spinner"></div>
+        <div>
+          <h3>Modelando Cenários</h3>
+          <p>Sincronizando premissas com a mesa de operações...</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="result-dashboard" id="resultPanel">
+      
+      <div class="dash-hero">
+        <div class="dash-label">Meta operacional para atingir independência</div>
+        <div class="dash-number" id="res-numero">0</div>
+        <div class="dash-unit" id="res-unidade">animais terminados / ano</div>
+      </div>
+
+      <div class="dash-grid">
+        <div class="metric-box">
+          <div class="metric-val" id="res-meta-capital">—</div>
+          <div class="metric-lbl">Patrimônio Alvo Final</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-val" id="res-lucro-anual">—</div>
+          <div class="metric-lbl">Lucro Atual Estimado/Ano</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-val" id="res-margem">—</div>
+          <div class="metric-lbl">Margem Unitária Operacional</div>
+        </div>
+      </div>
+
+      <div class="bento-section">
+        <div class="bento-header">
+          <h3>Evolua de Produtor para <span>Investidor Institucional</span></h3>
+          <p>Descubra como o Hedge Agrícola traz a previsibilidade dos grandes fundos para a sua fazenda.</p>
+        </div>
+
+        <div class="bento-grid">
+          <div class="bento-card">
+            <div class="bento-icon">🛡️</div>
+            <h4>Trava de Preços (Hedge)</h4>
+            <p>Garanta a rentabilidade da sua safra antes mesmo de plantar. Estruturamos operações na B3 para que quedas no mercado não destruam sua margem.</p>
+          </div>
+          <div class="bento-card">
+            <div class="bento-icon">📊</div>
+            <h4>Previsibilidade de Fluxo</h4>
+            <p>Com margens travadas, sua capacidade de alavancagem para compra de terras, maquinário e insumos torna-se matemática e livre de especulação.</p>
+          </div>
+          <div class="bento-card wide">
+            <div>
+              <h4>Execute a Estratégia Agora</h4>
+              <p style="max-width: 400px; margin-top: 8px;">Nossa mesa institucional está pronta para estruturar a proteção financeira do seu patrimônio com a Diversa Investimentos.</p>
+            </div>
+            <a id="cta-whatsapp" href="#" target="_blank" class="btn-whatsapp-bento">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Falar com Assessor
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <a class="restart-link" onclick="refazer()">← Ajustar Premissas Operacionais</a>
+
+    </div>
+
+  </div>
+</div>
+
+<script>
+  // --- MASK & UTILS ---
+  function maskPhone(v) {
+    v = v.replace(/\D/g, ""); 
+    if (v.length <= 10) {
+      v = v.replace(/^(\d{2})(\d)/g, "($1) $2");
+      v = v.replace(/(\d{4})(\d)/, "$1-$2");
+    } else {
+      v = v.replace(/^(\d{2})(\d)/g, "($1) $2");
+      v = v.replace(/(\d{5})(\d)/, "$1-$2");
+    }
+    return v.substring(0, 15);
+  }
+
+  function fmt(n) { return n.toLocaleString('pt-BR', {maximumFractionDigits:0}); }
+  function fmtMoeda(n) {
+    if(n >= 1e6) return 'R$ ' + (n/1e6).toLocaleString('pt-BR', {maximumFractionDigits:1}) + ' mi';
+    if(n >= 1e3) return 'R$ ' + (n/1e3).toLocaleString('pt-BR', {maximumFractionDigits:0}) + ' mil';
+    return 'R$ ' + fmt(n);
+  }
+
+  // --- STATE & WIZARD LOGIC ---
+  let currentStep = 1;
+  const totalSteps = 3;
+  let commodityAtual = 'boi';
+
+  function setCommodity(c) {
+    commodityAtual = c;
+    document.querySelectorAll('.comm-card').forEach(el => el.classList.remove('active'));
+    event.currentTarget.classList.add('active');
+    
+    document.querySelectorAll('.dyn-fields').forEach(el => el.classList.remove('active'));
+    document.getElementById(`fields-${c}`).classList.add('active');
+  }
+
+  function validateStep(step) {
+    if(step === 2) {
+      const r = parseFloat(document.getElementById('rendaMensal').value);
+      return r >= 1000;
+    }
+    if(step === 3) {
+      const n = document.getElementById('nome').value.trim();
+      const w = document.getElementById('whatsapp').value.trim();
+      return n && w.length >= 14;
+    }
+    return true; // Step 1 is handled by defaults
+  }
+
+  function changeStep(dir) {
+    const errorEl = document.getElementById('errorMsg');
+    errorEl.style.display = 'none';
+
+    if (dir === 1 && !validateStep(currentStep)) {
+      errorEl.style.display = 'block';
+      return;
+    }
+
+    document.getElementById(`step${currentStep}`).classList.remove('active');
+    currentStep += dir;
+
+    if (currentStep > totalSteps) {
+      iniciarCalculo();
+      return;
+    }
+
+    document.getElementById(`step${currentStep}`).classList.add('active');
+    
+    // Update UI
+    document.getElementById('btnPrev').style.display = currentStep === 1 ? 'none' : 'inline-flex';
+    document.getElementById('btnNext').innerHTML = currentStep === totalSteps ? 'Processar Dados <span>→</span>' : 'Próxima Etapa <span>→</span>';
+    
+    // Progress Dots
+    const dots = document.querySelectorAll('.progress-dot');
+    dots.forEach((dot, index) => {
+      dot.classList.toggle('active', index < currentStep);
+    });
+  }
+
+  // --- ANIMATION LOGIC ---
+  function animateValue(obj, start, end, duration) {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      // Easing out cubic
+      const easeOut = 1 - Math.pow(1 - progress, 3);
+      obj.innerHTML = fmt(Math.floor(easeOut * (end - start) + start));
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  }
+
+  // --- CALCULATION LOGIC ---
+  async function simularBuscaAPI(commodity) {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        const valores = { boi: { preco: 235.50 }, soja: { preco: 122.80 }, milho: { preco: 58.40 } };
+        resolve(valores[commodity]);
+      }, 1800);
+    });
+  }
+
+  async function iniciarCalculo() {
+    // Hide Form Controls, Show Loader
+    document.querySelectorAll('.step-container').forEach(el => el.classList.remove('active'));
+    document.getElementById('wizardControls').style.display = 'none';
+    document.getElementById('progressTracker').style.display = 'none';
+    document.getElementById('loaderState').style.display = 'flex';
+
+    const cotacao = await simularBuscaAPI(commodityAtual);
+    
+    // Math
+    const rendaMensal = parseFloat(document.getElementById('rendaMensal').value);
+    const anos = parseInt(document.getElementById('anosSlider').value);
+    const yieldAnual = 0.08; 
+    const capitalNecessario = (rendaMensal * 12) / yieldAnual;
+
+    let margemUnit = 0, lucroAnual = 0, volumeAlvo = 0, unidade = '';
+
+    if(commodityAtual === 'boi') {
+      const arr = parseFloat(document.getElementById('boi-arrobas').value);
+      const qtd = parseFloat(document.getElementById('boi-animais-ano').value);
+      const custo = parseFloat(document.getElementById('boi-custo-arroba').value);
+      const reinv = parseFloat(document.getElementById('boi-reinvest').value)/100;
+      
+      margemUnit = (arr * cotacao.preco) - (arr * custo);
+      lucroAnual = margemUnit * qtd * (1 - reinv);
+      volumeAlvo = (margemUnit > 0) ? (capitalNecessario / (margemUnit * anos)) : 0;
+      unidade = 'animais terminados / ano';
+    } else {
+      const area = parseFloat(document.getElementById(`${commodityAtual}-area`).value);
+      const prod = parseFloat(document.getElementById(`${commodityAtual}-produtividade`).value);
+      const custo = parseFloat(document.getElementById(`${commodityAtual}-custo-sc`).value);
+      const safras = parseFloat(document.getElementById(`${commodityAtual}-safras`).value);
+      const reinv = parseFloat(document.getElementById(`${commodityAtual}-reinvest`).value)/100;
+
+      const volumeAtual = area * prod * safras;
+      margemUnit = cotacao.preco - custo;
+      lucroAnual = volumeAtual * margemUnit * (1 - reinv);
+      volumeAlvo = (margemUnit > 0) ? (capitalNecessario / (margemUnit * anos)) : 0;
+      unidade = 'sacas produzidas / ano';
+    }
+
+    const volumeFinal = Math.ceil(volumeAlvo);
+    const lucroFinal = Math.max(0, lucroAnual);
+
+    // Populate Results (before showing)
+    document.getElementById('res-unidade').textContent = unidade;
+    document.getElementById('res-meta-capital').textContent = fmtMoeda(capitalNecessario);
+    document.getElementById('res-lucro-anual').textContent = fmtMoeda(lucroFinal);
+    document.getElementById('res-margem').textContent = `R$ ${fmt(margemUnit)}`;
+
+    // Lead Generation
+    const nome = document.getElementById('nome').value.split(' ')[0];
+    const wpp = document.getElementById('whatsapp').value.replace(/\D/g,'');
+    const msg = encodeURIComponent(`Olá! Sou ${nome}. Concluí o mapeamento estratégico da Diversa e meu alvo exige patrimônio de ${fmtMoeda(capitalNecessario)}. Quero estruturar o Hedge da minha operação para blindar minha margem.`);
+    document.getElementById('cta-whatsapp').href = `https://wa.me/55${wpp}?text=${msg}`;
+
+    // Transition to Dashboard
+    document.getElementById('wizardPanel').style.display = 'none';
+    document.getElementById('resultPanel').style.display = 'block';
+    
+    // Trigger Number Animation
+    const numEl = document.getElementById('res-numero');
+    animateValue(numEl, 0, volumeFinal, 2000);
+  }
+
+  function refazer() {
+    location.reload(); // Clean state restart for a complex app feel
+  }
+</script>
+
+</body>
+</html>
