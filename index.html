@@ -4731,6 +4731,77 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zM223.9 413.4c-33 0-65.4-8.9-94-25.7l-6.7-4-69.8 18.3L72 334.1l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.4-186.6 184.4zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
     </a>
 
+    <div class="shorts-player" id="shorts-player">
+        <button class="sp-close" onclick="fecharShortsPlayer()"><span class="material-symbols-outlined">close</span></button>
+        <div class="sp-progress" id="sp-progress"></div>
+        <button class="sp-nav-btn sp-nav-prev" id="sp-nav-prev" onclick="shortAnterior()"><span class="material-symbols-outlined">expand_less</span></button>
+        <div class="sp-viewport" id="sp-viewport">
+            <div class="sp-video-wrap" id="sp-video-wrap">
+                <div id="sp-video-container" style="width:100%;height:100%;"></div>
+            </div>
+            <div class="sp-touch-area">
+                <div class="sp-side" onclick="shortAnterior()"></div>
+                <div class="sp-center" onclick="shortTogglePlay()"></div>
+                <div class="sp-side" onclick="shortProximo()"></div>
+            </div>
+        </div>
+        <button class="sp-nav-btn sp-nav-next" id="sp-nav-next" onclick="shortProximo()"><span class="material-symbols-outlined">expand_more</span></button>
+        <div class="sp-actions">
+            <div style="text-align:center;">
+                <button onclick="shortTogglePlay()"><span class="material-symbols-outlined" id="sp-play-icon">pause</span></button>
+                <div class="sp-action-label">Play</div>
+            </div>
+            <div style="text-align:center;">
+                <button onclick="shortProximo()"><span class="material-symbols-outlined">skip_next</span></button>
+                <div class="sp-action-label">Próximo</div>
+            </div>
+            <div style="text-align:center;">
+                <a href="#" target="_blank" id="sp-share-link" style="text-decoration:none;"><button><span class="material-symbols-outlined">share</span></button></a>
+                <div class="sp-action-label">Compartilhar</div>
+            </div>
+        </div>
+        <div class="sp-info">
+            <div class="sp-title" id="sp-title">Título</div>
+            <div class="sp-desc" id="sp-desc">Descrição</div>
+        </div>
+    </div>
+
+    <div id="modal-consorcio-overlay" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:99999;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);align-items:center;justify-content:center;">
+        <div style="background:var(--bg-card);border-radius:20px;padding:30px;max-width:520px;width:92%;border:1px solid var(--border-color);box-shadow:0 20px 60px rgba(0,0,0,0.3);max-height:85vh;overflow-y:auto;position:relative;">
+            <div onclick="fecharModalConsorcio()" style="position:absolute;top:12px;right:12px;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center;cursor:pointer;"><span class="material-symbols-outlined" style="font-size:18px;color:var(--text-muted);">close</span></div>
+            <div style="display:flex;align-items:center;gap:15px;margin-bottom:20px;">
+                <div style="width:45px;height:45px;background:var(--azul-04);color:white;border-radius:10px;display:flex;align-items:center;justify-content:center;">
+                    <span class="material-symbols-outlined" id="modal-consorcio-icon">location_city</span>
+                </div>
+                <div>
+                    <h3 id="modal-consorcio-title" style="margin:0;font-size:1.5rem;color:var(--text-main);font-weight:800;">Título</h3>
+                    <p id="modal-consorcio-subtitle" style="margin:0;font-size:0.85rem;color:var(--text-muted);">Subtítulo descritivo</p>
+                </div>
+            </div>
+            <img id="modal-consorcio-img" src="" alt="Categoria" style="width:100%;height:220px;object-fit:cover;border-radius:12px;margin-bottom:20px;">
+            <div style="background:rgba(0,134,255,0.05);border:1px solid rgba(0,134,255,0.1);padding:20px;border-radius:12px;margin-bottom:25px;">
+                <h4 style="font-size:0.75rem;color:var(--text-muted);font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:5px;"><span class="material-symbols-outlined" style="font-size:16px;">help</span> Sobre esta solução</h4>
+                <p id="modal-consorcio-desc" style="margin:0;font-size:0.95rem;color:var(--text-main);line-height:1.6;"></p>
+            </div>
+            <button class="btn-account" style="width:100%;padding:15px;font-size:1.1rem;display:flex;align-items:center;justify-content:center;gap:10px;">
+                Falar com Especialista <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="quick-modal-overlay" id="quick-customize-modal">
+        <div class="quick-modal-box">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
+                <h3 style="margin:0;font-size:1.1rem;">Editar Atalhos</h3>
+                <span class="material-symbols-outlined" onclick="fecharCustomQuick()" style="cursor:pointer;color:var(--text-muted);font-size:22px;">close</span>
+            </div>
+            <p style="font-size:0.75rem;color:var(--text-muted);margin-bottom:10px;">Selecione até 4 para o acesso rápido.</p>
+            <div id="quick-options-list" style="display:flex;flex-direction:column;gap:4px;"></div>
+            <p id="quick-limit-msg" style="display:none;font-size:0.7rem;color:#E53935;margin:6px 0 0;text-align:center;">Máximo de 4 — remova um antes de adicionar outro.</p>
+            <button onclick="salvarCustomQuick()" class="btn-account" style="margin-top:10px;width:100%;text-align:center;font-size:0.8rem;padding:8px 0;">Salvar</button>
+        </div>
+    </div>
+
     <script>
         // 1. INICIALIZAÇÃO DO GLOBO 3D (Seção CNR)
         let world;
