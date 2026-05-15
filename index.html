@@ -5197,7 +5197,7 @@
         function filtrarVideos() { renderVideos(); }
 
         // Player state (no YouTube IFrame API — uses iframe + postMessage)
-        var playerState = -1, playerDuration = 0, playerCurrentTime = 0, playerMuted = false;
+        var playerState = -1, playerDuration = 0, playerCurrentTime = 0, playerMuted = false, activePlayer = null;
 
         function pausarHeroVideos() {
             document.querySelectorAll('video').forEach(function(v) {
@@ -5235,7 +5235,7 @@
             window.removeEventListener('message', playerMessageHandler);
             var wrap = document.getElementById('video-detail-player');
             if(wrap) wrap.innerHTML = '<iframe id="player-youtube-iframe" src="https://www.youtube.com/embed/'+videoId+'?enablejsapi=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;height:100%;"></iframe>';
-            playerState = -1; playerDuration = 0; playerCurrentTime = 0;
+            playerState = -1; playerDuration = 0; playerCurrentTime = 0; activePlayer = 'video';
             player = {
                 playVideo: function() { pSend('playVideo'); },
                 pauseVideo: function() { pSend('pauseVideo'); },
@@ -5261,8 +5261,7 @@
         }
         function playerMessageHandler(e) {
             if(e.origin !== 'https://www.youtube.com') return;
-            var _ifr = document.getElementById('player-youtube-iframe');
-            if(!_ifr || e.source !== _ifr.contentWindow) return;
+            if(activePlayer !== 'video') return;
             try {
                 var d = JSON.parse(e.data);
                 if(d.event==='onReady') { pSend('setVolume',[playerVolume]); pSend('playVideo'); }
@@ -5331,7 +5330,7 @@
             document.getElementById('edu-player-mini').classList.remove('active');
             document.body.classList.remove('has-video');
             videoAtual = null; playerModoMini = false; player = null; playerReady = false;
-            playerState = -1; playerDuration = 0; playerCurrentTime = 0;
+            playerState = -1; playerDuration = 0; playerCurrentTime = 0; activePlayer = null;
             document.getElementById('player-progress-fill').style.width = '0%';
             document.getElementById('player-time').textContent = '0:00 / 0:00';
         }
@@ -5463,7 +5462,7 @@
             var c = document.getElementById('sp-video-container');
             c.innerHTML = '<iframe id="sp-youtube-iframe" src="https://www.youtube.com/embed/'+s.id+'?enablejsapi=1&controls=0&rel=0&modestbranding=1&playsinline=1" frameborder="0" allow="autoplay; encrypted-media; accelerometer; gyroscope" style="width:100%;height:100%;"></iframe>';
 
-            shortState = -1; shortDuration = 0; shortCurrentTime = 0;
+            shortState = -1; shortDuration = 0; shortCurrentTime = 0; activePlayer = 'short';
             window.addEventListener('message', shortMessageHandler);
             shortPlayerTimer = setInterval(atualizarShortProgress, 300);
             atualizarProgressBars();
@@ -5475,11 +5474,12 @@
             window.removeEventListener('message', shortMessageHandler);
             var c = document.getElementById('sp-video-container');
             c.innerHTML = '';
-            shortState = -1; shortDuration = 0; shortCurrentTime = 0;
+            shortState = -1; shortDuration = 0; shortCurrentTime = 0; activePlayer = null;
         }
 
         function shortMessageHandler(e) {
             if(e.origin !== 'https://www.youtube.com') return;
+            if(activePlayer !== 'short') return;
             try {
                 var d = JSON.parse(e.data);
                 if(d.event==='onReady') {
