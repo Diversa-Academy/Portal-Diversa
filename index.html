@@ -103,7 +103,7 @@
         .sidebar-nav a:hover, .sidebar-nav a.active { background-color: var(--azul-08); color: #FFFFFF; }
         .sidebar-nav .ferramentas-header.active { background-color: var(--azul-08) !important; color: #FFFFFF !important; }
         .sidebar-nav a .menu-text { line-height: 1.15; }
-        .sidebar-footer { padding: 20px; border-top: 1px solid rgba(255,255,255,0.05); }
+        .sidebar-footer { padding: 20px; }
         .btn-account { display: block; width: 100%; background-color: var(--azul-01); color: white; padding: 12px; border-radius: 8px; font-weight: 700; border: none; cursor: pointer; transition: 0.3s; text-align: center; white-space: nowrap; overflow: hidden; }
         .btn-account:hover { background-color: var(--azul-02); transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,134,255,0.3); }
 
@@ -128,13 +128,13 @@
         /* =========================================
            TOPBAR & MAIN CONTENT
            ========================================= */
-        .main-content { flex-grow: 1; overflow-y: auto; perspective: 1000px; scroll-behavior: smooth; }
-        .topbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background-color: var(--bg-topbar); border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 10; transition: background-color 0.3s; }
+        .main-content { flex-grow: 1; overflow-y: auto; perspective: 1000px; scroll-behavior: smooth; display: flex; flex-direction: column; }
+        .topbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background-color: var(--bg-topbar); border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 10; transition: background-color 0.3s; flex-shrink: 0; }
         .topbar-search input { padding: 10px 16px; border-radius: 20px; border: 1px solid var(--border-color); width: 300px; background-color: var(--input-bg); color: var(--text-main); outline: none; transition: 0.3s; }
         .action-icon { color: var(--text-muted); cursor: pointer; transition: 0.2s; user-select: none; }
         .action-icon:hover { color: var(--azul-01); }
 
-        .page-container { padding: 40px; max-width: 1400px; margin: 0 auto; transition: padding 0.3s, max-width 0.3s; }
+        .page-container { padding: 40px; max-width: 1400px; margin: 0 auto; transition: padding 0.3s, max-width 0.3s; flex-grow: 1; width: 100%; }
         /* Remove padding for consorcio to allow full screen wrapper */
         #consorcio.page-section { padding: 0; max-width: 100%; }
         
@@ -161,7 +161,7 @@
         .hero-banner {
             background: #0a0e17; border-radius: 0;
             padding: 60px 48px 38px; color: white; display: flex; justify-content: flex-start; align-items: flex-start; margin: 0;
-            position: relative; overflow: hidden; min-height: 420px; width: 100%;
+            position: relative; overflow: hidden; min-height: 420px; width: 100%; flex-shrink: 0;
         }
         #home-hero { display: none; }
         body:not(.in-home) #home-hero { display: none; }
@@ -779,8 +779,11 @@
         .edu-player-bar .p-controls button .material-symbols-outlined { font-size: 22px; }
         .edu-player-bar .p-controls .p-play { width: 36px; height: 36px; border-radius: 50%; background: var(--azul-01); color: white; }
         .edu-player-bar .p-controls .p-play:hover { background: var(--azul-02); }
-        .edu-player-bar .p-progress { position: absolute; top: -2px; left: 0; right: 0; height: 2px; background: rgba(255,255,255,0.08); cursor: pointer; }
-        .edu-player-bar .p-progress .p-progress-fill { height: 100%; background: var(--azul-01); width: 0%; border-radius: 0 2px 2px 0; transition: width 0.3s linear; }
+        .edu-player-bar .p-progress { position: absolute; top: -4px; left: 0; right: 0; height: 4px; background: rgba(255,255,255,0.1); cursor: pointer; z-index: 1; }
+        .edu-player-bar .p-progress:hover { height: 6px; top: -6px; }
+        .edu-player-bar .p-progress .p-progress-fill { height: 100%; background: var(--azul-01); width: 0%; border-radius: 0 2px 2px 0; position: relative; }
+        .edu-player-bar .p-progress .p-progress-fill::after { content: ''; position: absolute; right: -5px; top: 50%; transform: translateY(-50%); width: 10px; height: 10px; border-radius: 50%; background: var(--azul-01); opacity: 0; transition: opacity 0.2s; }
+        .edu-player-bar .p-progress:hover .p-progress-fill::after { opacity: 1; }
         .edu-player-bar .p-volume { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
         .edu-player-bar .p-volume input[type=range] { width: 60px; height: 3px; -webkit-appearance: none; appearance: none; background: rgba(255,255,255,0.15); border-radius: 3px; outline: none; }
         .edu-player-bar .p-volume input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 10px; height: 10px; border-radius: 50%; background: white; cursor: pointer; margin-top: -3.5px; }
@@ -1405,7 +1408,7 @@
         .section-header .section-title { margin-bottom: 0; border-bottom: none; padding-bottom: 0; }
 
         /* ===== FOOTER ===== */
-        .site-footer { border-top: 1px solid rgba(255,255,255,0.06); background: #060912; padding: 40px 0 0; margin: 0; color: rgba(255,255,255,0.5); font-size: 0.82rem; }
+        .site-footer { background: #060912; padding: 40px 0 0; margin: 0; color: rgba(255,255,255,0.5); font-size: 0.82rem; flex-shrink: 0; }
         .site-footer .f-inner { max-width: 1100px; margin: 0 auto; padding: 0 40px 24px; display: flex; flex-wrap: wrap; justify-content: center; gap: 40px 60px; }
         .site-footer .f-brand { display: flex; flex-direction: column; gap: 6px; align-items: center; text-align: center; min-width: 200px; }
         .site-footer .f-contact { display: flex; flex-direction: column; gap: 8px; align-items: center; text-align: center; min-width: 200px; }
@@ -1428,6 +1431,24 @@
         .site-footer .f-site-link a:hover { text-decoration: underline; }
         .site-footer .f-bottom { border-top: 1px solid rgba(255,255,255,0.05); padding: 14px 40px; text-align: center; font-size: 0.7rem; color: rgba(255,255,255,0.35); }
         @media (max-width: 768px) { .site-footer .f-inner { grid-template-columns: 1fr; gap: 24px; } .site-footer { padding: 24px 0 0; } }
+
+        /* =========================================
+           AVISO DE COOKIES (LGPD) — flutuante esquerda
+           ========================================= */
+        .cookie-notice { position: fixed; bottom: 90px; left: 24px; z-index: 9999; background: #0e1320; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 16px 18px; display: none; flex-direction: column; gap: 12px; color: rgba(255,255,255,0.75); font-size: 0.78rem; line-height: 1.5; max-width: 280px; box-shadow: 0 8px 32px rgba(0,0,0,0.4); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        .cookie-notice.show { display: flex; }
+        .cookie-notice p { margin: 0; }
+        .cookie-notice a { color: var(--azul-01); text-decoration: none; font-weight: 600; }
+        .cookie-notice a:hover { text-decoration: underline; }
+        .cookie-notice .cn-actions { display: flex; gap: 8px; }
+        .cookie-notice .cn-btn { padding: 6px 14px; border-radius: 8px; font-size: 0.75rem; font-weight: 700; border: none; cursor: pointer; transition: 0.2s; }
+        .cookie-notice .cn-btn.accept { background: var(--azul-01); color: white; flex: 1; }
+        .cookie-notice .cn-btn.accept:hover { background: var(--azul-02); }
+        .cookie-notice .cn-btn.dismiss { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.5); }
+        .cookie-notice .cn-btn.dismiss:hover { background: rgba(255,255,255,0.1); }
+        @media (max-width: 600px) { .cookie-notice { left: 12px; right: 12px; bottom: 80px; max-width: none; } }
+
+
 
         /* =========================================
            CARTEIRAS RECOMENDADAS
@@ -4663,20 +4684,6 @@
 
     </main>
 
-    <div class="quick-modal-overlay" id="quick-customize-modal">
-        <div class="quick-modal-box">
-            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
-                <h3 style="margin:0;font-size:1.1rem;">Editar Atalhos</h3>
-                <span class="material-symbols-outlined" onclick="fecharCustomQuick()" style="cursor:pointer;color:var(--text-muted);font-size:22px;">close</span>
-            </div>
-            <p style="font-size:0.75rem;color:var(--text-muted);margin-bottom:10px;">Selecione até 4 para o acesso rápido.</p>
-            <div id="quick-options-list" style="display:flex;flex-direction:column;gap:4px;"></div>
-            <p id="quick-limit-msg" style="display:none;font-size:0.7rem;color:#E53935;margin:6px 0 0;text-align:center;">Máximo de 4 — remova um antes de adicionar outro.</p>
-            <button onclick="salvarCustomQuick()" class="btn-account" style="margin-top:10px;width:100%;text-align:center;font-size:0.8rem;padding:8px 0;">Salvar</button>
-        </div>
-    </div>
-
-    <!-- Player bar + Mini player + YouTube wrap (fora do main-content, para evitar perspective quebrar position:fixed) -->
     <div class="edu-player-bar" id="edu-player-bar">
         <div class="p-progress" id="player-progress-bar"><div class="p-progress-fill" id="player-progress-fill"></div></div>
         <div class="p-thumb" id="player-thumb" onclick="abrirPlayerVideo()"><img src="" alt=""></div>
@@ -4712,66 +4719,11 @@
 
     <div id="player-youtube-wrap" style="position:absolute;left:-9999px;top:0;width:640px;height:360px;"></div>
 
-    <!-- Shorts Player overlay (Instagram-style) -->
-    <div class="shorts-player" id="shorts-player">
-        <button class="sp-close" onclick="fecharShortsPlayer()"><span class="material-symbols-outlined">close</span></button>
-        <div class="sp-progress" id="sp-progress"></div>
-        <button class="sp-nav-btn sp-nav-prev" id="sp-nav-prev" onclick="shortAnterior()"><span class="material-symbols-outlined">expand_less</span></button>
-        <div class="sp-viewport" id="sp-viewport">
-            <div class="sp-video-wrap" id="sp-video-wrap">
-                <div id="sp-video-container" style="width:100%;height:100%;"></div>
-            </div>
-            <div class="sp-touch-area">
-                <div class="sp-side" onclick="shortAnterior()"></div>
-                <div class="sp-center" onclick="shortTogglePlay()"></div>
-                <div class="sp-side" onclick="shortProximo()"></div>
-            </div>
-        </div>
-        <button class="sp-nav-btn sp-nav-next" id="sp-nav-next" onclick="shortProximo()"><span class="material-symbols-outlined">expand_more</span></button>
-        <div class="sp-actions">
-            <div style="text-align:center;">
-                <button onclick="shortTogglePlay()"><span class="material-symbols-outlined" id="sp-play-icon">pause</span></button>
-                <div class="sp-action-label">Play</div>
-            </div>
-            <div style="text-align:center;">
-                <button onclick="shortProximo()"><span class="material-symbols-outlined">skip_next</span></button>
-                <div class="sp-action-label">Próximo</div>
-            </div>
-            <div style="text-align:center;">
-                <a href="#" target="_blank" id="sp-share-link" style="text-decoration:none;"><button><span class="material-symbols-outlined">share</span></button></a>
-                <div class="sp-action-label">Compartilhar</div>
-            </div>
-        </div>
-        <div class="sp-info">
-            <div class="sp-title" id="sp-title">Título</div>
-            <div class="sp-desc" id="sp-desc">Descrição</div>
-        </div>
-    </div>
-
-    <div id="modal-consorcio-overlay" class="modal-overlay">
-        <div class="modal-box">
-            <div class="modal-close" onclick="fecharModalConsorcio()"><span class="material-symbols-outlined">close</span></div>
-            
-            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
-                <div style="width: 45px; height: 45px; background: var(--azul-04); color: white; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                    <span class="material-symbols-outlined" id="modal-consorcio-icon">location_city</span>
-                </div>
-                <div>
-                    <h3 id="modal-consorcio-title" style="margin: 0; font-size: 1.5rem; color: var(--text-main); font-weight: 800;">Título</h3>
-                    <p id="modal-consorcio-subtitle" style="margin: 0; font-size: 0.85rem; color: var(--text-muted);">Subtítulo descritivo</p>
-                </div>
-            </div>
-
-            <img id="modal-consorcio-img" src="" alt="Categoria Imagem" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; margin-bottom: 20px;">
-
-            <div style="background: rgba(0, 134, 255, 0.05); border: 1px solid rgba(0, 134, 255, 0.1); padding: 20px; border-radius: 12px; margin-bottom: 25px;">
-                <h4 style="font-size: 0.75rem; color: var(--text-muted); font-weight: 800; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; display: flex; align-items: center; gap: 5px;"><span class="material-symbols-outlined" style="font-size: 16px;">help</span> Sobre esta solução</h4>
-                <p id="modal-consorcio-desc" style="margin: 0; font-size: 0.95rem; color: var(--text-main); line-height: 1.6;"></p>
-            </div>
-
-            <button class="btn-account" style="width: 100%; padding: 15px; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; gap: 10px;">
-                Falar com Especialista <span class="material-symbols-outlined">arrow_forward</span>
-            </button>
+    <div class="cookie-notice" id="cookie-notice">
+        <p>Utilizamos cookies para melhorar sua experiência. Ao continuar, você concorda com nossa <a href="https://diversainvestimentos.com.br/politica-de-privacidade/" target="_blank">Política de Privacidade</a>.</p>
+        <div class="cn-actions">
+            <button class="cn-btn dismiss" onclick="fecharCookie(false)">Recusar</button>
+            <button class="cn-btn accept" onclick="fecharCookie(true)">Aceitar</button>
         </div>
     </div>
 
@@ -5176,8 +5128,15 @@
         // Player state (no YouTube IFrame API — uses iframe + postMessage)
         var playerState = -1, playerDuration = 0, playerCurrentTime = 0, playerMuted = false;
 
+        function pausarHeroVideos() {
+            document.querySelectorAll('video').forEach(function(v) {
+                if (!v.paused) v.pause();
+            });
+        }
+
         function abrirVideo(videoId) {
             var v = videosData.find(function(x){return x.id===videoId;}); if(!v) return;
+            pausarHeroVideos();
             videoAtual = v;
             navigate('edu-video-player');
             atualizarPlayerUI(v);
@@ -5186,6 +5145,18 @@
             document.body.classList.add('has-video');
             playerModoMini = false;
             document.getElementById('edu-player-mini').classList.remove('active');
+        }
+
+        function playerSeekClick(e) {
+            var bar = document.getElementById('player-progress-bar');
+            var fill = document.getElementById('player-progress-fill');
+            var rect = bar.getBoundingClientRect();
+            var pct = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+            var t = pct * (playerDuration || 1);
+            fill.style.transition = 'none';
+            fill.style.width = (pct * 100) + '%';
+            if (player) player.seekTo(t);
+            setTimeout(function() { fill.style.transition = ''; }, 200);
         }
 
         function criarPlayer(videoId) {
@@ -5916,6 +5887,21 @@
 
             container.innerHTML = html;
         }
+
+        function fecharCookie(aceito) {
+            document.getElementById('cookie-notice').classList.remove('show');
+            try { localStorage.setItem('diversa_cookie_consent', aceito ? 'aceito' : 'recusado'); } catch(e) {}
+        }
+
+        (function() {
+            var consent = null;
+            try { consent = localStorage.getItem('diversa_cookie_consent'); } catch(e) {}
+            if (!consent) {
+                setTimeout(function() { document.getElementById('cookie-notice').classList.add('show'); }, 500);
+            }
+        })();
+
+        document.getElementById('player-progress-bar').addEventListener('click', playerSeekClick);
 
         document.addEventListener('DOMContentLoaded', function() {
             setTimeout(carregarCarteiras, 200);
