@@ -1,0 +1,5161 @@
+[
+  {
+    "accumulatedIndex": 69.49,
+    "accumulatedProfitability": 83.52,
+    "authors": [
+      {
+        "id": "772",
+        "name": "Gabriela Sporch",
+        "image": "https://content.btgpactual.com/research/files/media/2025-05-06T113501.103_Gabi.jpg",
+        "local": "São Paulo",
+        "email": "analise.tecnica@btgpactual.com",
+        "occupation": "Analista Técnica",
+        "team": {
+          "id": "23",
+          "name": "Área do trader"
+        },
+        "linkedinUrl": "https://www.linkedin.com/in/gabrielasporch/"
+      },
+      {
+        "id": "264",
+        "name": "Lucas Costa, CMT",
+        "image": "https://content.btgpactual.com/research/files/media/2022-09-29T103541.231_Untitled.jpg",
+        "local": "São Paulo",
+        "email": "lucas.correia@btgpactual.com",
+        "team": {
+          "id": "23",
+          "name": "Área do trader"
+        },
+        "instagramUrl": "lucascostaat",
+        "linkedinUrl": "https://www.linkedin.com/in/lucas-costa-msc-3a3560142/"
+      }
+    ],
+    "comparativeIndex": "IBOV",
+    "description": "<p>A carteira tem como objetivo capturar as melhores oportunidades do mercado de ações sugerindo uma carteira com até 10 ativos, com nova composição mensal. O processo de seleção dos ativos é realizado pelo time de análise técnica do Research do Banco BTG Pactual, com base exclusivamente em análise técnica, sem considerar necessariamente índices de referência ou liquidez.</p>",
+    "fileName": "https://content.btgpactual.com/research/files/file/2026-05-15T100912.644_Carteira AT - Mai26.pdf",
+    "hideContent": false,
+    "id": "6a071af99fd8cf7b378504c1",
+    "inAssets": [
+      {
+        "asset": {
+          "company": "PetroRio",
+          "currentFundamentals": {
+            "evEbitda": "10.097674146",
+            "pl": "23.295762758",
+            "pvp": "2.0232453314"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/PRIO.png",
+          "sector": {
+            "description": "Petróleo & Gás",
+            "name": "Petróleo & Gás",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "PRIO3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Gerdau",
+          "currentFundamentals": {
+            "evEbitda": "6.3974683417",
+            "pl": "27.470151235",
+            "pvp": "0.84108721635"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/GGBR.png",
+          "sector": {
+            "description": "Mineração & Siderurgia",
+            "name": "Mineração & Siderurgia",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "GGBR4"
+        },
+        "weight": 10
+      }
+    ],
+    "inclusionTime": "2026-05-15T07:09:12.616-03:00",
+    "name": "Análise Técnica (Gráfica)",
+    "noTagsDescription": "A carteira tem como objetivo capturar as melhores oportunidades do mercado de ações sugerindo uma carteira com até 10 ativos, com nova composição mensal. O processo de seleção dos ativos é realizado pelo time de análise técnica do Research do Banco BTG Pactual, com base exclusivamente em análise técnica, sem considerar necessariamente índices de referência ou liquidez.",
+    "outAssets": [
+      {
+        "asset": {
+          "company": "Tenda",
+          "currentFundamentals": {
+            "evEbitda": "6.3833242623",
+            "pl": "6.9051303229",
+            "pvp": "2.8770261939"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/TEND.png",
+          "sector": {
+            "description": " ",
+            "name": "Construção Civil & Propriedades",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "TEND3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Raia Drogasil",
+          "currentFundamentals": {
+            "evEbitda": "8.6750780897",
+            "pl": "29.703735396",
+            "pvp": "5.2617440723"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/RADL.png",
+          "sector": {
+            "description": "Varejo & Consumo",
+            "name": "Varejo & Consumo",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "RADL3"
+        },
+        "weight": 10
+      }
+    ],
+    "portfolioAsset": [
+      {
+        "asset": {
+          "company": "Amazon",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/AMZO.svg",
+          "sector": {
+            "description": "Consumo discricionário",
+            "name": "Consumo discricionário",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "AMZO34"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Aura Minerals",
+          "currentFundamentals": {
+            "evEbitda": "13.835996566",
+            "pl": "-68.191785869",
+            "pvp": "23.548538554"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/AURA.svg",
+          "sector": {
+            "description": "Materiais Básicos",
+            "name": "Materiais Básicos",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "AURA33"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Axia Energia",
+          "currentFundamentals": {
+            "evEbitda": "19.987648272",
+            "pl": "21.46969698",
+            "pvp": "1.4884128002"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/AXIA.png",
+          "sector": {
+            "name": "Serviços Básicos",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "AXIA3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "B3",
+          "currentFundamentals": {
+            "evEbitda": "13.197879127",
+            "pl": "21.013362353",
+            "pvp": "5.3485669093"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/B3SA.png",
+          "sector": {
+            "description": " ",
+            "name": "Financeiro",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "B3SA3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Nvidia",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/NVDC.png",
+          "sector": {
+            "description": " ",
+            "name": "Tecnologia",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "NVDC34"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Petrobras",
+          "currentFundamentals": {
+            "evEbitda": "4.2909430757",
+            "pl": "5.5614105349",
+            "pvp": "1.4730476274"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/PETR.png",
+          "sector": {
+            "description": "Petróleo & Gás",
+            "name": "Petróleo & Gás",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "PETR4"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Vale",
+          "currentFundamentals": {
+            "evEbitda": "8.1819439959",
+            "pl": "23.085253367",
+            "pvp": "1.804130178"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/VALE.svg",
+          "sector": {
+            "description": "Mineração & Siderurgia",
+            "name": "Mineração & Siderurgia",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "VALE3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "WEG",
+          "currentFundamentals": {
+            "evEbitda": "22.000236461",
+            "pl": "31.557581289",
+            "pvp": "11.180734303"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/WEGE.png",
+          "sector": {
+            "description": " ",
+            "name": "Bens de Capital",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "WEGE3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "PetroRio",
+          "currentFundamentals": {
+            "evEbitda": "10.097674146",
+            "pl": "23.295762758",
+            "pvp": "2.0232453314"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/PRIO.png",
+          "sector": {
+            "description": "Petróleo & Gás",
+            "name": "Petróleo & Gás",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "PRIO3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Gerdau",
+          "currentFundamentals": {
+            "evEbitda": "6.3974683417",
+            "pl": "27.470151235",
+            "pvp": "0.84108721635"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/GGBR.png",
+          "sector": {
+            "description": "Mineração & Siderurgia",
+            "name": "Mineração & Siderurgia",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "GGBR4"
+        },
+        "weight": 10
+      }
+    ],
+    "portfolioType": {
+      "channels": [
+        "R360",
+        "PUBLIC",
+        "BANKERS"
+      ],
+      "description": "A carteira tem como objetivo capturar as melhores oportunidades e performances do mercado de ações sugerindo uma carteira com até 10 ações. O processo de seleção dos ativos é realizado pelo time de análise técnica do Research do Banco BTG Pactual, com base exclusivamente em análise técnica, sem considerar necessariamente índices de referência ou liquidez. Atualização: Não há periodicidade definida – ou seja, o Research poderá atualizar o relatório em qualquer dia, quando achar relevante.",
+      "frequency": "MENSAL",
+      "hideContent": false,
+      "image": "https://content.btgpactual.com/research/files/file/2023-10-31T183340.758_Imagem.png",
+      "initials": "SWING",
+      "name": "Análise Técnica (Gráfica)",
+      "segments": [
+        "DIGITAL",
+        "WM",
+        "CORPORATE"
+      ]
+    },
+    "previousIndex": -10.21,
+    "previousProfitability": -9.18,
+    "sectorAllocation": [
+      {
+        "percent": 10,
+        "sector": {
+          "description": " ",
+          "name": "Financeiro",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 20,
+        "sector": {
+          "description": "Petróleo & Gás",
+          "name": "Petróleo & Gás",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "name": "Serviços Básicos",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 20,
+        "sector": {
+          "description": "Mineração & Siderurgia",
+          "name": "Mineração & Siderurgia",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "description": "Consumo discricionário",
+          "name": "Consumo discricionário",
+          "sectorIndicator": "BDR"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "description": " ",
+          "name": "Bens de Capital",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "description": "Materiais Básicos",
+          "name": "Materiais Básicos",
+          "sectorIndicator": "BDR"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "description": " ",
+          "name": "Tecnologia",
+          "sectorIndicator": "BDR"
+        }
+      }
+    ],
+    "tier": "AREA_PUBLICA",
+    "topics": [],
+    "validityFinal": "2026-06-12T00:00:00.000-03:00",
+    "validityInitial": "2026-05-15T00:00:00.000-03:00"
+  },
+  {
+    "accumulatedIndex": -0.81,
+    "accumulatedProfitability": -3.65,
+    "authors": [
+      {
+        "id": "443",
+        "name": "Research Empiricus",
+        "local": "Empiricus",
+        "email": "research@empiricus.com.br",
+        "team": {
+          "id": "1",
+          "name": "Research"
+        }
+      }
+    ],
+    "comparativeIndex": "SMLL",
+    "description": "<p>A carteira tem como objetivo capturar as melhores oportunidades de valorização entre empresas do Índice Small Caps. O portfólio pode ter até 15 ativos e é revisado mensalmente. O processo de seleção é conduzido pelo time de análise técnica do Research Empiricus, com base em análise técnica.</p>",
+    "fileName": "https://content.btgpactual.com/research/files/file/2026-05-15T095517.048_Small Technicals - Maio e Junho 2026 VF.pdf",
+    "hideContent": false,
+    "id": "6a0717b59fd8cf7b378504c0",
+    "inAssets": [
+      {
+        "asset": {
+          "company": "Intelbras",
+          "currentFundamentals": {
+            "evEbitda": "8.1398445117",
+            "pl": "9.4963160552",
+            "pvp": "1.531653866"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/INTB.png",
+          "sector": {
+            "description": " ",
+            "name": "Telecom & Tecnologia",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "INTB3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Direcional",
+          "currentFundamentals": {
+            "evEbitda": "7.2145992009",
+            "pl": "8.5664677508",
+            "pvp": "3.5227055076"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/DIRR.png",
+          "sector": {
+            "description": " ",
+            "name": "Construção Civil & Propriedades",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "DIRR3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "iShares BM&FBOVESPA Small Cap Fundo de Índice",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "SMAL11"
+        },
+        "weight": 10
+      }
+    ],
+    "inclusionTime": "2026-05-15T06:58:57.255-03:00",
+    "name": "Empiricus Small Technicals - Mai-Jun 26",
+    "noTagsDescription": "A carteira tem como objetivo capturar as melhores oportunidades de valorização entre empresas do Índice Small Caps. O portfólio pode ter até 15 ativos e é revisado mensalmente. O processo de seleção é conduzido pelo time de análise técnica do Research Empiricus, com base em análise técnica.",
+    "outAssets": [
+      {
+        "asset": {
+          "company": "ALLPARK EMPREENDIMENTOS PARTICIPACOES SERVICOS S.A",
+          "currentFundamentals": {
+            "pl": "133.44637048",
+            "pvp": "2.6613918771"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/ALPK.svg",
+          "sector": {
+            "description": " ",
+            "name": "Construção Civil & Propriedades",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "ALPK3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Tenda",
+          "currentFundamentals": {
+            "evEbitda": "6.3833242623",
+            "pl": "6.9051303229",
+            "pvp": "2.8770261939"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/TEND.png",
+          "sector": {
+            "description": " ",
+            "name": "Construção Civil & Propriedades",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "TEND3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Vamos",
+          "currentFundamentals": {
+            "evEbitda": "4.4660476336",
+            "pl": "13.218950123",
+            "pvp": "1.6893760996"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/VAMO.png",
+          "sector": {
+            "description": " ",
+            "name": "Aluguel de Carros & Logística",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "VAMO3"
+        },
+        "weight": 10
+      }
+    ],
+    "portfolioAsset": [
+      {
+        "asset": {
+          "company": "Moura Dubeux Engenharia SA",
+          "currentFundamentals": {
+            "evEbitda": "7.5236353059",
+            "pl": "6.0949007365",
+            "pvp": "1.6933872039"
+          },
+          "sector": {
+            "description": " ",
+            "name": "Construção Civil & Propriedades",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "MDNE3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Bradespar",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Mineração & Siderurgia",
+            "name": "Mineração & Siderurgia",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "BRAP4"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Priner",
+          "currentFundamentals": {
+            "evEbitda": "9.0632236115",
+            "pl": "-82.694040609",
+            "pvp": "2.2931052425"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/PRNR.svg",
+          "sector": {
+            "name": "Infraestrutura",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "PRNR3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "3Tentos",
+          "currentFundamentals": {
+            "evEbitda": "14.433905237",
+            "pl": "9.2950546989",
+            "pvp": "1.6171932224"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/TTEN.png",
+          "sector": {
+            "name": "Agronegócio",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "TTEN3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "IRB Brasil RE",
+          "currentFundamentals": {
+            "pl": "11.114112778",
+            "pvp": "0.82029403028"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/IRBR.png",
+          "sector": {
+            "description": " ",
+            "name": "Financeiro",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "IRBR3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Smart Fit",
+          "currentFundamentals": {
+            "evEbitda": "4.2224322506",
+            "pl": "15.9348415",
+            "pvp": "1.8039125079"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/SMFT.png",
+          "sector": {
+            "description": "Varejo & Consumo",
+            "name": "Varejo & Consumo",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "SMFT3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Usiminas",
+          "currentFundamentals": {
+            "evEbitda": "-66.98415676",
+            "pl": "-3.8567137681",
+            "pvp": "0.48968565097"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/USIM.png",
+          "sector": {
+            "description": "Mineração & Siderurgia",
+            "name": "Mineração & Siderurgia",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "USIM5"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Intelbras",
+          "currentFundamentals": {
+            "evEbitda": "8.1398445117",
+            "pl": "9.4963160552",
+            "pvp": "1.531653866"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/INTB.png",
+          "sector": {
+            "description": " ",
+            "name": "Telecom & Tecnologia",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "INTB3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Direcional",
+          "currentFundamentals": {
+            "evEbitda": "7.2145992009",
+            "pl": "8.5664677508",
+            "pvp": "3.5227055076"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/DIRR.png",
+          "sector": {
+            "description": " ",
+            "name": "Construção Civil & Propriedades",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "DIRR3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "iShares BM&FBOVESPA Small Cap Fundo de Índice",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "SMAL11"
+        },
+        "weight": 10
+      }
+    ],
+    "portfolioType": {
+      "channels": [
+        "R360",
+        "PUBLIC",
+        "BANKERS"
+      ],
+      "description": "A carteira tem como objetivo capturar movimentos técnicos das ações que compõem o Índice Small Caps (SMLL), atualmente formado por 112 ativos, além do ETF SMAL11. A estratégia é fundamentada em análise técnica e direcionada a investidores com maior apetite ao risco, que buscam potencializar retornos assumindo a volatilidade inerente a esse perfil de ativos.\nA ideia consiste na seleção de 10 a 15 ativos com maior potencial de valorização, identificados a partir de configurações técnicas favoráveis, visando oportunidades de ganho no curto e médio prazo.",
+      "frequency": "MENSAL",
+      "hideContent": false,
+      "image": "https://content.btgpactual.com/research/files/file/2026-03-16T104659.629_portfolio-empiricus.png",
+      "initials": "EMPSMALL",
+      "name": "Empiricus Small Technicals",
+      "segments": [
+        "DIGITAL",
+        "WM",
+        "CORPORATE"
+      ]
+    },
+    "previousIndex": -3.16,
+    "previousProfitability": -4.72,
+    "sectorAllocation": [
+      {
+        "percent": 10,
+        "sector": {
+          "description": " ",
+          "name": "Financeiro",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 20,
+        "sector": {
+          "description": " ",
+          "name": "Construção Civil & Propriedades",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "name": "Agronegócio",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 20,
+        "sector": {
+          "description": "Mineração & Siderurgia",
+          "name": "Mineração & Siderurgia",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "description": " ",
+          "name": "Telecom & Tecnologia",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+          "name": "Fundos de Índice",
+          "sectorIndicator": "ETF"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "name": "Infraestrutura",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "description": "Varejo & Consumo",
+          "name": "Varejo & Consumo",
+          "sectorIndicator": "ACAO"
+        }
+      }
+    ],
+    "tier": "AREA_PUBLICA",
+    "topics": [],
+    "validityFinal": "2026-06-12T00:00:00.000-03:00",
+    "validityInitial": "2026-05-15T00:00:00.000-03:00"
+  },
+  {
+    "accumulatedIndex": 13.89,
+    "accumulatedProfitability": 5.51,
+    "authors": [
+      {
+        "id": "443",
+        "name": "Research Empiricus",
+        "local": "Empiricus",
+        "email": "research@empiricus.com.br",
+        "team": {
+          "id": "1",
+          "name": "Research"
+        }
+      }
+    ],
+    "comparativeIndex": "NASD11",
+    "description": "<p>A carteira Empiricus Megatendências tem como objetivo capturar os principais movimentos estruturais da economia, no Brasil e no exterior, por meio de investimentos simples, acessíveis e negociados na bolsa local. A estratégia parte da identificação de principais mudanças em curso — sejam tecnológicas, geopolíticas ou econômicas — para direcionar a alocação a setores, regiões e temas que tendem a se beneficiar dessas transformações. Mais do que buscar ganhos pontuais, a proposta é se posicionar em tendências amplas e duradouras, com potencial de redefinir a dinâmica dos mercados ao longo do tempo.</p>",
+    "fileName": "https://content.btgpactual.com/research/files/file/2026-05-15T095328.718_IA CASH - 2026.05 [Imprensa].pdf",
+    "hideContent": false,
+    "id": "6a07174a806f8f23d7010460",
+    "inAssets": [],
+    "inclusionTime": "2026-05-15T06:53:28.708-03:00",
+    "name": "Empiricus IA Cash - Mai-Jun 26",
+    "noTagsDescription": "A carteira Empiricus Megatendências tem como objetivo capturar os principais movimentos estruturais da economia, no Brasil e no exterior, por meio de investimentos simples, acessíveis e negociados na bolsa local. A estratégia parte da identificação de principais mudanças em curso — sejam tecnológicas, geopolíticas ou econômicas — para direcionar a alocação a setores, regiões e temas que tendem a se beneficiar dessas transformações. Mais do que buscar ganhos pontuais, a proposta é se posicionar em tendências amplas e duradouras, com potencial de redefinir a dinâmica dos mercados ao longo do tempo.",
+    "outAssets": [],
+    "portfolioAsset": [
+      {
+        "asset": {
+          "company": "Meta Platforms",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Comunicação",
+            "name": "Comunicação",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "M1TA34"
+        },
+        "weight": 12
+      },
+      {
+        "asset": {
+          "company": "Microsoft",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/MSFT.png",
+          "sector": {
+            "description": " ",
+            "name": "Tecnologia",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "MSFT34"
+        },
+        "weight": 12
+      },
+      {
+        "asset": {
+          "company": "Amazon",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/AMZO.svg",
+          "sector": {
+            "description": "Consumo discricionário",
+            "name": "Consumo discricionário",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "AMZO34"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Nvidia",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/NVDC.png",
+          "sector": {
+            "description": " ",
+            "name": "Tecnologia",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "NVDC34"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "TAIWAN SEMICONDUCTOR",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/TSMC.svg",
+          "sector": {
+            "description": " ",
+            "name": "Tecnologia",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "TSMC34"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Alibaba Group Holding Limited",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/BABA.svg",
+          "sector": {
+            "description": " ",
+            "name": "Tecnologia",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "BABA34"
+        },
+        "weight": 8
+      },
+      {
+        "asset": {
+          "company": "BAIDU INC",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/BIDU.svg",
+          "sector": {
+            "description": " ",
+            "name": "Tecnologia",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "BIDU34"
+        },
+        "weight": 8
+      },
+      {
+        "asset": {
+          "company": "Salesforce",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/SSFO.svg",
+          "sector": {
+            "description": " ",
+            "name": "Tecnologia",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "SSFO34"
+        },
+        "weight": 8
+      },
+      {
+        "asset": {
+          "company": "SNOWFLAKE INC",
+          "currentFundamentals": {},
+          "sector": {
+            "description": " ",
+            "name": "Tecnologia",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "S2NW34"
+        },
+        "weight": 7
+      },
+      {
+        "asset": {
+          "company": "Alphabet",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/GOGL.svg",
+          "sector": {
+            "description": "Comunicação",
+            "name": "Comunicação",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "GOGL34"
+        },
+        "weight": 6
+      },
+      {
+        "asset": {
+          "company": "Vertiv Holdings Co",
+          "currentFundamentals": {},
+          "sector": {
+            "description": " ",
+            "name": "Tecnologia",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "V1RT34"
+        },
+        "weight": 3
+      },
+      {
+        "asset": {
+          "company": "Micron Technology",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/MUTC.png",
+          "sector": {
+            "description": " ",
+            "name": "Tecnologia",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "MUTC34"
+        },
+        "weight": 1
+      },
+      {
+        "asset": {
+          "company": "BTG Pactual Teva Bitcoin",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "BITC11"
+        },
+        "weight": 3
+      },
+      {
+        "asset": {
+          "company": "BTG Pactual Teva Ethereum",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "EETH11"
+        },
+        "weight": 2
+      }
+    ],
+    "portfolioType": {
+      "channels": [
+        "R360",
+        "PUBLIC",
+        "BANKERS"
+      ],
+      "description": "A carteira tem como objetivo investir em ativos que estão presentes na carteira IA Cash, produto da Empiricus com o objetivo de permitir ao investidor alocar parte do seu capital em ações de empresas ligadas a tecnologia de Inteligência Artificial – cujo benchmark é o índice Nasdaq (CCMP) e composto por ações e ativos digitais (criptomoedas). A ideia é escolher entre 10 a 15 ativos mensalmente, que estejam dentro do nosso universo de cobertura, com pesos que não ultrapasse 15% por ativo, e que contam com BDR listada na B3. ",
+      "frequency": "MENSAL",
+      "hideContent": false,
+      "image": "https://content.btgpactual.com/research/files/file/2026-03-16T104710.767_portfolio-empiricus.png",
+      "initials": "EMPIACASH",
+      "name": "Empiricus IA Cash",
+      "segments": [
+        "DIGITAL",
+        "WM",
+        "CORPORATE"
+      ]
+    },
+    "previousIndex": 8.56,
+    "previousProfitability": 7.44,
+    "sectorAllocation": [
+      {
+        "percent": 10,
+        "sector": {
+          "description": "Consumo discricionário",
+          "name": "Consumo discricionário",
+          "sectorIndicator": "BDR"
+        }
+      },
+      {
+        "percent": 18,
+        "sector": {
+          "description": "Comunicação",
+          "name": "Comunicação",
+          "sectorIndicator": "BDR"
+        }
+      },
+      {
+        "percent": 5,
+        "sector": {
+          "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+          "name": "Fundos de Índice",
+          "sectorIndicator": "ETF"
+        }
+      },
+      {
+        "percent": 67,
+        "sector": {
+          "description": " ",
+          "name": "Tecnologia",
+          "sectorIndicator": "BDR"
+        }
+      }
+    ],
+    "tier": "AREA_PUBLICA",
+    "topics": [],
+    "validityFinal": "2026-06-12T00:00:00.000-03:00",
+    "validityInitial": "2026-05-15T00:00:00.000-03:00"
+  },
+  {
+    "accumulatedIndex": -1.13,
+    "accumulatedProfitability": -2.43,
+    "authors": [
+      {
+        "id": "443",
+        "name": "Research Empiricus",
+        "local": "Empiricus",
+        "email": "research@empiricus.com.br",
+        "team": {
+          "id": "1",
+          "name": "Research"
+        }
+      }
+    ],
+    "comparativeIndex": "IDCOT +2%",
+    "description": "<p>A carteira Empiricus Megatendências tem como objetivo capturar os principais movimentos estruturais da economia, no Brasil e no exterior, por meio de investimentos simples, acessíveis e negociados na bolsa local. A estratégia parte da identificação de principais mudanças em curso — sejam tecnológicas, geopolíticas ou econômicas — para direcionar a alocação a setores, regiões e temas que tendem a se beneficiar dessas transformações. Mais do que buscar ganhos pontuais, a proposta é se posicionar em tendências amplas e duradouras, com potencial de redefinir a dinâmica dos mercados ao longo do tempo.</p>",
+    "fileName": "https://content.btgpactual.com/research/files/file/2026-05-15T095211.918_Relatório Empiricus Megatendências mai2026 vf.pdf",
+    "hideContent": false,
+    "id": "6a0716fd9fd8cf7b378504bf",
+    "inAssets": [
+      {
+        "asset": {
+          "company": "BTG Pactual S&P 500 Futures Quanto BRL",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "SPBZ11"
+        },
+        "weight": 5
+      },
+      {
+        "asset": {
+          "company": "INVESTO ETF US LISTED SEMICONDUCTOR 25 INDEX",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "CHIP11"
+        },
+        "weight": 5
+      }
+    ],
+    "inclusionTime": "2026-05-15T06:52:11.908-03:00",
+    "name": "Empiricus Megatendências",
+    "noTagsDescription": "A carteira Empiricus Megatendências tem como objetivo capturar os principais movimentos estruturais da economia, no Brasil e no exterior, por meio de investimentos simples, acessíveis e negociados na bolsa local. A estratégia parte da identificação de principais mudanças em curso — sejam tecnológicas, geopolíticas ou econômicas — para direcionar a alocação a setores, regiões e temas que tendem a se beneficiar dessas transformações. Mais do que buscar ganhos pontuais, a proposta é se posicionar em tendências amplas e duradouras, com potencial de redefinir a dinâmica dos mercados ao longo do tempo.",
+    "outAssets": [],
+    "portfolioAsset": [
+      {
+        "asset": {
+          "company": "BTG PACTUAL SMLL B3 FUNDO DE ÍNDICE",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "SMAB11"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "BTG PACTUAL TEVA AÇÕES COMMODITIES BRASIL FDO IND",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "CMDB11"
+        },
+        "weight": 15
+      },
+      {
+        "asset": {
+          "company": "BTG PACTUAL TEVA TES IPCA LO",
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "PACB11"
+        },
+        "weight": 15
+      },
+      {
+        "asset": {
+          "company": "BTG PACTUAL FUTURO DE OURO B3 FUNDO DE ÍNDICE",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "GOLB11"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "ETFi Shares U.S. Aerospace&Defense ETF",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Indústria",
+            "name": "Indústria",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "BAER39"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Global X Uranium ETF",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "BURA39"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "VANECK GOLD MINERS ETF",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "GDXB39"
+        },
+        "weight": 5
+      },
+      {
+        "asset": {
+          "company": "GLOBAL X MSCI ARGENTINA ETF",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "ARGT39"
+        },
+        "weight": 5
+      },
+      {
+        "asset": {
+          "company": "Global X Robotics & Artificial Intelligence ETF",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "BOTZ39"
+        },
+        "weight": 5
+      },
+      {
+        "asset": {
+          "company": "EMPIRICUS TEVA CRIPTOMOEDAS TOP20",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "CRPT11"
+        },
+        "weight": 5
+      },
+      {
+        "asset": {
+          "company": "BTG Pactual S&P 500 Futures Quanto BRL",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "SPBZ11"
+        },
+        "weight": 5
+      },
+      {
+        "asset": {
+          "company": "INVESTO ETF US LISTED SEMICONDUCTOR 25 INDEX",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "CHIP11"
+        },
+        "weight": 5
+      }
+    ],
+    "portfolioType": {
+      "channels": [
+        "R360",
+        "PUBLIC",
+        "BANKERS"
+      ],
+      "description": " Resumo da estratégia: \n\nA proposta do Empiricus Megatendências é capturar as principais teses macroeconômicas — no Brasil e no mundo — por meio de veículos listados localmente que combinem diversificação, eficiência e simplicidade de acesso. Trata-se de uma abordagem essencialmente top-down, orientada à identificação de grandes vetores estruturais e à alocação em setores e temas que se beneficiam dessas transformações, utilizando ETFs e BDRs de ETFs como instrumentos centrais dessa construção.\n",
+      "frequency": "MENSAL",
+      "hideContent": false,
+      "image": "https://content.btgpactual.com/research/files/file/2026-04-23T115626.820_portfolio-empiricus.png",
+      "initials": "EMPMEGA",
+      "name": " Empiricus Megatendências",
+      "segments": [
+        "DIGITAL",
+        "WM",
+        "CORPORATE"
+      ]
+    },
+    "previousIndex": -1.53,
+    "previousProfitability": 0.85,
+    "sectorAllocation": [
+      {
+        "percent": 90,
+        "sector": {
+          "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+          "name": "Fundos de Índice",
+          "sectorIndicator": "ETF"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "description": "Indústria",
+          "name": "Indústria",
+          "sectorIndicator": "BDR"
+        }
+      }
+    ],
+    "tier": "AREA_PUBLICA",
+    "topics": [],
+    "validityFinal": "2026-06-12T00:00:00.000-03:00",
+    "validityInitial": "2026-05-15T00:00:00.000-03:00"
+  },
+  {
+    "accumulatedIndex": -1.35,
+    "accumulatedProfitability": 0.08,
+    "authors": [
+      {
+        "id": "443",
+        "name": "Research Empiricus",
+        "local": "Empiricus",
+        "email": "research@empiricus.com.br",
+        "team": {
+          "id": "1",
+          "name": "Research"
+        }
+      }
+    ],
+    "comparativeIndex": "IDCOTS",
+    "description": "<p>A Carteira Alocação Estrutural Global nasce com uma proposta clara: oferecer ao investidor brasileiro uma forma simples, acessível e disciplinada de investir globalmente por meio de ativos listados na B3, com foco em preservação de patrimônio real e geração de retorno ajustado ao risco no longo prazo.</p><p>A lógica central da estratégia é reduzir a dependência de um único país, uma única moeda e um único ciclo econômico. Em vez de concentrar risco no Brasil, a carteira combina blocos globais de renda fixa, ações, ouro e ativos alternativos, criando uma estrutura robusta para atravessar diferentes regimes de mercado.</p>",
+    "fileName": "https://content.btgpactual.com/research/files/file/2026-05-15T094932.315_Carteira Automatizada - Alocação Estrutural Global - mai26.pdf",
+    "hideContent": false,
+    "id": "6a071664806f8f23d701045f",
+    "inAssets": [],
+    "inclusionTime": "2026-05-15T06:49:32.128-03:00",
+    "name": "Empiricus Alocação Estrutural Global",
+    "noTagsDescription": "A Carteira Alocação Estrutural Global nasce com uma proposta clara: oferecer ao investidor brasileiro uma forma simples, acessível e disciplinada de investir globalmente por meio de ativos listados na B3, com foco em preservação de patrimônio real e geração de retorno ajustado ao risco no longo prazo. A lógica central da estratégia é reduzir a dependência de um único país, uma única moeda e um único ciclo econômico. Em vez de concentrar risco no Brasil, a carteira combina blocos globais de renda fixa, ações, ouro e ativos alternativos, criando uma estrutura robusta para atravessar diferentes regimes de mercado.",
+    "outAssets": [],
+    "portfolioAsset": [
+      {
+        "asset": {
+          "company": "ISHARES SHORT TREASURY BOND ETF",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "BSHV39"
+        },
+        "weight": 22
+      },
+      {
+        "asset": {
+          "company": "ISHARES US TREASURY BOND ETF",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "BGOV39"
+        },
+        "weight": 25
+      },
+      {
+        "asset": {
+          "company": "ISHARES IBOXX INVESTMENT GRADE CORPORATE BOND ETF",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "BLQD39"
+        },
+        "weight": 15
+      },
+      {
+        "asset": {
+          "company": "ISHARES IBOXX $ HIGH YIELD CORPORATE BOND ETF",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "BHYG39"
+        },
+        "weight": 15
+      },
+      {
+        "asset": {
+          "company": "ISHARES CORE S&P 500 ETF",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "BIVB39"
+        },
+        "weight": 6
+      },
+      {
+        "asset": {
+          "company": "ISHARES CORE MSCI EUROPE ETF",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "BIEU39"
+        },
+        "weight": 2
+      },
+      {
+        "asset": {
+          "company": "ISHARES MSCI JAPAN ETF",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "BEWJ39"
+        },
+        "weight": 1
+      },
+      {
+        "asset": {
+          "company": "ISHARES MSCI EMERGING MARKETS ETF",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "BEEM39"
+        },
+        "weight": 1
+      },
+      {
+        "asset": {
+          "company": "ISHARES GOLD TRUST",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "BIAU39"
+        },
+        "weight": 7
+      },
+      {
+        "asset": {
+          "company": "EMPIRICUS TEVA CRIPTOMOEDAS TOP20",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "CRPT11"
+        },
+        "weight": 1
+      },
+      {
+        "asset": {
+          "company": "ISHARES CORE US REIT ETF",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "BUSR39"
+        },
+        "weight": 2.5
+      },
+      {
+        "asset": {
+          "company": "ISHARES GLOBAL REIT ETF",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "BGRT39"
+        },
+        "weight": 2.5
+      }
+    ],
+    "portfolioType": {
+      "channels": [
+        "R360",
+        "PUBLIC",
+        "BANKERS"
+      ],
+      "description": "Resumo da estratégia: A carteira tem como objetivo proporcionar uma alocação estrutural de longo prazo para o investidor pessoal física (público geral). A alocação é baseada no modelo de paridade de risco, ou seja, não há viés de risco em nenhuma das classes de alocação.\n \nO retorno médio esperado é de dólar+3% ao ano, em linha com uma alocação passiva e o perfil de risco moderado.\nA carteira será inspirada na Carteira Global Geral da série Melhores Fundos da Empiricus com tracking record desde março de 2021 com performance de Dólar +5,02% a.a.\nA carteira proposta terá entre 10 e 15 ativos.\n \nO benchmark é o índice IDCOTS (juros nominais americanos de curto prazo)\n \nPeriodicidade de revisão: Mensal\n \nTipos de ativos: BDR de ETF e ETF \nAtivos elegíveis: BDR de ETFs, ETF ou ETF de ETF globais.\n",
+      "frequency": "MENSAL",
+      "hideContent": false,
+      "image": "https://content.btgpactual.com/research/files/file/2026-04-23T115656.896_portfolio-empiricus.png",
+      "initials": "EMPGLOB",
+      "name": "Empiricus Alocação Estrutural Global",
+      "segments": [
+        "DIGITAL",
+        "WM",
+        "CORPORATE"
+      ]
+    },
+    "previousIndex": -1.35,
+    "previousProfitability": 0.08,
+    "sectorAllocation": [
+      {
+        "percent": 100,
+        "sector": {
+          "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+          "name": "Fundos de Índice",
+          "sectorIndicator": "ETF"
+        }
+      }
+    ],
+    "tier": "AREA_PUBLICA",
+    "topics": [],
+    "validityFinal": "2026-06-12T00:00:00.000-03:00",
+    "validityInitial": "2026-05-15T00:00:00.000-03:00"
+  },
+  {
+    "accumulatedIndex": -0.5,
+    "accumulatedProfitability": -2.6,
+    "authors": [
+      {
+        "id": "281",
+        "name": "Renata Faber",
+        "image": "https://content.btgpactual.com/research/files/media/2021-09-03T140418.836_blob",
+        "local": "São Paulo",
+        "email": "renata.faber@btgpactual.com",
+        "team": {
+          "id": "1",
+          "name": "Research"
+        }
+      },
+      {
+        "id": "169",
+        "name": "Carlos Sequeira, CFA",
+        "image": "https://content.btgpactual.com/research/files/media/2021-06-01T193013.560_90195.jpg",
+        "local": "São Paulo",
+        "team": {
+          "id": "1",
+          "name": "Research"
+        }
+      },
+      {
+        "id": "201",
+        "name": "Rafaella Dortas",
+        "image": "https://content.btgpactual.com/research/files/media/2021-06-01T193017.493_378996.jpg",
+        "local": "São Paulo",
+        "team": {
+          "id": "1",
+          "name": "Research"
+        }
+      }
+    ],
+    "comparativeIndex": "S&P/B3,",
+    "description": "<p>O investimento responsável está se tornando cada vez mais importante para a comunidade de investidores em geral<br>e para os investidores latino-americanos em particular. Com o objetivo de auxiliar nossos clientes em seu processo<br>de investimento, lançamos um portfólio ESG. Será uma carteira de 10 ações, com revisão mensal .</p>",
+    "fileName": "https://content.btgpactual.com/research/files/file/2026-05-15T093348.873_BTG ESG MAIO26.pdf",
+    "hideContent": false,
+    "id": "6a0712af9fd8cf7b378504be",
+    "inAssets": [
+      {
+        "asset": {
+          "company": "Smart Fit",
+          "currentFundamentals": {
+            "evEbitda": "4.2224322506",
+            "pl": "15.9348415",
+            "pvp": "1.8039125079"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/SMFT.png",
+          "sector": {
+            "description": "Varejo & Consumo",
+            "name": "Varejo & Consumo",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "SMFT3"
+        },
+        "weight": 10
+      }
+    ],
+    "inclusionTime": "2026-05-15T06:33:48.866-03:00",
+    "name": "ESG - Maio/2026",
+    "noTagsDescription": "O investimento responsável está se tornando cada vez mais importante para a comunidade de investidores em geral e para os investidores latino-americanos em particular. Com o objetivo de auxiliar nossos clientes em seu processo de investimento, lançamos um portfólio ESG. Será uma carteira de 10 ações, com revisão mensal .",
+    "outAssets": [
+      {
+        "asset": {
+          "company": "C&A",
+          "currentFundamentals": {
+            "evEbitda": "1.9010996848",
+            "pl": "5.8523453971",
+            "pvp": "0.92744203103"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/CEAB.png",
+          "sector": {
+            "description": "Varejo & Consumo",
+            "name": "Varejo & Consumo",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "CEAB3"
+        },
+        "weight": 10
+      }
+    ],
+    "portfolioAsset": [
+      {
+        "asset": {
+          "company": "Allos",
+          "currentFundamentals": {
+            "evEbitda": "6.3435997269",
+            "pl": "18.631900697",
+            "pvp": "1.1767144937"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/ALSO.png",
+          "sector": {
+            "description": " ",
+            "name": "Construção Civil & Propriedades",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "ALOS3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Axia Energia",
+          "currentFundamentals": {
+            "evEbitda": "19.987648272",
+            "pl": "21.46969698",
+            "pvp": "1.4884128002"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/AXIA.png",
+          "sector": {
+            "name": "Serviços Básicos",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "AXIA3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Copel",
+          "currentFundamentals": {
+            "evEbitda": "9.9209883873",
+            "pl": "17.832256636",
+            "pvp": "2.0712146558"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/CPLE.svg",
+          "sector": {
+            "name": "Serviços Básicos",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "CPLE3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Equatorial",
+          "currentFundamentals": {
+            "evEbitda": "8.8875982446",
+            "pl": "31.820148802",
+            "pvp": "2.0832312513"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/EQTL.svg",
+          "sector": {
+            "name": "Serviços Básicos",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "EQTL3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Itaú Unibanco",
+          "currentFundamentals": {
+            "pl": "10.71059971",
+            "pvp": "2.4791212077"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/ITUB.svg",
+          "sector": {
+            "description": " ",
+            "name": "Financeiro",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "ITUB4"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Localiza",
+          "currentFundamentals": {
+            "evEbitda": "6.1600220117",
+            "pl": "26.597122482",
+            "pvp": "2.0288065053"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/RENT.png",
+          "sector": {
+            "description": " ",
+            "name": "Aluguel de Carros & Logística",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "RENT3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Nubank",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/NUBR.png",
+          "sector": {
+            "description": " ",
+            "name": "Financeiro",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "ROXO34"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Motiva",
+          "currentFundamentals": {
+            "evEbitda": "7.1170954429",
+            "pl": "9.8010167928",
+            "pvp": "2.0357915739"
+          },
+          "sector": {
+            "name": "Infraestrutura",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "MOTV3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Rede D'or",
+          "currentFundamentals": {
+            "evEbitda": "7.9139013431",
+            "pl": "18.118883764",
+            "pvp": "4.381646167"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/RDOR.png",
+          "sector": {
+            "description": " ",
+            "name": "Saúde",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "RDOR3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Smart Fit",
+          "currentFundamentals": {
+            "evEbitda": "4.2224322506",
+            "pl": "15.9348415",
+            "pvp": "1.8039125079"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/SMFT.png",
+          "sector": {
+            "description": "Varejo & Consumo",
+            "name": "Varejo & Consumo",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "SMFT3"
+        },
+        "weight": 10
+      }
+    ],
+    "portfolioType": {
+      "channels": [
+        "R360",
+        "PUBLIC",
+        "BANKERS"
+      ],
+      "description": "O investimento responsável está se tornando cada vez mais importante para a comunidade de investidores em geral e para os investidores latino-americanos em particular. Com o objetivo de auxiliar nossos clientes em seu processo de investimento, estamos lançando nosso primeiro portfólio ESG. Será uma carteira de 10 ações, com revisão mensal. ",
+      "frequency": "MENSAL",
+      "hideContent": false,
+      "image": "https://digital-research-prd.s3-sa-east-1.amazonaws.com/file/2023-10-31T183412.659_Imagem.png",
+      "initials": "ESG",
+      "name": "ESG",
+      "segments": [
+        "DIGITAL",
+        "WM",
+        "CORPORATE"
+      ]
+    },
+    "previousIndex": -9.6,
+    "previousProfitability": -15,
+    "sectorAllocation": [
+      {
+        "percent": 20,
+        "sector": {
+          "description": " ",
+          "name": "Financeiro",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "description": " ",
+          "name": "Construção Civil & Propriedades",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 30,
+        "sector": {
+          "name": "Serviços Básicos",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "description": " ",
+          "name": "Aluguel de Carros & Logística",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "name": "Infraestrutura",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "description": " ",
+          "name": "Saúde",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "description": "Varejo & Consumo",
+          "name": "Varejo & Consumo",
+          "sectorIndicator": "ACAO"
+        }
+      }
+    ],
+    "tier": "AREA_PUBLICA",
+    "topics": [],
+    "validityFinal": "2026-06-12T00:00:00.000-03:00",
+    "validityInitial": "2026-05-15T00:00:00.000-03:00"
+  },
+  {
+    "accumulatedIndex": 33.14,
+    "accumulatedProfitability": 54.82,
+    "authors": [
+      {
+        "id": "382",
+        "name": "Luis Gonçalves",
+        "local": "São Paulo",
+        "email": "analise.credito@btgpactual.com",
+        "team": {
+          "id": "1",
+          "name": "Research"
+        }
+      },
+      {
+        "id": "739",
+        "name": "Fernando Revers",
+        "local": "São Paulo",
+        "email": "fernando.revers@btgpactual.com",
+        "occupation": "",
+        "team": {
+          "id": "1",
+          "name": "Research"
+        }
+      },
+      {
+        "id": "141",
+        "name": "Matheus Oliveira",
+        "image": "https://content.btgpactual.com/research/files/media/2021-08-19T113752.362_blob",
+        "local": "São Paulo",
+        "email": "analise.fii@btgpactual.com",
+        "occupation": "Analista de FIIs",
+        "team": {
+          "id": "1",
+          "name": "Research"
+        },
+        "description": "Formado em Economia e com certificação CNPI, especializou-se no Mercado de Fundos Imobiliários. Com passagem por diversos setores da economia (energia, indústria, automotivo) iniciou sua trajetória no mercado financeiro na mesa de operações de produtos financeiros, migrando posteriormente para a análise de ofertas públicas. No BTG Pactual desde 2020, hoje atua exclusivamente na área de análise de fundos imobiliários",
+        "instagramUrl": "matheusfiis",
+        "linkedinUrl": "https://www.linkedin.com/in/matheus-alves-de-oliveira/"
+      },
+      {
+        "id": "41",
+        "name": "Daniel Marinelli",
+        "image": "https://content.btgpactual.com/research/files/media/2025-02-03T112505.572_Image.jpg",
+        "local": "São Paulo",
+        "email": "analise.fii@btgpactual.com",
+        "team": {
+          "id": "1",
+          "name": "Research"
+        }
+      },
+      {
+        "id": "262",
+        "name": "Frederico Khouri",
+        "image": "https://content.btgpactual.com/research/files/media/2024-04-11T180321.297_Capture.PNG",
+        "local": "São Paulo",
+        "email": "frederico.khouri@btgpactual.com",
+        "team": {
+          "id": "1",
+          "name": "Research"
+        }
+      }
+    ],
+    "buyable": true,
+    "comparativeIndex": "IMA-B 5+",
+    "description": "<p>Destinada para clientes que gostariam de ter renda mensal isenta de imposto de renda na distribuição de rendimentos para pessoa física, a Top Fundos para Renda tem como objetivo capturar as melhores oportunidades em termos de rendimentos após um profundo processo de análise e avaliação de qualidade dos ativos.</p>",
+    "fileName": "https://content.btgpactual.com/research/files/file/2026-05-12T162148.535_BTGFII Top Picks de Fundos Listados para Renda MAI26.pdf",
+    "hideContent": false,
+    "id": "6a01c73b9fd8cf7b378504bd",
+    "inAssets": [],
+    "inclusionTime": "2026-05-12T13:21:48.464-03:00",
+    "name": "Top Fundos - Maio/26",
+    "noTagsDescription": "Destinada para clientes que gostariam de ter renda mensal isenta de imposto de renda na distribuição de rendimentos para pessoa física, a Top Fundos para Renda tem como objetivo capturar as melhores oportunidades em termos de rendimentos após um profundo processo de análise e avaliação de qualidade dos ativos.",
+    "outAssets": [
+      {
+        "asset": {
+          "company": "Kinea Crédito Agro",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fiagros",
+            "name": "Fiagros",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "KNCA11"
+        },
+        "weight": 2
+      }
+    ],
+    "portfolioAsset": [
+      {
+        "asset": {
+          "company": "Kinea High Yield CRI",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Recebíveis",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "KNHY11"
+        },
+        "weight": 5
+      },
+      {
+        "asset": {
+          "company": "RBR Crédito Imobiliário Estruturado FII",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Recebíveis",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "RBRY11"
+        },
+        "weight": 9
+      },
+      {
+        "asset": {
+          "company": "Kinea Rendimentos Imobiliários FII",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Recebíveis",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "KNCR11"
+        },
+        "weight": 15.5
+      },
+      {
+        "asset": {
+          "company": "Kinea Índice de Preços FII",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Recebíveis",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "KNIP11"
+        },
+        "weight": 3.5
+      },
+      {
+        "asset": {
+          "company": "Mauá Capital Recebíveis Imobiliários FII",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Recebíveis",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "MCCI11"
+        },
+        "weight": 7
+      },
+      {
+        "asset": {
+          "company": "TRX Real Estate FII",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Renda Urbana",
+            "name": "Renda Urbana",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "TRXF11"
+        },
+        "weight": 7
+      },
+      {
+        "asset": {
+          "company": "Kinea Hedge Fund",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Hedge Fund",
+            "name": "Hedge Fund",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "KNHF11"
+        },
+        "weight": 3.5
+      },
+      {
+        "asset": {
+          "company": "Mauá Capital Real Estate",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Recebíveis",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "MCRE11"
+        },
+        "weight": 4
+      },
+      {
+        "asset": {
+          "company": "Capitânia Securities II FII",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Recebíveis",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "CPTS11"
+        },
+        "weight": 4.5
+      },
+      {
+        "asset": {
+          "company": "Tellus Properties FII",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Lajes Corporativas",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "TEPP11"
+        },
+        "weight": 2.5
+      },
+      {
+        "asset": {
+          "company": "BTG Pactual Dívida Infra ",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "FIPs e FI-Infras",
+            "name": "FIPs e FI-Infras",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "BDIF11"
+        },
+        "weight": 10.5
+      },
+      {
+        "asset": {
+          "company": "Bocaina FIC FI-Infra",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "FIPs e FI-Infras",
+            "name": "FIPs e FI-Infras",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "BODB11"
+        },
+        "weight": 7
+      },
+      {
+        "asset": {
+          "company": "Capitânia Infra FIC FIRF",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "FIPs e FI-Infras",
+            "name": "FIPs e FI-Infras",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "CPTI11"
+        },
+        "weight": 6
+      },
+      {
+        "asset": {
+          "company": "Sparta Infra CDI FI-Infra",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "FIPs e FI-Infras",
+            "name": "FIPs e FI-Infras",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "CDII11"
+        },
+        "weight": 8.5
+      },
+      {
+        "asset": {
+          "company": "Kinea Infra",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "FIPs e FI-Infras",
+            "name": "FIPs e FI-Infras",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "KDIF11"
+        },
+        "weight": 4.5
+      },
+      {
+        "asset": {
+          "company": "Itaú Asset Rural",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fiagros",
+            "name": "Fiagros",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "RURA11"
+        },
+        "weight": 2
+      }
+    ],
+    "portfolioType": {
+      "channels": [
+        "R360",
+        "PUBLIC",
+        "BANKERS"
+      ],
+      "description": "Destinada para clientes que gostariam de ter renda mensal isenta de imposto de renda na distribuição de rendimentos para pessoa física, a Carteira Recomendada de Fundos Imobiliários tem como objetivo capturar as melhores oportunidades e performances do mercado de FIIs após um profundo processo de análise e avaliação de qualidade dos ativos.",
+      "frequency": "MENSAL",
+      "hideContent": false,
+      "image": "https://digital-research-prd.s3-sa-east-1.amazonaws.com/file/2023-10-31T183450.961_Imagem.png",
+      "initials": "TOPFII",
+      "name": "Top Fundos Listados para Renda",
+      "segments": [
+        "DIGITAL",
+        "WM",
+        "CORPORATE"
+      ]
+    },
+    "previousIndex": 1.26,
+    "previousProfitability": 0.7,
+    "purchaseId": "8606",
+    "purchaseLink": "https://app.btgpactual.com/?productType=HOMEBROKER&productID=recommended-wallets&hb_param=8606&origin=content_research",
+    "sectorAllocation": [
+      {
+        "percent": 2,
+        "sector": {
+          "description": "Fiagros",
+          "name": "Fiagros",
+          "sectorIndicator": "FII"
+        }
+      },
+      {
+        "percent": 2.5,
+        "sector": {
+          "name": "Lajes Corporativas",
+          "sectorIndicator": "FII"
+        }
+      },
+      {
+        "percent": 7,
+        "sector": {
+          "description": "Renda Urbana",
+          "name": "Renda Urbana",
+          "sectorIndicator": "FII"
+        }
+      },
+      {
+        "percent": 48.5,
+        "sector": {
+          "name": "Recebíveis",
+          "sectorIndicator": "FII"
+        }
+      },
+      {
+        "percent": 36.5,
+        "sector": {
+          "description": "FIPs e FI-Infras",
+          "name": "FIPs e FI-Infras",
+          "sectorIndicator": "FII"
+        }
+      },
+      {
+        "percent": 3.5,
+        "sector": {
+          "description": "Hedge Fund",
+          "name": "Hedge Fund",
+          "sectorIndicator": "FII"
+        }
+      }
+    ],
+    "tier": "AREA_PUBLICA",
+    "topics": [],
+    "validityFinal": "2026-06-08T00:00:00.000-03:00",
+    "validityInitial": "2026-05-11T00:00:00.000-03:00"
+  },
+  {
+    "accumulatedIndex": 27.34,
+    "accumulatedProfitability": 39.75,
+    "authors": [
+      {
+        "id": "224",
+        "name": "Bruno Henriques",
+        "image": "https://content.btgpactual.com/research/files/media/2021-08-12T170825.279_blob",
+        "local": "São Paulo",
+        "email": "analise.acoes@btgpactual.com",
+        "occupation": "Analista",
+        "team": {
+          "id": "1",
+          "name": "Research"
+        }
+      },
+      {
+        "id": "141",
+        "name": "Matheus Oliveira",
+        "image": "https://content.btgpactual.com/research/files/media/2021-08-19T113752.362_blob",
+        "local": "São Paulo",
+        "email": "analise.fii@btgpactual.com",
+        "occupation": "Analista de FIIs",
+        "team": {
+          "id": "1",
+          "name": "Research"
+        },
+        "description": "Formado em Economia e com certificação CNPI, especializou-se no Mercado de Fundos Imobiliários. Com passagem por diversos setores da economia (energia, indústria, automotivo) iniciou sua trajetória no mercado financeiro na mesa de operações de produtos financeiros, migrando posteriormente para a análise de ofertas públicas. No BTG Pactual desde 2020, hoje atua exclusivamente na área de análise de fundos imobiliários",
+        "instagramUrl": "matheusfiis",
+        "linkedinUrl": "https://www.linkedin.com/in/matheus-alves-de-oliveira/"
+      },
+      {
+        "id": "41",
+        "name": "Daniel Marinelli",
+        "image": "https://content.btgpactual.com/research/files/media/2025-02-03T112505.572_Image.jpg",
+        "local": "São Paulo",
+        "email": "analise.fii@btgpactual.com",
+        "team": {
+          "id": "1",
+          "name": "Research"
+        }
+      },
+      {
+        "id": "223",
+        "name": "Marcel Zambello",
+        "image": "https://content.btgpactual.com/research/files/media/2021-08-12T170806.350_blob",
+        "local": "São Paulo",
+        "team": {
+          "id": "1",
+          "name": "Research"
+        }
+      },
+      {
+        "id": "222",
+        "name": "Luis Mollo, CFA",
+        "image": "https://content.btgpactual.com/research/files/media/2021-08-12T170756.127_blob",
+        "local": "São Paulo",
+        "email": "Analise.Acoes@btgpactual.com",
+        "team": {
+          "id": "1",
+          "name": "Research"
+        }
+      }
+    ],
+    "buyable": true,
+    "comparativeIndex": "IMA-B 5+",
+    "description": "<p>A carteira Top Renda é destinada a investidores que buscam renda por meio da alocação em Ações e Fundos Listados (FIIs, FI-Infras e Fiagros). A junção dessas duas classes de ativos busca unir a recorrência de distribuição de dividendos dos fundos ao potencial de <i>upside</i> e dividendos extraordinários das empresas listadas.</p>",
+    "fileName": "https://content.btgpactual.com/research/files/file/2026-05-06T100224.205_BTG Carteira Top Renda MAI26.pdf",
+    "hideContent": false,
+    "id": "69fb36319fd8cf7b378504bc",
+    "inAssets": [],
+    "inclusionTime": "2026-05-06T15:06:31.953-03:00",
+    "name": "Top Renda - Maio/26",
+    "noTagsDescription": "A carteira Top Renda é destinada a investidores que buscam renda por meio da alocação em Ações e Fundos Listados (FIIs, FI-Infras e Fiagros). A junção dessas duas classes de ativos busca unir a recorrência de distribuição de dividendos dos fundos ao potencial de upside e dividendos extraordinários das empresas listadas.",
+    "outAssets": [],
+    "portfolioAsset": [
+      {
+        "asset": {
+          "company": "Petrobras",
+          "currentFundamentals": {
+            "evEbitda": "4.2909430757",
+            "pl": "5.5614105349",
+            "pvp": "1.4730476274"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/PETR.png",
+          "sector": {
+            "description": "Petróleo & Gás",
+            "name": "Petróleo & Gás",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "PETR4"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Itaú Unibanco",
+          "currentFundamentals": {
+            "pl": "10.71059971",
+            "pvp": "2.4791212077"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/ITUB.svg",
+          "sector": {
+            "description": " ",
+            "name": "Financeiro",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "ITUB4"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Vale",
+          "currentFundamentals": {
+            "evEbitda": "8.1819439959",
+            "pl": "23.085253367",
+            "pvp": "1.804130178"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/VALE.svg",
+          "sector": {
+            "description": "Mineração & Siderurgia",
+            "name": "Mineração & Siderurgia",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "VALE3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Allos",
+          "currentFundamentals": {
+            "evEbitda": "6.3435997269",
+            "pl": "18.631900697",
+            "pvp": "1.1767144937"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/ALSO.png",
+          "sector": {
+            "description": " ",
+            "name": "Construção Civil & Propriedades",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "ALOS3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Axia Energia",
+          "currentFundamentals": {
+            "evEbitda": "19.987648272",
+            "pl": "21.46969698",
+            "pvp": "1.4884128002"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/AXIA.png",
+          "sector": {
+            "name": "Serviços Básicos",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "AXIA3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "TRX Real Estate FII",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Renda Urbana",
+            "name": "Renda Urbana",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "TRXF11"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Mauá Capital Recebíveis Imobiliários FII",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Recebíveis",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "MCCI11"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Kinea Rendimentos Imobiliários FII",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Recebíveis",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "KNCR11"
+        },
+        "weight": 20
+      },
+      {
+        "asset": {
+          "company": "Bocaina FIC FI-Infra",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "FIPs e FI-Infras",
+            "name": "FIPs e FI-Infras",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "BODB11"
+        },
+        "weight": 10
+      }
+    ],
+    "portfolioType": {
+      "channels": [
+        "R360",
+        "PUBLIC",
+        "BANKERS"
+      ],
+      "description": "Destinada para clientes que buscam renda através de dividendos, a Carteira Top Renda é projetada para capturar as melhores oportunidades no mercado de ações e FIIs. Nossa abordagem rigorosa inclui um profundo processo de análise e avaliação da qualidade dos ativos, visando maximizar o retorno de dividendos ajustado ao risco.",
+      "frequency": "MENSAL",
+      "hideContent": false,
+      "image": "https://content.btgpactual.com/research/files/file/2024-06-06T142237.108_img_top_renda.png",
+      "initials": "TOPRENDA",
+      "name": "TOP Renda",
+      "segments": [
+        "DIGITAL",
+        "WM",
+        "CORPORATE"
+      ]
+    },
+    "previousIndex": 1.65,
+    "previousProfitability": 0.1,
+    "purchaseId": "8585",
+    "purchaseLink": "https://app.btgpactual.com/?productType=HOMEBROKER&productID=recommended-wallets&hb_param=8585&origin=content_research",
+    "sectorAllocation": [
+      {
+        "percent": 10,
+        "sector": {
+          "description": " ",
+          "name": "Financeiro",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "description": "Petróleo & Gás",
+          "name": "Petróleo & Gás",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "description": " ",
+          "name": "Construção Civil & Propriedades",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "name": "Serviços Básicos",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "description": "Mineração & Siderurgia",
+          "name": "Mineração & Siderurgia",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "description": "Renda Urbana",
+          "name": "Renda Urbana",
+          "sectorIndicator": "FII"
+        }
+      },
+      {
+        "percent": 30,
+        "sector": {
+          "name": "Recebíveis",
+          "sectorIndicator": "FII"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "description": "FIPs e FI-Infras",
+          "name": "FIPs e FI-Infras",
+          "sectorIndicator": "FII"
+        }
+      }
+    ],
+    "tier": "AREA_PUBLICA",
+    "topics": [],
+    "validityFinal": "2026-06-03T00:00:00.000-03:00",
+    "validityInitial": "2026-05-06T00:00:00.000-03:00"
+  },
+  {
+    "accumulatedIndex": 14.8,
+    "accumulatedProfitability": 14.5,
+    "authors": [
+      {
+        "id": "42",
+        "name": "Álvaro Frasson",
+        "image": "https://content.btgpactual.com/research/files/media/2020-07-21T155011.168_blob",
+        "local": "São Paulo",
+        "email": "alvaro.frasson@btgpactual.com",
+        "occupation": "Macro Estrategista",
+        "team": {
+          "id": "1",
+          "name": "Research"
+        },
+        "instagramUrl": "@alvarosfrasson",
+        "linkedinUrl": "https://www.linkedin.com/in/alvarofrasson/"
+      }
+    ],
+    "buyable": true,
+    "comparativeIndex": "CDI",
+    "description": "<p><strong>O que é?</strong></p><p>O ETF Strategy é uma carteira de investimentos de fundos passivos listados em bolsa de valores (<i>exchange-traded funds, </i>ETF), compostas tanto por ETFs locais quanto BDR (<i>Brazilian Deposit Receipt</i>) de ETFs, das mais diversas classes de ativos, a fim de refletir nossa estratégia de alocação.</p><p><strong>Objetivo da Carteira</strong></p><p>O <i>benchmark </i>da carteira será o Certificado de Depósito Interbancário (CDI), padrão utilizado pela indústria de fundos de investimentos em multimercados. O relatório terá periodicidade mensal e divulgado todo primeiro dia útil de cada mês.</p>",
+    "fileName": "https://content.btgpactual.com/research/files/file/2026-05-04T172537.128_202605 ETF Strategy - BTGP Macro Strategy.pdf",
+    "hideContent": false,
+    "id": "69f900c0806f8f23d7010454",
+    "inAssets": [],
+    "inclusionTime": "2026-05-04T16:02:57.977-03:00",
+    "name": "ETF Strategy Maio/26",
+    "noTagsDescription": "O que é? O ETF Strategy é uma carteira de investimentos de fundos passivos listados em bolsa de valores ( exchange-traded funds, ETF), compostas tanto por ETFs locais quanto BDR ( Brazilian Deposit Receipt ) de ETFs, das mais diversas classes de ativos, a fim de refletir nossa estratégia de alocação. Objetivo da Carteira O benchmark da carteira será o Certificado de Depósito Interbancário (CDI), padrão utilizado pela indústria de fundos de investimentos em multimercados. O relatório terá periodicidade mensal e divulgado todo primeiro dia útil de cada mês.",
+    "outAssets": [],
+    "portfolioAsset": [
+      {
+        "asset": {
+          "company": "BTG PACTUAL TEVA AÇÕES COMMODITIES BRASIL FDO IND",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "CMDB11"
+        },
+        "weight": 2.5
+      },
+      {
+        "asset": {
+          "company": "BTG PACTUAL TEVA DEB ETF",
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "DEBB11"
+        },
+        "weight": 20
+      },
+      {
+        "asset": {
+          "company": "NU IBOXX INVESTMENT GRADE HEDGE CARRY BRL CLASSE DE ÍNDICE INVESTIMENTO NO EXTERIOR",
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "HGBR11"
+        },
+        "weight": 7.5
+      },
+      {
+        "asset": {
+          "company": "BTG PACTUAL B3 IBOVESPA FUNDO DE ÍNDICE",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "IBOB11"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "BTG Pactual TEVA Tesouro Selic Fundo De Índice",
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "LLFT11"
+        },
+        "weight": 5
+      },
+      {
+        "asset": {
+          "company": "BTG Pactual IRF-M Fundo de Índice",
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "LTNB11"
+        },
+        "weight": 7.5
+      },
+      {
+        "asset": {
+          "company": "BTG PACTUAL TEVA TES IPCA LO",
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "PACB11"
+        },
+        "weight": 5
+      },
+      {
+        "asset": {
+          "company": "BTG PACTUAL IMA-B 5 P2 FUNDO DE INDICE",
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "PACC11"
+        },
+        "weight": 2.5
+      },
+      {
+        "asset": {
+          "company": "BTG PACTUAL IMA-B FUNDO DE INDICE",
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "PACG11"
+        },
+        "weight": 25
+      },
+      {
+        "asset": {
+          "company": "BTG PACTUAL SMLL B3 FUNDO DE ÍNDICE",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "SMAB11"
+        },
+        "weight": 2.5
+      },
+      {
+        "asset": {
+          "company": "BTG PACTUAL S&P 500 FUNDO DE ÍNDICE",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "SPXB11"
+        },
+        "weight": 12.5
+      }
+    ],
+    "portfolioType": {
+      "channels": [
+        "R360",
+        "PUBLIC",
+        "BANKERS"
+      ],
+      "description": "O EFT Strategy é uma carteira de investimentos de fundos passivos listados em bolsa de valores (exchange-traded funds, ETF), compostas tanto por ETFs locais quanto BDR (Brazilian Deposit Receipt) de ETFs, das mais diversas classes de ativos, a fim de refletir nossa estratégia de alocação.",
+      "frequency": "MENSAL",
+      "hideContent": false,
+      "image": "https://content.btgpactual.com/research/files/file/2024-11-01T094619.326_img_back_etf_str.png",
+      "initials": "ETFSTR",
+      "name": "ETF Strategy",
+      "segments": [
+        "DIGITAL",
+        "WM",
+        "CORPORATE"
+      ]
+    },
+    "previousIndex": 1.59,
+    "previousProfitability": 1.09,
+    "purchaseId": "8570",
+    "purchaseLink": "https://app.btgpactual.com/?productType=HOMEBROKER&productID=recommended-wallets&hb_param=8570&origin=content_research",
+    "sectorAllocation": [
+      {
+        "percent": 100,
+        "sector": {
+          "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+          "name": "Fundos de Índice",
+          "sectorIndicator": "ETF"
+        }
+      }
+    ],
+    "tier": "AREA_PUBLICA",
+    "topics": [],
+    "validityFinal": "2026-05-29T00:00:00.000-03:00",
+    "validityInitial": "2026-05-04T00:00:00.000-03:00"
+  },
+  {
+    "accumulatedIndex": 113.5,
+    "accumulatedProfitability": 170.6,
+    "authors": [
+      {
+        "id": "224",
+        "name": "Bruno Henriques",
+        "image": "https://content.btgpactual.com/research/files/media/2021-08-12T170825.279_blob",
+        "local": "São Paulo",
+        "email": "analise.acoes@btgpactual.com",
+        "occupation": "Analista",
+        "team": {
+          "id": "1",
+          "name": "Research"
+        }
+      },
+      {
+        "id": "223",
+        "name": "Marcel Zambello",
+        "image": "https://content.btgpactual.com/research/files/media/2021-08-12T170806.350_blob",
+        "local": "São Paulo",
+        "team": {
+          "id": "1",
+          "name": "Research"
+        }
+      },
+      {
+        "id": "222",
+        "name": "Luis Mollo, CFA",
+        "image": "https://content.btgpactual.com/research/files/media/2021-08-12T170756.127_blob",
+        "local": "São Paulo",
+        "email": "Analise.Acoes@btgpactual.com",
+        "team": {
+          "id": "1",
+          "name": "Research"
+        }
+      }
+    ],
+    "buyable": true,
+    "comparativeIndex": "IDIV",
+    "description": "<p>A carteira tem como objetivo a seleção das melhores empresas sob a ótica de geração total de valor ao acionista com foco na distribuição de proventos. Dessa forma, realizamos uma análise focada em ativos de alta qualidade, com resiliência de entrega de resultados e geração de caixa. A seleção dos ativos é feita de forma complementar entre a equipe de análise de empresas e a equipe de estratégia do BTG Pactual, com uma revisão mensal da carteira.</p>",
+    "fileName": "https://content.btgpactual.com/research/files/file/2026-05-04T085222.599_BTGDIVMAI26.pdf",
+    "hideContent": false,
+    "id": "69f888799fd8cf7b378504b3",
+    "inAssets": [
+      {
+        "asset": {
+          "company": "Vibra Energia",
+          "currentFundamentals": {
+            "evEbitda": "10.008561764",
+            "pl": "19.621556037",
+            "pvp": "1.9065105566"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/VBBR.png",
+          "sector": {
+            "description": "Petróleo & Gás",
+            "name": "Petróleo & Gás",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "VBBR3"
+        },
+        "weight": 5
+      }
+    ],
+    "inclusionTime": "2026-05-04T06:54:24.466-03:00",
+    "name": "Dividendos - Maio/26",
+    "noTagsDescription": "A carteira tem como objetivo a seleção das melhores empresas sob a ótica de geração total de valor ao acionista com foco na distribuição de proventos. Dessa forma, realizamos uma análise focada em ativos de alta qualidade, com resiliência de entrega de resultados e geração de caixa. A seleção dos ativos é feita de forma complementar entre a equipe de análise de empresas e a equipe de estratégia do BTG Pactual, com uma revisão mensal da carteira.",
+    "outAssets": [
+      {
+        "asset": {
+          "company": "Aura Minerals",
+          "currentFundamentals": {
+            "evEbitda": "13.835996566",
+            "pl": "-68.191785869",
+            "pvp": "23.548538554"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/AURA.svg",
+          "sector": {
+            "description": "Materiais Básicos",
+            "name": "Materiais Básicos",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "AURA33"
+        },
+        "weight": 5
+      }
+    ],
+    "portfolioAsset": [
+      {
+        "asset": {
+          "company": "Itaú Unibanco",
+          "currentFundamentals": {
+            "pl": "10.71059971",
+            "pvp": "2.4791212077"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/ITUB.svg",
+          "sector": {
+            "description": " ",
+            "name": "Financeiro",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "ITUB4"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Bradesco",
+          "currentFundamentals": {
+            "pl": "8.4350678432",
+            "pvp": "1.2017726844"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/BBDC.png",
+          "sector": {
+            "description": " ",
+            "name": "Financeiro",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "BBDC4"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Vale",
+          "currentFundamentals": {
+            "evEbitda": "8.1819439959",
+            "pl": "23.085253367",
+            "pvp": "1.804130178"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/VALE.svg",
+          "sector": {
+            "description": "Mineração & Siderurgia",
+            "name": "Mineração & Siderurgia",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "VALE3"
+        },
+        "weight": 5
+      },
+      {
+        "asset": {
+          "company": "Allos",
+          "currentFundamentals": {
+            "evEbitda": "6.3435997269",
+            "pl": "18.631900697",
+            "pvp": "1.1767144937"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/ALSO.png",
+          "sector": {
+            "description": " ",
+            "name": "Construção Civil & Propriedades",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "ALOS3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Copasa",
+          "currentFundamentals": {
+            "evEbitda": "9.3792465781",
+            "pl": "14.786983388",
+            "pvp": "2.4404107677"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/CSMG.png",
+          "sector": {
+            "name": "Serviços Básicos",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "CSMG3"
+        },
+        "weight": 5
+      },
+      {
+        "asset": {
+          "company": "Cury",
+          "currentFundamentals": {
+            "evEbitda": "6.9793685278",
+            "pl": "8.8981234704",
+            "pvp": "6.6326815701"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/CURY.png",
+          "sector": {
+            "description": " ",
+            "name": "Construção Civil & Propriedades",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "CURY3"
+        },
+        "weight": 5
+      },
+      {
+        "asset": {
+          "company": "Petrobras",
+          "currentFundamentals": {
+            "evEbitda": "4.2909430757",
+            "pl": "5.5614105349",
+            "pvp": "1.4730476274"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/PETR.png",
+          "sector": {
+            "description": "Petróleo & Gás",
+            "name": "Petróleo & Gás",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "PETR4"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Copel",
+          "currentFundamentals": {
+            "evEbitda": "9.9209883873",
+            "pl": "17.832256636",
+            "pvp": "2.0712146558"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/CPLE.svg",
+          "sector": {
+            "name": "Serviços Básicos",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "CPLE3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Equatorial",
+          "currentFundamentals": {
+            "evEbitda": "8.8875982446",
+            "pl": "31.820148802",
+            "pvp": "2.0832312513"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/EQTL.svg",
+          "sector": {
+            "name": "Serviços Básicos",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "EQTL3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Motiva",
+          "currentFundamentals": {
+            "evEbitda": "7.1170954429",
+            "pl": "9.8010167928",
+            "pvp": "2.0357915739"
+          },
+          "sector": {
+            "name": "Infraestrutura",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "MOTV3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Vibra Energia",
+          "currentFundamentals": {
+            "evEbitda": "10.008561764",
+            "pl": "19.621556037",
+            "pvp": "1.9065105566"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/VBBR.png",
+          "sector": {
+            "description": "Petróleo & Gás",
+            "name": "Petróleo & Gás",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "VBBR3"
+        },
+        "weight": 5
+      },
+      {
+        "asset": {
+          "company": "Axia Energia",
+          "currentFundamentals": {
+            "evEbitda": "19.987648272",
+            "pl": "21.46969698",
+            "pvp": "1.4884128002"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/AXIA.png",
+          "sector": {
+            "name": "Serviços Básicos",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "AXIA3"
+        },
+        "weight": 10
+      }
+    ],
+    "portfolioType": {
+      "channels": [
+        "R360",
+        "PUBLIC",
+        "BANKERS"
+      ],
+      "description": "A carteira tem como objetivo encontrar as melhores empresas sob a ótica de distribuição de dividendos.",
+      "frequency": "TRIMESTRAL",
+      "hideContent": false,
+      "image": "https://digital-research-prd.s3-sa-east-1.amazonaws.com/file/2023-10-31T183554.999_Imagem.png",
+      "initials": "DIV",
+      "name": "Dividendo",
+      "segments": [
+        "DIGITAL",
+        "WM",
+        "CORPORATE"
+      ]
+    },
+    "previousIndex": -1.2,
+    "previousProfitability": 0.8,
+    "purchaseId": "8568",
+    "purchaseLink": "https://app.btgpactual.com/?productType=HOMEBROKER&productID=recommended-wallets&hb_param=8568&origin=content_research",
+    "sectorAllocation": [
+      {
+        "percent": 20,
+        "sector": {
+          "description": " ",
+          "name": "Financeiro",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 15,
+        "sector": {
+          "description": "Petróleo & Gás",
+          "name": "Petróleo & Gás",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 15,
+        "sector": {
+          "description": " ",
+          "name": "Construção Civil & Propriedades",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 35,
+        "sector": {
+          "name": "Serviços Básicos",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 5,
+        "sector": {
+          "description": "Mineração & Siderurgia",
+          "name": "Mineração & Siderurgia",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "name": "Infraestrutura",
+          "sectorIndicator": "ACAO"
+        }
+      }
+    ],
+    "tier": "AREA_PUBLICA",
+    "topics": [],
+    "validityFinal": "2026-05-29T00:00:00.000-03:00",
+    "validityInitial": "2026-05-04T00:00:00.000-03:00"
+  },
+  {
+    "accumulatedIndex": 65.7,
+    "accumulatedProfitability": 25.8,
+    "authors": [
+      {
+        "id": "443",
+        "name": "Research Empiricus",
+        "local": "Empiricus",
+        "email": "research@empiricus.com.br",
+        "team": {
+          "id": "1",
+          "name": "Research"
+        }
+      }
+    ],
+    "buyable": true,
+    "comparativeIndex": "Ibovespa",
+    "description": "<p>Por meio da Carteira Top Picks, compartilhamos uma seleção de 10 ações brasileiras que acreditamos ter o potencial de proteger o patrimônio investido e, ao mesmo tempo, gerar algum ganho de capital. O objetivo é gerar retornos superiores aos principais índices acionários locais, correndo um nível de risco adequado.</p>",
+    "fileName": "https://content.btgpactual.com/research/files/file/2026-05-04T093847.572_2026.05  - Top Picks - Completo.pdf",
+    "hideContent": false,
+    "id": "69f89358806f8f23d7010452",
+    "inAssets": [
+      {
+        "asset": {
+          "company": "Petrobras",
+          "currentFundamentals": {
+            "evEbitda": "4.2909430757",
+            "pl": "5.5614105349",
+            "pvp": "1.4730476274"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/PETR.png",
+          "sector": {
+            "description": "Petróleo & Gás",
+            "name": "Petróleo & Gás",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "PETR4"
+        },
+        "weight": 10
+      }
+    ],
+    "inclusionTime": "2026-05-11T09:52:49.908-03:00",
+    "name": "Empiricus Top Picks Maio/26",
+    "noTagsDescription": "Por meio da Carteira Top Picks, compartilhamos uma seleção de 10 ações brasileiras que acreditamos ter o potencial de proteger o patrimônio investido e, ao mesmo tempo, gerar algum ganho de capital. O objetivo é gerar retornos superiores aos principais índices acionários locais, correndo um nível de risco adequado.",
+    "outAssets": [
+      {
+        "asset": {
+          "company": "PetroRio",
+          "currentFundamentals": {
+            "evEbitda": "10.097674146",
+            "pl": "23.295762758",
+            "pvp": "2.0232453314"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/PRIO.png",
+          "sector": {
+            "description": "Petróleo & Gás",
+            "name": "Petróleo & Gás",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "PRIO3"
+        },
+        "weight": 10
+      }
+    ],
+    "portfolioAsset": [
+      {
+        "asset": {
+          "company": "Axia Energia",
+          "currentFundamentals": {
+            "evEbitda": "19.987648272",
+            "pl": "23.572399261",
+            "pvp": "1.6341851878"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/AXIA.svg",
+          "sector": {
+            "name": "Serviços Básicos",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "AXIA6"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Cosan",
+          "currentFundamentals": {
+            "evEbitda": "24.2785882",
+            "pl": "-1.1657802546",
+            "pvp": "3.8666965546"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/CSAN.png",
+          "sector": {
+            "name": "Agronegócio",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "CSAN3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Equatorial",
+          "currentFundamentals": {
+            "evEbitda": "8.8875982446",
+            "pl": "31.820148802",
+            "pvp": "2.0832312513"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/EQTL.svg",
+          "sector": {
+            "name": "Serviços Básicos",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "EQTL3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Itaú Unibanco",
+          "currentFundamentals": {
+            "pl": "10.71059971",
+            "pvp": "2.4791212077"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/ITUB.svg",
+          "sector": {
+            "description": " ",
+            "name": "Financeiro",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "ITUB4"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Petrobras",
+          "currentFundamentals": {
+            "evEbitda": "4.2909430757",
+            "pl": "5.5614105349",
+            "pvp": "1.4730476274"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/PETR.png",
+          "sector": {
+            "description": "Petróleo & Gás",
+            "name": "Petróleo & Gás",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "PETR4"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Rede D'or",
+          "currentFundamentals": {
+            "evEbitda": "7.9139013431",
+            "pl": "18.118883764",
+            "pvp": "4.381646167"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/RDOR.png",
+          "sector": {
+            "description": " ",
+            "name": "Saúde",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "RDOR3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Localiza",
+          "currentFundamentals": {
+            "evEbitda": "6.1600220117",
+            "pl": "26.597122482",
+            "pvp": "2.0288065053"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/RENT.png",
+          "sector": {
+            "description": " ",
+            "name": "Aluguel de Carros & Logística",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "RENT3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Nubank",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/NUBR.png",
+          "sector": {
+            "description": " ",
+            "name": "Financeiro",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "ROXO34"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Smart Fit",
+          "currentFundamentals": {
+            "evEbitda": "4.2224322506",
+            "pl": "15.9348415",
+            "pvp": "1.8039125079"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/SMFT.png",
+          "sector": {
+            "description": "Varejo & Consumo",
+            "name": "Varejo & Consumo",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "SMFT3"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Vale",
+          "currentFundamentals": {
+            "evEbitda": "8.1819439959",
+            "pl": "23.085253367",
+            "pvp": "1.804130178"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/VALE.svg",
+          "sector": {
+            "description": "Mineração & Siderurgia",
+            "name": "Mineração & Siderurgia",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "VALE3"
+        },
+        "weight": 10
+      }
+    ],
+    "portfolioType": {
+      "channels": [
+        "R360",
+        "PUBLIC",
+        "BANKERS"
+      ],
+      "description": "Por meio da Carteira 10 Ideias, compartilhamos uma seleção de 10 ações brasileiras que acreditamos ter o potencial de proteger o patrimônio investido e, ao mesmo tempo, gerar algum ganho de capital. O objetivo é gerar retornos superiores aos principais índices acionários locais, correndo um nível de risco adequado.\n\nPara esta Carteira, priorizamos empresas com comprovada capacidade de execução; uma governança sadia; e um valuation razoável. Buscamos, também, um posicionamento técnico  avorável, tentando aproveitar as janelas de oportunidade disponíveis. A existência desses fatores tende a nos apontar um potencial de valorização relevante; mas, em muitos casos, não é possível encontrar todos eles em uma única empresa, forçando-nos, por vezes, a escolher.",
+      "frequency": "MENSAL",
+      "hideContent": false,
+      "image": "https://content.btgpactual.com/research/files/file/2023-12-14T114715.097_empiricus.png",
+      "initials": "EMP10IDEIAS",
+      "name": "Empiricus Top Picks",
+      "segments": [
+        "DIGITAL",
+        "WM",
+        "CORPORATE"
+      ]
+    },
+    "previousIndex": -0.1,
+    "previousProfitability": -1.4,
+    "purchaseId": "8575",
+    "purchaseLink": "https://app.btgpactual.com/?productType=HOMEBROKER&productID=recommended-wallets&hb_param=8575&origin=content_research",
+    "sectorAllocation": [
+      {
+        "percent": 20,
+        "sector": {
+          "description": " ",
+          "name": "Financeiro",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "description": "Petróleo & Gás",
+          "name": "Petróleo & Gás",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "name": "Agronegócio",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 20,
+        "sector": {
+          "name": "Serviços Básicos",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "description": "Mineração & Siderurgia",
+          "name": "Mineração & Siderurgia",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "description": " ",
+          "name": "Aluguel de Carros & Logística",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "description": " ",
+          "name": "Saúde",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "description": "Varejo & Consumo",
+          "name": "Varejo & Consumo",
+          "sectorIndicator": "ACAO"
+        }
+      }
+    ],
+    "tier": "AREA_PUBLICA",
+    "topics": [],
+    "validityFinal": "2026-05-29T00:00:00.000-03:00",
+    "validityInitial": "2026-05-04T00:00:00.000-03:00"
+  },
+  {
+    "accumulatedIndex": 3.34,
+    "accumulatedProfitability": 3.53,
+    "authors": [
+      {
+        "id": "443",
+        "name": "Research Empiricus",
+        "local": "Empiricus",
+        "email": "research@empiricus.com.br",
+        "team": {
+          "id": "1",
+          "name": "Research"
+        }
+      }
+    ],
+    "buyable": true,
+    "comparativeIndex": "CDI",
+    "description": "<p>Baseada na série Double Income da Empiricus, focada em renda e já com sete anos de existência, a Carteira Recomendada Empiricus Renda Extra será destinada aos investidores que gostariam de ter renda. Originalmente, a série na Empiricus possui duas carteiras, uma Diversificada e outra Reduzida. A ideia aqui seria a de adaptarmos a Carteira Recomenda Renda Extra para seguir a Carteira Reduzida do Double Income, devendo conter de 12 a 15 ativos. Parte deles (de 55% a 90%) deve gerar renda e a outra, a minoria (de 10% a 45%), não.</p>",
+    "fileName": "https://content.btgpactual.com/research/files/file/2026-05-04T092001.540_Relatório Empiricus Renda Extra mai2026 v5.pdf",
+    "hideContent": false,
+    "id": "69f88ef29fd8cf7b378504b7",
+    "inAssets": [
+      {
+        "asset": {
+          "company": "Vale",
+          "currentFundamentals": {
+            "evEbitda": "8.1819439959",
+            "pl": "23.085253367",
+            "pvp": "1.804130178"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/VALE.svg",
+          "sector": {
+            "description": "Mineração & Siderurgia",
+            "name": "Mineração & Siderurgia",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "VALE3"
+        },
+        "weight": 5
+      }
+    ],
+    "inclusionTime": "2026-05-04T06:53:51.221-03:00",
+    "name": "Empiricus Renda Extra Maio/26",
+    "noTagsDescription": "Baseada na série Double Income da Empiricus, focada em renda e já com sete anos de existência, a Carteira Recomendada Empiricus Renda Extra será destinada aos investidores que gostariam de ter renda. Originalmente, a série na Empiricus possui duas carteiras, uma Diversificada e outra Reduzida. A ideia aqui seria a de adaptarmos a Carteira Recomenda Renda Extra para seguir a Carteira Reduzida do Double Income, devendo conter de 12 a 15 ativos. Parte deles (de 55% a 90%) deve gerar renda e a outra, a minoria (de 10% a 45%), não.",
+    "outAssets": [
+      {
+        "asset": {
+          "company": "Multiplan",
+          "currentFundamentals": {
+            "evEbitda": "10.205060929",
+            "pl": "13.804266625",
+            "pvp": "2.5044611193"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/MULT.png",
+          "sector": {
+            "description": " ",
+            "name": "Construção Civil & Propriedades",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "MULT3"
+        },
+        "weight": 5
+      }
+    ],
+    "portfolioAsset": [
+      {
+        "asset": {
+          "company": "AUVP RENDA AUTOMÁTICA",
+          "image": "https://content.btgpactual.com/research/files/media/ativos/AREA.svg",
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "AREA11"
+        },
+        "weight": 30
+      },
+      {
+        "asset": {
+          "company": "BTG Pactual TEVA Tesouro Selic Fundo De Índice",
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "LLFT11"
+        },
+        "weight": 15
+      },
+      {
+        "asset": {
+          "company": "IT NOW IDIV RENDA DIVIDENDOS FUNDO DE ÍNDICE",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "DIVD11"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Axia Energia",
+          "currentFundamentals": {
+            "evEbitda": "19.987648272",
+            "pl": "23.572399261",
+            "pvp": "1.6341851878"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/AXIA.svg",
+          "sector": {
+            "name": "Serviços Básicos",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "AXIA6"
+        },
+        "weight": 5
+      },
+      {
+        "asset": {
+          "company": "BTG Pactual Dívida Infra ",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "FIPs e FI-Infras",
+            "name": "FIPs e FI-Infras",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "BDIF11"
+        },
+        "weight": 5
+      },
+      {
+        "asset": {
+          "company": "BTG Pactual Real Estate Hedge Fund",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Hedge Fund",
+            "name": "Hedge Fund",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "BTHF11"
+        },
+        "weight": 5
+      },
+      {
+        "asset": {
+          "company": "HSI Malls FII",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Shopping Centers",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "HSML11"
+        },
+        "weight": 5
+      },
+      {
+        "asset": {
+          "company": "Itaú Unibanco",
+          "currentFundamentals": {
+            "pl": "10.71059971",
+            "pvp": "2.4791212077"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/ITUB.svg",
+          "sector": {
+            "description": " ",
+            "name": "Financeiro",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "ITUB4"
+        },
+        "weight": 5
+      },
+      {
+        "asset": {
+          "company": "Kinea Infra",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "FIPs e FI-Infras",
+            "name": "FIPs e FI-Infras",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "KDIF11"
+        },
+        "weight": 5
+      },
+      {
+        "asset": {
+          "company": "Kinea Securities FII",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Recebíveis",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "KNSC11"
+        },
+        "weight": 5
+      },
+      {
+        "asset": {
+          "company": "BTG Pactual IRF-M Fundo de Índice",
+          "sector": {
+            "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+            "name": "Fundos de Índice",
+            "sectorIndicator": "ETF"
+          },
+          "ticker": "LTNB11"
+        },
+        "weight": 5
+      },
+      {
+        "asset": {
+          "company": "Vale",
+          "currentFundamentals": {
+            "evEbitda": "8.1819439959",
+            "pl": "23.085253367",
+            "pvp": "1.804130178"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/VALE.svg",
+          "sector": {
+            "description": "Mineração & Siderurgia",
+            "name": "Mineração & Siderurgia",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "VALE3"
+        },
+        "weight": 5
+      }
+    ],
+    "portfolioType": {
+      "channels": [
+        "R360",
+        "PUBLIC",
+        "BANKERS"
+      ],
+      "description": "Baseada na série Double Income da Empiricus, focada em renda e já com sete anos de existência, a Carteira Recomendada Empiricus Renda Extra será destinada aos investidores que gostariam de ter renda. Originalmente, a série na Empiricus possui duas carteiras, uma Diversificada e outra Reduzida. A ideia aqui seria a de adaptarmos a Carteira Recomenda Renda Extra para seguir a Carteira Reduzida do Double Income, devendo conter de 12 a 15 ativos. Parte deles (de 55% a 90%) deve gerar renda e a outra, a minoria (de 10% a 45%), não.",
+      "frequency": "MENSAL",
+      "hideContent": false,
+      "image": "https://content.btgpactual.com/research/files/file/2026-02-02T103652.176_empiricus.png",
+      "initials": "EMPRENDA",
+      "name": "Empiricus Renda Extra",
+      "segments": [
+        "DIGITAL",
+        "WM",
+        "CORPORATE"
+      ]
+    },
+    "previousIndex": 1.09,
+    "previousProfitability": 1.46,
+    "purchaseId": "8576",
+    "purchaseLink": "https://app.btgpactual.com/?productType=HOMEBROKER&productID=recommended-wallets&hb_param=8576&origin=content_research",
+    "sectorAllocation": [
+      {
+        "percent": 5,
+        "sector": {
+          "description": " ",
+          "name": "Financeiro",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 5,
+        "sector": {
+          "name": "Serviços Básicos",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 5,
+        "sector": {
+          "description": "Mineração & Siderurgia",
+          "name": "Mineração & Siderurgia",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "description": "FIPs e FI-Infras",
+          "name": "FIPs e FI-Infras",
+          "sectorIndicator": "FII"
+        }
+      },
+      {
+        "percent": 5,
+        "sector": {
+          "name": "Recebíveis",
+          "sectorIndicator": "FII"
+        }
+      },
+      {
+        "percent": 60,
+        "sector": {
+          "description": "Fundos de investimento constituídos com o objetivo de investir em uma carteira de ações que busca replicar a carteira e a rentabilidade de um determinado índice de referência (índice subjacente), como o Ibovespa, ou qualquer índice de ações ou de renda fixa.",
+          "name": "Fundos de Índice",
+          "sectorIndicator": "ETF"
+        }
+      },
+      {
+        "percent": 5,
+        "sector": {
+          "description": "Hedge Fund",
+          "name": "Hedge Fund",
+          "sectorIndicator": "FII"
+        }
+      },
+      {
+        "percent": 5,
+        "sector": {
+          "name": "Shopping Centers",
+          "sectorIndicator": "FII"
+        }
+      }
+    ],
+    "tier": "AREA_PUBLICA",
+    "topics": [],
+    "validityFinal": "2026-05-29T00:00:00.000-03:00",
+    "validityInitial": "2026-05-04T00:00:00.000-03:00"
+  },
+  {
+    "accumulatedIndex": 24.53,
+    "accumulatedProfitability": 44.86,
+    "authors": [
+      {
+        "id": "443",
+        "name": "Research Empiricus",
+        "local": "Empiricus",
+        "email": "research@empiricus.com.br",
+        "team": {
+          "id": "1",
+          "name": "Research"
+        }
+      }
+    ],
+    "buyable": true,
+    "comparativeIndex": "IFIX",
+    "description": "<p>Neste documento, consolidamos a lista de ideias de fundos imobiliários (FIIs) para o mês, de forma a elaborar uma seleção de ativos com base na série Renda Imobiliária da Empiricus Research.</p><p>A Empiricus TOP FIIs consiste em uma carteira compacta de ativos de diferentes setores/estratégias de atuação, com objetivo de gerar uma diversificação e eficiência para a alocação.</p>",
+    "fileName": "https://content.btgpactual.com/research/files/file/2026-05-04T091813.956_Top FIIs - maio_26 .pdf",
+    "hideContent": false,
+    "id": "69f88e87806f8f23d7010451",
+    "inAssets": [],
+    "inclusionTime": "2026-05-04T06:53:51.793-03:00",
+    "name": "Empiricus Top FII Maio/26",
+    "noTagsDescription": "Neste documento, consolidamos a lista de ideias de fundos imobiliários (FIIs) para o mês, de forma a elaborar uma seleção de ativos com base na série Renda Imobiliária da Empiricus Research. A Empiricus TOP FIIs consiste em uma carteira compacta de ativos de diferentes setores/estratégias de atuação, com objetivo de gerar uma diversificação e eficiência para a alocação.",
+    "outAssets": [],
+    "portfolioAsset": [
+      {
+        "asset": {
+          "company": "Bresco Logística FII",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Galpões Logisticos",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "BRCO11"
+        },
+        "weight": 20
+      },
+      {
+        "asset": {
+          "company": "Kinea Securities FII",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Recebíveis",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "KNSC11"
+        },
+        "weight": 20
+      },
+      {
+        "asset": {
+          "company": "Mauá Capital Recebíveis Imobiliários FII",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Recebíveis",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "MCCI11"
+        },
+        "weight": 20
+      },
+      {
+        "asset": {
+          "company": "Clave Índices de Preços",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Recebíveis",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "CLIN11"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "HSI Malls FII",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Shopping Centers",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "HSML11"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Patria Malls",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Shopping Centers",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "PMLL11"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Vinci Logística FII",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Galpões Logisticos",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "VILG11"
+        },
+        "weight": 10
+      }
+    ],
+    "portfolioType": {
+      "channels": [
+        "R360",
+        "PUBLIC",
+        "BANKERS"
+      ],
+      "description": "Nesta carteira, consolidamos a lista de ideias de fundos imobiliários (FIIs) para novembro, de forma a elaborar uma seleção de ativos formulada por nossos analistas da Empiricus Research.\nA seleção consiste em cinco ativos de diferentes setores/estratégia de atuação, de modo a gerar uma diversificação mínima para a alocação. Diante do tamanho do portfólio, indicamos pesos equivalentes para cada FII (20% dos recursos para cada).",
+      "frequency": "MENSAL",
+      "hideContent": false,
+      "image": "https://content.btgpactual.com/research/files/file/2023-12-14T114829.592_empiricus.png",
+      "initials": "EMPFII",
+      "name": "Empiricus Top FIIs",
+      "segments": [
+        "DIGITAL",
+        "WM",
+        "CORPORATE"
+      ]
+    },
+    "previousIndex": 1.53,
+    "previousProfitability": 3.59,
+    "purchaseId": "8574",
+    "purchaseLink": "https://app.btgpactual.com/?productType=HOMEBROKER&productID=recommended-wallets&hb_param=8574&origin=content_research",
+    "sectorAllocation": [
+      {
+        "percent": 30,
+        "sector": {
+          "name": "Galpões Logisticos",
+          "sectorIndicator": "FII"
+        }
+      },
+      {
+        "percent": 50,
+        "sector": {
+          "name": "Recebíveis",
+          "sectorIndicator": "FII"
+        }
+      },
+      {
+        "percent": 20,
+        "sector": {
+          "name": "Shopping Centers",
+          "sectorIndicator": "FII"
+        }
+      }
+    ],
+    "tier": "AREA_PUBLICA",
+    "topics": [],
+    "validityFinal": "2026-05-29T00:00:00.000-03:00",
+    "validityInitial": "2026-05-04T00:00:00.000-03:00"
+  },
+  {
+    "accumulatedIndex": 72.5,
+    "accumulatedProfitability": 38.91,
+    "authors": [
+      {
+        "id": "443",
+        "name": "Research Empiricus",
+        "local": "Empiricus",
+        "email": "research@empiricus.com.br",
+        "team": {
+          "id": "1",
+          "name": "Research"
+        }
+      }
+    ],
+    "buyable": true,
+    "comparativeIndex": "IVVB11",
+    "description": "<p>Neste relatório compartilhamos uma carteira de ações que atendem os requisitos que consideramos mais importantes para um portfólio focado em dividendos. O objetivo é encontrar empresas que possuem capacidade de geração de caixa livre (GCL) comprovada, distribuição de proventos sustentáveis e que proporcionam aos seus acionistas o benefício dos juros compostos (compounding).</p><p>Damos preferência para modelos de negócio resilientes, com vantagens competitivas, em setores de fortes tendências seculares, previsibilidade de resultados e boa margem de segurança (níveis de valuation e carrego).</p>",
+    "fileName": "https://content.btgpactual.com/research/files/file/2026-05-04T091607.729_CARTEIRA BDR - Maio.26 [Completa].pdf",
+    "hideContent": false,
+    "id": "69f88e089fd8cf7b378504b6",
+    "inAssets": [
+      {
+        "asset": {
+          "company": "Meta Platforms",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Comunicação",
+            "name": "Comunicação",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "M1TA34"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Uber",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/U1BE.svg",
+          "sector": {
+            "description": "Indústria",
+            "name": "Indústria",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "U1BE34"
+        },
+        "weight": 10
+      }
+    ],
+    "inclusionTime": "2026-05-04T06:53:52.092-03:00",
+    "name": "Empiricus BDR Maio/26",
+    "noTagsDescription": "Neste relatório compartilhamos uma carteira de ações que atendem os requisitos que consideramos mais importantes para um portfólio focado em dividendos. O objetivo é encontrar empresas que possuem capacidade de geração de caixa livre (GCL) comprovada, distribuição de proventos sustentáveis e que proporcionam aos seus acionistas o benefício dos juros compostos (compounding). Damos preferência para modelos de negócio resilientes, com vantagens competitivas, em setores de fortes tendências seculares, previsibilidade de resultados e boa margem de segurança (níveis de valuation e carrego).",
+    "outAssets": [
+      {
+        "asset": {
+          "company": "Netflix",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Comunicação",
+            "name": "Comunicação",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "NFLX34"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Alphabet",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/GOGL.svg",
+          "sector": {
+            "description": "Comunicação",
+            "name": "Comunicação",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "GOGL34"
+        },
+        "weight": 15
+      }
+    ],
+    "portfolioAsset": [
+      {
+        "asset": {
+          "company": "Berkshire",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/BERK.svg",
+          "sector": {
+            "description": "Financeiro ex-bancos",
+            "name": "Financeiro ex-bancos",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "BERK34"
+        },
+        "weight": 15
+      },
+      {
+        "asset": {
+          "company": "Microsoft",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/MSFT.png",
+          "sector": {
+            "description": " ",
+            "name": "Tecnologia",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "MSFT34"
+        },
+        "weight": 15
+      },
+      {
+        "asset": {
+          "company": "Meta Platforms",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Comunicação",
+            "name": "Comunicação",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "M1TA34"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Visa",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/VISA.svg",
+          "sector": {
+            "description": " ",
+            "name": "Tecnologia",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "VISA34"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "BAIDU INC",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/BIDU.svg",
+          "sector": {
+            "description": " ",
+            "name": "Tecnologia",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "BIDU34"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Schlumberger",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Energia - Petróleo & Gás",
+            "name": "Energia",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "SLBG34"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Nvidia",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/NVDC.png",
+          "sector": {
+            "description": " ",
+            "name": "Tecnologia",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "NVDC34"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Uber",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/U1BE.svg",
+          "sector": {
+            "description": "Indústria",
+            "name": "Indústria",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "U1BE34"
+        },
+        "weight": 10
+      },
+      {
+        "asset": {
+          "company": "Coinbase Global Inc",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Financeiro ex-bancos",
+            "name": "Financeiro ex-bancos",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "C2OI34"
+        },
+        "weight": 5
+      },
+      {
+        "asset": {
+          "company": "TAIWAN SEMICONDUCTOR",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/TSMC.svg",
+          "sector": {
+            "description": " ",
+            "name": "Tecnologia",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "TSMC34"
+        },
+        "weight": 5
+      }
+    ],
+    "portfolioType": {
+      "channels": [
+        "R360",
+        "PUBLIC",
+        "BANKERS"
+      ],
+      "description": "Nesta carteira, as 5 ideias de ações que entendemos serem as melhores apostas nos mercados internacionais para o mês de novembro.\nA intenção é ter uma carteira diversificada, dentre os mais diversos setores da economia – aliando nomes defensivos com outros mais cíclicos.",
+      "frequency": "MENSAL",
+      "hideContent": false,
+      "image": "https://content.btgpactual.com/research/files/file/2023-12-14T114754.087_empiricus.png",
+      "initials": "EMPBDR",
+      "name": "Empiricus BDR",
+      "segments": [
+        "DIGITAL",
+        "WM",
+        "CORPORATE"
+      ]
+    },
+    "previousIndex": 5.88,
+    "previousProfitability": 7.64,
+    "purchaseId": "8572",
+    "purchaseLink": "https://app.btgpactual.com/?productType=HOMEBROKER&productID=recommended-wallets&hb_param=8572&origin=content_research",
+    "sectorAllocation": [
+      {
+        "percent": 20,
+        "sector": {
+          "description": "Financeiro ex-bancos",
+          "name": "Financeiro ex-bancos",
+          "sectorIndicator": "BDR"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "description": "Energia - Petróleo & Gás",
+          "name": "Energia",
+          "sectorIndicator": "BDR"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "description": "Comunicação",
+          "name": "Comunicação",
+          "sectorIndicator": "BDR"
+        }
+      },
+      {
+        "percent": 10,
+        "sector": {
+          "description": "Indústria",
+          "name": "Indústria",
+          "sectorIndicator": "BDR"
+        }
+      },
+      {
+        "percent": 50,
+        "sector": {
+          "description": " ",
+          "name": "Tecnologia",
+          "sectorIndicator": "BDR"
+        }
+      }
+    ],
+    "tier": "AREA_PUBLICA",
+    "topics": [],
+    "validityFinal": "2026-05-29T00:00:00.000-03:00",
+    "validityInitial": "2026-05-04T00:00:00.000-03:00"
+  },
+  {
+    "accumulatedIndex": 65.8,
+    "accumulatedProfitability": 95,
+    "authors": [
+      {
+        "id": "443",
+        "name": "Research Empiricus",
+        "local": "Empiricus",
+        "email": "research@empiricus.com.br",
+        "team": {
+          "id": "1",
+          "name": "Research"
+        }
+      }
+    ],
+    "buyable": true,
+    "comparativeIndex": "Ibovespa",
+    "description": "<p>Neste relatório compartilhamos uma carteira de ações que atendem os requisitos que consideramos mais importantes para um portfólio focado em dividendos. O objetivo é encontrar empresas que possuem capacidade de geração de caixa livre (GCL) comprovada, distribuição de proventos sustentáveis e que proporcionam aos seus acionistas o benefício dos juros compostos (compounding).</p><p>Damos preferência para modelos de negócio resilientes, com vantagens competitivas, em setores de fortes tendências seculares, previsibilidade de resultados e boa margem de segurança (níveis de valuation e carrego).</p>",
+    "fileName": "https://content.btgpactual.com/research/files/file/2026-05-04T090851.645_Carteira de Dividendos mai-2026.pdf",
+    "hideContent": false,
+    "id": "69f88c549fd8cf7b378504b5",
+    "inAssets": [
+      {
+        "asset": {
+          "company": "Vale",
+          "currentFundamentals": {
+            "evEbitda": "8.1819439959",
+            "pl": "23.085253367",
+            "pvp": "1.804130178"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/VALE.svg",
+          "sector": {
+            "description": "Mineração & Siderurgia",
+            "name": "Mineração & Siderurgia",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "VALE3"
+        },
+        "weight": 12.5
+      }
+    ],
+    "inclusionTime": "2026-05-04T06:53:51.584-03:00",
+    "name": "Empiricus Dividendos  Maio/26",
+    "noTagsDescription": "Neste relatório compartilhamos uma carteira de ações que atendem os requisitos que consideramos mais importantes para um portfólio focado em dividendos. O objetivo é encontrar empresas que possuem capacidade de geração de caixa livre (GCL) comprovada, distribuição de proventos sustentáveis e que proporcionam aos seus acionistas o benefício dos juros compostos (compounding). Damos preferência para modelos de negócio resilientes, com vantagens competitivas, em setores de fortes tendências seculares, previsibilidade de resultados e boa margem de segurança (níveis de valuation e carrego).",
+    "outAssets": [
+      {
+        "asset": {
+          "company": "SLC Agrícola",
+          "currentFundamentals": {
+            "evEbitda": "5.5651466881",
+            "pl": "15.047289904",
+            "pvp": "1.6639352787"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/SLCE.png",
+          "sector": {
+            "name": "Agronegócio",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "SLCE3"
+        },
+        "weight": 12.5
+      }
+    ],
+    "portfolioAsset": [
+      {
+        "asset": {
+          "company": "Axia Energia",
+          "currentFundamentals": {
+            "evEbitda": "19.987648272",
+            "pl": "23.572399261",
+            "pvp": "1.6341851878"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/AXIA.svg",
+          "sector": {
+            "name": "Serviços Básicos",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "AXIA6"
+        },
+        "weight": 12.5
+      },
+      {
+        "asset": {
+          "company": "B3",
+          "currentFundamentals": {
+            "evEbitda": "13.197879127",
+            "pl": "21.013362353",
+            "pvp": "5.3485669093"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/B3SA.png",
+          "sector": {
+            "description": " ",
+            "name": "Financeiro",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "B3SA3"
+        },
+        "weight": 12.5
+      },
+      {
+        "asset": {
+          "company": "Itaú Unibanco",
+          "currentFundamentals": {
+            "pl": "10.71059971",
+            "pvp": "2.4791212077"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/ITUB.svg",
+          "sector": {
+            "description": " ",
+            "name": "Financeiro",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "ITUB4"
+        },
+        "weight": 12.5
+      },
+      {
+        "asset": {
+          "company": "Multiplan",
+          "currentFundamentals": {
+            "evEbitda": "10.205060929",
+            "pl": "13.804266625",
+            "pvp": "2.5044611193"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/MULT.png",
+          "sector": {
+            "description": " ",
+            "name": "Construção Civil & Propriedades",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "MULT3"
+        },
+        "weight": 12.5
+      },
+      {
+        "asset": {
+          "company": "Petrobras",
+          "currentFundamentals": {
+            "evEbitda": "4.2909430757",
+            "pl": "5.5614105349",
+            "pvp": "1.4730476274"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/PETR.png",
+          "sector": {
+            "description": "Petróleo & Gás",
+            "name": "Petróleo & Gás",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "PETR4"
+        },
+        "weight": 12.5
+      },
+      {
+        "asset": {
+          "company": "Porto Seguro",
+          "currentFundamentals": {
+            "evEbitda": "5.8433679102",
+            "pl": "9.7085637709",
+            "pvp": "2.0795844897"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/PSSA.png",
+          "sector": {
+            "description": " ",
+            "name": "Financeiro",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "PSSA3"
+        },
+        "weight": 12.5
+      },
+      {
+        "asset": {
+          "company": "Vale",
+          "currentFundamentals": {
+            "evEbitda": "8.1819439959",
+            "pl": "23.085253367",
+            "pvp": "1.804130178"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/VALE.svg",
+          "sector": {
+            "description": "Mineração & Siderurgia",
+            "name": "Mineração & Siderurgia",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "VALE3"
+        },
+        "weight": 12.5
+      },
+      {
+        "asset": {
+          "company": "Telefônica Brasil",
+          "currentFundamentals": {
+            "evEbitda": "5.5584175857",
+            "pl": "20.387476683",
+            "pvp": "1.8098056567"
+          },
+          "image": "https://content.btgpactual.com/research/files/media/ativos/VIVT.png",
+          "sector": {
+            "description": " ",
+            "name": "Telecom & Tecnologia",
+            "sectorIndicator": "ACAO"
+          },
+          "ticker": "VIVT3"
+        },
+        "weight": 12.5
+      }
+    ],
+    "portfolioType": {
+      "channels": [
+        "R360",
+        "PUBLIC",
+        "BANKERS"
+      ],
+      "description": "Neste relatório compartilhamos a carteira composta por nomes que acreditamos atender plenamente os requisitos para compor um portfólio de verdadeiros investidores de dividendos: aqueles focados no longo prazo, na busca pela “paz de espírito” — além de níveis de retornos superiores no longo prazo, obviamente, ajudados pelos reinvestimentos dos dividendos recebidos.\nO objetivo é encontrar empresas que possuem capacidade de geração de caixa livre (GCL) comprovada, permitindo a distribuição de proventos de forma sustentável ao longo do tempo, para\nque os acionistas possam se beneficiar do fenômeno dos juros compostos (compounding), potencializando o retorno total.",
+      "frequency": "MENSAL",
+      "hideContent": false,
+      "image": "https://content.btgpactual.com/research/files/file/2023-12-14T114816.367_empiricus.png",
+      "initials": "EMPDIV",
+      "name": "Empiricus Dividendos",
+      "segments": [
+        "DIGITAL",
+        "WM",
+        "CORPORATE"
+      ]
+    },
+    "previousIndex": -0.1,
+    "previousProfitability": -0.8,
+    "purchaseId": "8573",
+    "purchaseLink": "https://app.btgpactual.com/?productType=HOMEBROKER&productID=recommended-wallets&hb_param=8573&origin=content_research",
+    "sectorAllocation": [
+      {
+        "percent": 37.5,
+        "sector": {
+          "description": " ",
+          "name": "Financeiro",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 12.5,
+        "sector": {
+          "description": "Petróleo & Gás",
+          "name": "Petróleo & Gás",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 12.5,
+        "sector": {
+          "description": " ",
+          "name": "Construção Civil & Propriedades",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 12.5,
+        "sector": {
+          "name": "Serviços Básicos",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 12.5,
+        "sector": {
+          "description": "Mineração & Siderurgia",
+          "name": "Mineração & Siderurgia",
+          "sectorIndicator": "ACAO"
+        }
+      },
+      {
+        "percent": 12.5,
+        "sector": {
+          "description": " ",
+          "name": "Telecom & Tecnologia",
+          "sectorIndicator": "ACAO"
+        }
+      }
+    ],
+    "tier": "AREA_PUBLICA",
+    "topics": [],
+    "validityFinal": "2026-05-29T00:00:00.000-03:00",
+    "validityInitial": "2026-05-04T00:00:00.000-03:00"
+  },
+  {
+    "accumulatedIndex": 87.1,
+    "accumulatedProfitability": 92.8,
+    "authors": [
+      {
+        "id": "224",
+        "name": "Bruno Henriques",
+        "image": "https://content.btgpactual.com/research/files/media/2021-08-12T170825.279_blob",
+        "local": "São Paulo",
+        "email": "analise.acoes@btgpactual.com",
+        "occupation": "Analista",
+        "team": {
+          "id": "1",
+          "name": "Research"
+        }
+      },
+      {
+        "id": "223",
+        "name": "Marcel Zambello",
+        "image": "https://content.btgpactual.com/research/files/media/2021-08-12T170806.350_blob",
+        "local": "São Paulo",
+        "team": {
+          "id": "1",
+          "name": "Research"
+        }
+      },
+      {
+        "id": "302",
+        "name": "Arthur Mota",
+        "image": "https://content.btgpactual.com/research/files/media/2022-01-13T112537.197_blob",
+        "local": "São Paulo",
+        "email": "arthur.mota@btg.pactual.com",
+        "team": {
+          "id": "1",
+          "name": "Research"
+        }
+      },
+      {
+        "id": "222",
+        "name": "Luis Mollo, CFA",
+        "image": "https://content.btgpactual.com/research/files/media/2021-08-12T170756.127_blob",
+        "local": "São Paulo",
+        "email": "Analise.Acoes@btgpactual.com",
+        "team": {
+          "id": "1",
+          "name": "Research"
+        }
+      }
+    ],
+    "buyable": true,
+    "comparativeIndex": "BDRX",
+    "description": "<p>A carteira de ações internacionais oferece oportunidades de investimento no exterior e é composta por BDRs. O processo de seleção dos BDRs é realizado pelo time de analistas e estrategistas com base em uma análise conjunta dos fundamentos das companhias e do cenário econômico global. O objetivo da carteira é superar o BDRX, nosso principal benchmark, o índice de referência da B3 para os BDRs.</p>",
+    "fileName": "https://content.btgpactual.com/research/files/file/2026-05-04T085736.482_Carteira de ações internacionais - Maio_ 2026_V2.pdf",
+    "hideContent": false,
+    "id": "69f889b1806f8f23d7010450",
+    "inAssets": [],
+    "inclusionTime": "2026-05-04T06:54:41.816-03:00",
+    "name": "BDR Maio/26",
+    "noTagsDescription": "A carteira de ações internacionais oferece oportunidades de investimento no exterior e é composta por BDRs. O processo de seleção dos BDRs é realizado pelo time de analistas e estrategistas com base em uma análise conjunta dos fundamentos das companhias e do cenário econômico global. O objetivo da carteira é superar o BDRX, nosso principal benchmark, o índice de referência da B3 para os BDRs.",
+    "outAssets": [],
+    "portfolioAsset": [
+      {
+        "asset": {
+          "company": "Apple",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/AAPL.png",
+          "sector": {
+            "description": " ",
+            "name": "Tecnologia",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "AAPL34"
+        },
+        "weight": 9
+      },
+      {
+        "asset": {
+          "company": "Amazon",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/AMZO.svg",
+          "sector": {
+            "description": "Consumo discricionário",
+            "name": "Consumo discricionário",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "AMZO34"
+        },
+        "weight": 8
+      },
+      {
+        "asset": {
+          "company": "Bank of America",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/BOAC.png",
+          "sector": {
+            "description": " ",
+            "name": "Bancos",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "BOAC34"
+        },
+        "weight": 7
+      },
+      {
+        "asset": {
+          "company": "Coca-Cola",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/COCA.svg",
+          "sector": {
+            "description": "Consumo não Discricionário",
+            "name": "Consumo não Discricionário",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "COCA34"
+        },
+        "weight": 4
+      },
+      {
+        "asset": {
+          "company": "Alphabet",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/GOGL.svg",
+          "sector": {
+            "description": "Comunicação",
+            "name": "Comunicação",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "GOGL34"
+        },
+        "weight": 8
+      },
+      {
+        "asset": {
+          "company": "Goldman Sachs",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/GSGI.png",
+          "sector": {
+            "description": " ",
+            "name": "Bancos",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "GSGI34"
+        },
+        "weight": 6
+      },
+      {
+        "asset": {
+          "company": "Johnson & Johnson",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/JNJB.png",
+          "sector": {
+            "description": " ",
+            "name": "Saúde",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "JNJB34"
+        },
+        "weight": 4
+      },
+      {
+        "asset": {
+          "company": "Meta Platforms",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Comunicação",
+            "name": "Comunicação",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "M1TA34"
+        },
+        "weight": 8
+      },
+      {
+        "asset": {
+          "company": "Microsoft",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/MSFT.png",
+          "sector": {
+            "description": " ",
+            "name": "Tecnologia",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "MSFT34"
+        },
+        "weight": 9
+      },
+      {
+        "asset": {
+          "company": "Micron Technology",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/MUTC.png",
+          "sector": {
+            "description": " ",
+            "name": "Tecnologia",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "MUTC34"
+        },
+        "weight": 3
+      },
+      {
+        "asset": {
+          "company": "Newmont",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Materiais Básicos",
+            "name": "Materiais Básicos",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "N1EM34"
+        },
+        "weight": 6
+      },
+      {
+        "asset": {
+          "company": "Nvidia",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/NVDC.png",
+          "sector": {
+            "description": " ",
+            "name": "Tecnologia",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "NVDC34"
+        },
+        "weight": 13
+      },
+      {
+        "asset": {
+          "company": "Raytheon technologies",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/RYTT.svg",
+          "sector": {
+            "description": "Indústria",
+            "name": "Indústria",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "RYTT34"
+        },
+        "weight": 4
+      },
+      {
+        "asset": {
+          "company": "TAIWAN SEMICONDUCTOR",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/TSMC.svg",
+          "sector": {
+            "description": " ",
+            "name": "Tecnologia",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "TSMC34"
+        },
+        "weight": 7
+      },
+      {
+        "asset": {
+          "company": "Wal Mart Stores",
+          "currentFundamentals": {},
+          "image": "https://content.btgpactual.com/research/files/media/ativos/WALM.svg",
+          "sector": {
+            "description": "Consumo não Discricionário",
+            "name": "Consumo não Discricionário",
+            "sectorIndicator": "BDR"
+          },
+          "ticker": "WALM34"
+        },
+        "weight": 4
+      }
+    ],
+    "portfolioType": {
+      "channels": [
+        "R360",
+        "PUBLIC",
+        "BANKERS"
+      ],
+      "description": "A carteira oferece as melhores oportunidades de investimento no exterior através da indicação de dez BDRs a cada mês. O processo de seleção dos BDRs é realizado pelo time de analistas e estrategistas do Research do Banco BTG Pactual, com base em uma análise conjunta dos fundamentos das companhias e do cenário econômico global. O objetivo da carteira é superar o BDRX, nosso principal benchmark, o índice de referência da B3 para os BDR’s.",
+      "frequency": "MENSAL",
+      "hideContent": false,
+      "image": "https://digital-research-prd.s3-sa-east-1.amazonaws.com/file/2023-10-31T183538.743_Imagem.png",
+      "initials": "BDR",
+      "name": "BDR",
+      "segments": [
+        "DIGITAL",
+        "WM",
+        "CORPORATE"
+      ]
+    },
+    "previousIndex": 7.8,
+    "previousProfitability": 7.9,
+    "purchaseId": "8566",
+    "purchaseLink": "https://app.btgpactual.com/?productType=HOMEBROKER&productID=recommended-wallets&hb_param=8566&origin=content_research",
+    "sectorAllocation": [
+      {
+        "percent": 13,
+        "sector": {
+          "description": " ",
+          "name": "Bancos",
+          "sectorIndicator": "BDR"
+        }
+      },
+      {
+        "percent": 4,
+        "sector": {
+          "description": " ",
+          "name": "Saúde",
+          "sectorIndicator": "BDR"
+        }
+      },
+      {
+        "percent": 8,
+        "sector": {
+          "description": "Consumo não Discricionário",
+          "name": "Consumo não Discricionário",
+          "sectorIndicator": "BDR"
+        }
+      },
+      {
+        "percent": 8,
+        "sector": {
+          "description": "Consumo discricionário",
+          "name": "Consumo discricionário",
+          "sectorIndicator": "BDR"
+        }
+      },
+      {
+        "percent": 16,
+        "sector": {
+          "description": "Comunicação",
+          "name": "Comunicação",
+          "sectorIndicator": "BDR"
+        }
+      },
+      {
+        "percent": 4,
+        "sector": {
+          "description": "Indústria",
+          "name": "Indústria",
+          "sectorIndicator": "BDR"
+        }
+      },
+      {
+        "percent": 6,
+        "sector": {
+          "description": "Materiais Básicos",
+          "name": "Materiais Básicos",
+          "sectorIndicator": "BDR"
+        }
+      },
+      {
+        "percent": 41,
+        "sector": {
+          "description": " ",
+          "name": "Tecnologia",
+          "sectorIndicator": "BDR"
+        }
+      }
+    ],
+    "tier": "AREA_PUBLICA",
+    "topics": [],
+    "validityFinal": "2026-05-29T00:00:00.000-03:00",
+    "validityInitial": "2026-05-04T00:00:00.000-03:00"
+  },
+  {
+    "accumulatedIndex": 49.65,
+    "accumulatedProfitability": 69.96,
+    "authors": [
+      {
+        "id": "141",
+        "name": "Matheus Oliveira",
+        "image": "https://content.btgpactual.com/research/files/media/2021-08-19T113752.362_blob",
+        "local": "São Paulo",
+        "email": "analise.fii@btgpactual.com",
+        "occupation": "Analista de FIIs",
+        "team": {
+          "id": "1",
+          "name": "Research"
+        },
+        "description": "Formado em Economia e com certificação CNPI, especializou-se no Mercado de Fundos Imobiliários. Com passagem por diversos setores da economia (energia, indústria, automotivo) iniciou sua trajetória no mercado financeiro na mesa de operações de produtos financeiros, migrando posteriormente para a análise de ofertas públicas. No BTG Pactual desde 2020, hoje atua exclusivamente na área de análise de fundos imobiliários",
+        "instagramUrl": "matheusfiis",
+        "linkedinUrl": "https://www.linkedin.com/in/matheus-alves-de-oliveira/"
+      },
+      {
+        "id": "41",
+        "name": "Daniel Marinelli",
+        "image": "https://content.btgpactual.com/research/files/media/2025-02-03T112505.572_Image.jpg",
+        "local": "São Paulo",
+        "email": "analise.fii@btgpactual.com",
+        "team": {
+          "id": "1",
+          "name": "Research"
+        }
+      }
+    ],
+    "buyable": true,
+    "comparativeIndex": "Ifix",
+    "description": "<p>Destinada aos investidores que gostariam de ter renda e ganho de capital, a Carteira Recomendada de Fundos Imobiliários tem como objetivo capturar as melhores oportunidades do mercado de FIIs após um profundo processo de análise e avaliação de qualidade dos ativos. Buscamos equilibrar o nosso portfolio com fundos que possuam estratégias complementares, proporcionando, além da diversificação setorial, exposição a diferentes regiões do país. A atualização da carteira possui periodicidade mensal, com divulgação todo 1º dia útil de cada mês.</p>",
+    "fileName": "https://content.btgpactual.com/research/files/file/2026-05-11T091152.491_BTGFII MAI26.pdf",
+    "hideContent": false,
+    "id": "69f8895a9fd8cf7b378504b4",
+    "inAssets": [
+      {
+        "asset": {
+          "company": "Vinci Shopping Centers FII",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Shopping Centers",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "VISC11"
+        },
+        "weight": 2
+      }
+    ],
+    "inclusionTime": "2026-05-11T06:11:52.480-03:00",
+    "name": "FII - Maio/26",
+    "noTagsDescription": "Destinada aos investidores que gostariam de ter renda e ganho de capital, a Carteira Recomendada de Fundos Imobiliários tem como objetivo capturar as melhores oportunidades do mercado de FIIs após um profundo processo de análise e avaliação de qualidade dos ativos. Buscamos equilibrar o nosso portfolio com fundos que possuam estratégias complementares, proporcionando, além da diversificação setorial, exposição a diferentes regiões do país. A atualização da carteira possui periodicidade mensal, com divulgação todo 1º dia útil de cada mês.",
+    "outAssets": [],
+    "portfolioAsset": [
+      {
+        "asset": {
+          "company": "BTG Pactual Crédito Imobiliário FII",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Recebíveis",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "BTCI11"
+        },
+        "weight": 6
+      },
+      {
+        "asset": {
+          "company": "Kinea Rendimentos Imobiliários FII",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Recebíveis",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "KNCR11"
+        },
+        "weight": 13
+      },
+      {
+        "asset": {
+          "company": "Kinea Índice de Preços FII",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Recebíveis",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "KNIP11"
+        },
+        "weight": 13
+      },
+      {
+        "asset": {
+          "company": "RBR Rendimento High Grade FII",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Recebíveis",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "RBRR11"
+        },
+        "weight": 3
+      },
+      {
+        "asset": {
+          "company": "RBR Crédito Imobiliário Estruturado FII",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Recebíveis",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "RBRY11"
+        },
+        "weight": 9
+      },
+      {
+        "asset": {
+          "company": "Mauá Capital Recebíveis Imobiliários FII",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Recebíveis",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "MCCI11"
+        },
+        "weight": 8
+      },
+      {
+        "asset": {
+          "company": "Vinci Logística FII",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Galpões Logisticos",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "VILG11"
+        },
+        "weight": 4.5
+      },
+      {
+        "asset": {
+          "company": "Bresco Logística FII",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Galpões Logisticos",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "BRCO11"
+        },
+        "weight": 4.5
+      },
+      {
+        "asset": {
+          "company": "BTG Logística FII",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Galpões Logisticos",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "BTLG11"
+        },
+        "weight": 13
+      },
+      {
+        "asset": {
+          "company": "BTG Pactual Corporate Office FII",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Lajes Corporativas",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "BRCR11"
+        },
+        "weight": 4.5
+      },
+      {
+        "asset": {
+          "company": "VBI Prime Properties FII",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Lajes Corporativas",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "PVBI11"
+        },
+        "weight": 5
+      },
+      {
+        "asset": {
+          "company": "Hedge Brasil Shopping FII",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Shopping Centers",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "HGBS11"
+        },
+        "weight": 3
+      },
+      {
+        "asset": {
+          "company": "Gazit Malls FII",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Shopping Centers",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "GZIT11"
+        },
+        "weight": 2.5
+      },
+      {
+        "asset": {
+          "company": "HSI Malls FII",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Shopping Centers",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "HSML11"
+        },
+        "weight": 2
+      },
+      {
+        "asset": {
+          "company": "Vinci Shopping Centers FII",
+          "currentFundamentals": {},
+          "sector": {
+            "name": "Shopping Centers",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "VISC11"
+        },
+        "weight": 2
+      },
+      {
+        "asset": {
+          "company": "TRX Real Estate FII",
+          "currentFundamentals": {},
+          "sector": {
+            "description": "Renda Urbana",
+            "name": "Renda Urbana",
+            "sectorIndicator": "FII"
+          },
+          "ticker": "TRXF11"
+        },
+        "weight": 7
+      }
+    ],
+    "portfolioType": {
+      "channels": [
+        "R360",
+        "PUBLIC",
+        "BANKERS"
+      ],
+      "description": "A carteira tem como objetivo capturar as melhores oportunidades e performances do mercado de FIIs.",
+      "frequency": "MENSAL",
+      "hideContent": false,
+      "image": "https://digital-research-prd.s3-sa-east-1.amazonaws.com/file/2023-10-31T183606.579_Imagem.png",
+      "initials": "FII",
+      "name": "FII",
+      "segments": [
+        "DIGITAL",
+        "WM",
+        "CORPORATE"
+      ]
+    },
+    "previousIndex": 1.53,
+    "previousProfitability": 1.76,
+    "purchaseId": "8571",
+    "purchaseLink": "https://app.btgpactual.com/?productType=HOMEBROKER&productID=recommended-wallets&hb_param=8571&origin=content_research",
+    "sectorAllocation": [
+      {
+        "percent": 9.5,
+        "sector": {
+          "name": "Lajes Corporativas",
+          "sectorIndicator": "FII"
+        }
+      },
+      {
+        "percent": 22,
+        "sector": {
+          "name": "Galpões Logisticos",
+          "sectorIndicator": "FII"
+        }
+      },
+      {
+        "percent": 7,
+        "sector": {
+          "description": "Renda Urbana",
+          "name": "Renda Urbana",
+          "sectorIndicator": "FII"
+        }
+      },
+      {
+        "percent": 52,
+        "sector": {
+          "name": "Recebíveis",
+          "sectorIndicator": "FII"
+        }
+      },
+      {
+        "percent": 9.5,
+        "sector": {
+          "name": "Shopping Centers",
+          "sectorIndicator": "FII"
+        }
+      }
+    ],
+    "tier": "AREA_PUBLICA",
+    "topics": [],
+    "validityFinal": "2026-05-29T00:00:00.000-03:00",
+    "validityInitial": "2026-05-04T00:00:00.000-03:00"
+  }
+]
