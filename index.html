@@ -1432,7 +1432,7 @@
         /* =========================================
            CARTEIRAS RECOMENDADAS
            ========================================= */
-        .carteiras-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 24px; margin-bottom: 40px; }
+        .carteiras-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 24px; margin-top: 32px; margin-bottom: 40px; }
         .carteira-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; overflow: hidden; cursor: pointer; transition: all 0.3s; }
         .carteira-card:hover { border-color: var(--azul-01); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,134,255,0.15); }
         .carteira-card .cc-img { width: 100%; height: 120px; object-fit: cover; border-bottom: 1px solid var(--border-color); }
@@ -1449,6 +1449,13 @@
         .carteira-card .cc-stat .val.positive { color: #00C853; }
         .carteira-card .cc-stat .val.negative { color: #FF5252; }
         .carteira-card .cc-stat .lbl { font-size: 0.62rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.3px; font-weight: 600; margin-top: 2px; }
+        .cc-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 10px; }
+        .cc-tag { font-size: 0.62rem; padding: 2px 8px; border-radius: 4px; background: rgba(0,134,255,0.06); color: var(--azul-01); border: 1px solid rgba(0,134,255,0.12); font-weight: 600; letter-spacing: 0.2px; }
+        .carteiras-tagbar { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 32px; margin-bottom: 4px; }
+        .ct-filter { font-size: 0.75rem; padding: 5px 12px; border-radius: 16px; background: var(--bg-card); border: 1px solid var(--border-color); color: var(--text-muted); cursor: pointer; transition: all 0.2s; font-weight: 600; user-select: none; }
+        .ct-filter:hover { border-color: var(--azul-01); color: var(--azul-01); }
+        .ct-filter-ativa { background: var(--azul-01); color: white; border-color: var(--azul-01); }
+        .ct-filter small { font-weight: 400; opacity: 0.7; }
 
         .carteira-loading { text-align: center; padding: 60px 20px; color: var(--text-muted); }
         .carteira-loading .n-spinner { display: inline-block; width: 28px; height: 28px; border: 3px solid var(--border-color); border-top-color: var(--azul-01); border-radius: 50%; animation: spin 0.8s linear infinite; margin-bottom: 12px; }
@@ -3846,6 +3853,8 @@
                     </div>
                 </div>
 
+                <div id="carteiras-tags" class="carteiras-tagbar"></div>
+
                 <div id="carteiras-grid" class="carteiras-grid">
                     <div class="carteira-loading"><div class="n-spinner"></div><p>Carregando carteiras...</p></div>
                 </div>
@@ -5606,6 +5615,7 @@
                 if (xhr.status === 200) {
                     try {
                         carteirasData = JSON.parse(xhr.responseText);
+                        montarBarraTags();
                         renderizarCarteiras();
                     } catch(e) {
                         grid.innerHTML = '<div class="carteira-error"><span class="material-symbols-outlined">error_outline</span><h3>Erro ao processar dados</h3><p>Formato inválido do arquivo de carteiras.</p></div>';
@@ -5620,13 +5630,44 @@
             xhr.send();
         }
 
+        function getTags(c) {
+            var tags = [];
+            var ci = c.comparativeIndex || '';
+            if (ci) tags.push(ci.toUpperCase());
+            var pt = c.portfolioType;
+            if (pt) {
+                if (pt.frequency === 'MENSAL') tags.push('Mensal');
+                else if (pt.frequency === 'TRIMESTRAL') tags.push('Trimestral');
+            }
+            if (c.inAssets && c.inAssets.length) {
+                var sectors = {};
+                c.inAssets.forEach(function(a) {
+                    if (a.asset && a.asset.sector && a.asset.sector.name) sectors[a.asset.sector.name] = true;
+                });
+                Object.keys(sectors).forEach(function(s) { tags.push(s); });
+            }
+            var name = (c.name || '').toLowerCase();
+            if (name.indexOf('fii') >= 0 || name.indexOf('fundos') >= 0) tags.push('FII');
+            if (name.indexOf('bdr') >= 0) tags.push('BDR');
+            if (name.indexOf('etf') >= 0) tags.push('ETF');
+            if (name.indexOf('dividend') >= 0) tags.push('Dividendos');
+            if (name.indexOf('renda') >= 0) tags.push('Renda');
+            if (name.indexOf('esg') >= 0) tags.push('ESG');
+            if (name.indexOf('técnica') >= 0 || name.indexOf('tecnica') >= 0 || name.indexOf('technical') >= 0) tags.push('Análise Técnica');
+            if (name.indexOf('internacional') >= 0 || name.indexOf('global') >= 0) tags.push('Internacional');
+            return tags;
+        }
+
+        var carteirasFiltro = [];
+
         function renderizarCarteiras() {
             var grid = document.getElementById('carteiras-grid');
             if (!grid || !carteirasData.length) {
                 if (grid) grid.innerHTML = '<div class="carteira-error"><span class="material-symbols-outlined">inventory_2</span><h3>Nenhuma carteira disponível</h3></div>';
                 return;
             }
-            grid.innerHTML = carteirasData.map(function(c) {
+            var dados = carteirasFiltro.length ? carteirasFiltro : carteirasData;
+            grid.innerHTML = dados.map(function(c) {
                 var initials = c.portfolioType && c.portfolioType.initials ? c.portfolioType.initials : '';
                 var typeName = c.portfolioType && c.portfolioType.name ? c.portfolioType.name : '';
                 var typeImg = c.portfolioType && c.portfolioType.image ? c.portfolioType.image : '';
@@ -5639,12 +5680,14 @@
                 var idxClass = accIdx >= 0 ? 'positive' : 'negative';
                 var profStr = (accProf >= 0 ? '+' : '') + accProf.toFixed(1) + '%';
                 var idxStr = (accIdx >= 0 ? '+' : '') + accIdx.toFixed(1) + '%';
+                var cardTags = getTags(c);
                 return '<div class="carteira-card" onclick="abrirCarteira(\'' + c.id + '\')">' +
                     (typeImg ? '<img class="cc-img" src="' + typeImg + '" alt="" loading="lazy" onerror="this.style.display=\'none\'">' : '<div class="cc-img" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--azul-04),var(--azul-08));"><span class="material-symbols-outlined" style="font-size:40px;color:rgba(255,255,255,0.3);">folder</span></div>') +
                     '<div class="cc-body">' +
                     (initials ? '<div class="cc-badge">' + initials + '</div>' : '') +
                     '<div class="cc-name">' + c.name + '</div>' +
                     (authorName ? '<div class="cc-author">' + (authorImg ? '<img src="' + authorImg + '" alt="" onerror="this.style.display=\'none\'">' : '<span class="material-symbols-outlined" style="font-size:20px;color:var(--text-muted);">person</span>') + '<span>' + authorName + '</span></div>' : '') +
+                    (cardTags.length ? '<div class="cc-tags">' + cardTags.map(function(t) { return '<span class="cc-tag">' + t + '</span>'; }).join('') + '</div>' : '') +
                     '<div class="cc-stats">' +
                     '<div class="cc-stat"><div class="val ' + profClass + '">' + profStr + '</div><div class="lbl">Retorno</div></div>' +
                     (compIdx ? '<div class="cc-stat"><div class="val ' + idxClass + '">' + idxStr + '</div><div class="lbl">' + compIdx + '</div></div>' : '') +
@@ -5652,6 +5695,41 @@
                     '</div>' +
                     '</div></div>';
             }).join('');
+        }
+
+        function montarBarraTags() {
+            var barra = document.getElementById('carteiras-tags');
+            if (!barra || !carteirasData.length) return;
+            var todas = {};
+            carteirasData.forEach(function(c) {
+                getTags(c).forEach(function(t) { todas[t] = (todas[t] || 0) + 1; });
+            });
+            var keys = Object.keys(todas).sort();
+            var html = '<span class="ct-filter ct-filter-ativa" data-tag="" onclick="filtrarCarteiras(\'\')">Todas</span>';
+            keys.forEach(function(k) {
+                html += '<span class="ct-filter" data-tag="' + k.replace(/"/g, '&quot;') + '" onclick="filtrarCarteiras(\'' + k.replace(/'/g, "\\'") + '\')">' + k + ' <small>(' + todas[k] + ')</small></span>';
+            });
+            barra.innerHTML = html;
+        }
+
+        var filtroAtual = '';
+
+        function filtrarCarteiras(tag) {
+            filtroAtual = tag;
+            var filters = document.querySelectorAll('.ct-filter');
+            filters.forEach(function(f) {
+                f.classList.toggle('ct-filter-ativa', f.getAttribute('data-tag') === tag);
+            });
+            if (!tag) {
+                carteirasFiltro = [];
+            } else {
+                carteirasFiltro = [];
+                carteirasData.forEach(function(c) {
+                    var ct = getTags(c);
+                    if (ct.indexOf(tag) >= 0) carteirasFiltro.push(c);
+                });
+            }
+            renderizarCarteiras();
         }
 
         function abrirCarteira(id) {
