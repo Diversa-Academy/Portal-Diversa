@@ -90,7 +90,7 @@
         /* =========================================
            SIDEBAR & COLLAPSE
            ========================================= */
-        .sidebar { width: 280px; background-color: var(--bg-sidebar); display: flex; flex-direction: column; border-right: 1px solid var(--border-color); z-index: 20; transition: width 0.3s ease, background-color 0.3s; }
+        .sidebar { width: 280px; flex-shrink: 0; background-color: var(--bg-sidebar); display: flex; flex-direction: column; border-right: 1px solid var(--border-color); z-index: 20; transition: width 0.3s ease, background-color 0.3s; }
         .sidebar-header { padding: 24px; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; height: 80px; }
         .sidebar-header img { width: 140px; filter: brightness(0) invert(1); cursor: pointer; transition: 0.3s; }
         .sidebar-header .logo-simbolo { display: none; width: 40px; filter: brightness(0) invert(1); }
@@ -159,29 +159,83 @@
            HERO & ANIMAÇÃO ORBITAL 3D
            ========================================= */
         .hero-banner {
-            background: linear-gradient(135deg, var(--azul-03), var(--azul-05)); border-radius: var(--border-radius);
-            padding: 40px; color: white; display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px;
-            position: relative; overflow: hidden; min-height: 350px;
+            background: #0a0e17; border-radius: 0;
+            padding: 60px 48px 38px; color: white; display: flex; justify-content: flex-start; align-items: flex-start; margin: 0;
+            position: relative; overflow: hidden; min-height: 420px; width: 100%;
         }
+        #home-hero { display: none; }
+        body:not(.in-home) #home-hero { display: none; }
+        body.in-home #home-hero { display: flex; }
+        .hero-video-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; pointer-events: none; }
+        .hero-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10,14,23,0.85) 0%, rgba(10,14,23,0.4) 50%, rgba(10,14,23,0.15) 100%); z-index: 1; }
         .hero-content { position: relative; z-index: 2; max-width: 50%; }
         .hero-content h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 10px; line-height: 1.1; }
         .hero-content p { color: #CDCDCD; font-size: 1.1rem; margin-bottom: 20px; }
 
-        .orbit-system { position: absolute; right: 10%; top: 50%; transform: translateY(-50%); width: 300px; height: 300px; perspective: 800px; transform-style: preserve-3d; }
-        .orbit-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; height: 80px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 30px rgba(0, 134, 255, 0.5); z-index: 10; }
-        .orbit-center img { width: 50px; }
-        .orbit-ring { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px dashed rgba(0, 134, 255, 0.4); border-radius: 50%; transform-style: preserve-3d; animation: spin 20s linear infinite; }
-        .orbit-ring:nth-child(2) { width: 200px; height: 200px; top: 50px; left: 50px; animation: spin-reverse 15s linear infinite; border: 1px solid rgba(255, 255, 255, 0.1); }
-        .orbit-item { position: absolute; width: 40px; height: 40px; background: var(--azul-01); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.3); animation: spin-reverse 20s linear infinite; }
-        .orbit-item.i1 { top: -20px; left: 130px; }
-        .orbit-item.i2 { bottom: -20px; left: 130px; background: #E53935; }
-        .orbit-item.i3 { top: 130px; left: -20px; background: #43A047; }
-        .orbit-item.i4 { top: 130px; right: -20px; background: #FFB300; }
-        @keyframes spin { 100% { transform: rotateX(60deg) rotateZ(360deg); } }
-        @keyframes spin-reverse { 100% { transform: rotateZ(-360deg) rotateX(-60deg); } }
+        .orbit-system { position: absolute; right: 10%; top: 50%; transform: translateY(-50%); width: 240px; height: 240px; }
+        .orbit-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 40px rgba(0, 134, 255, 0.5), 0 0 80px rgba(0, 134, 255, 0.2); z-index: 10; animation: centerPulse 3s ease-in-out infinite; }
+        .orbit-center img { width: 36px; }
+        @keyframes centerPulse { 0%, 100% { box-shadow: 0 0 40px rgba(0,134,255,0.5), 0 0 80px rgba(0,134,255,0.2); transform: translate(-50%, -50%) scale(1); } 50% { box-shadow: 0 0 70px rgba(0,134,255,0.8), 0 0 120px rgba(0,134,255,0.3); transform: translate(-50%, -50%) scale(1.06); } }
+        .orbit-ring { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px dashed rgba(0, 134, 255, 0.25); border-radius: 50%; animation: spin 14s linear infinite; }
+        .orbit-ring:nth-child(2) { width: 160px; height: 160px; top: 40px; left: 40px; animation: spin-reverse 10s linear infinite; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 0 30px rgba(0,134,255,0.05); }
+        .orbit-item { position: absolute; width: 36px; height: 36px; background: rgba(255,255,255,0.13); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3); animation: spin-reverse 14s linear infinite; border: 1.5px solid rgba(255,255,255,0.2); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+        .orbit-item .material-symbols-outlined { font-size: 18px; color: white; }
+        .orbit-item.i1 { top: -18px; left: 102px; }
+        .orbit-item.i2 { bottom: -18px; left: 102px; }
+        .orbit-item.i3 { top: 102px; left: -18px; }
+        .orbit-item.i4 { top: 102px; right: -18px; }
+        @keyframes spin { 100% { transform: rotateZ(360deg); } }
+        @keyframes spin-reverse { 100% { transform: rotateZ(-360deg); } }
+
+        /* Hero aprimoramentos */
+        .hero-banner::before {
+            content: ''; position: absolute; inset: 0;
+            background: radial-gradient(ellipse at 20% 50%, rgba(0,134,255,0.12) 0%, transparent 60%),
+                        radial-gradient(ellipse at 80% 20%, rgba(0,134,255,0.06) 0%, transparent 50%);
+            z-index: 1; pointer-events: none;
+        }
+        .hero-banner::after {
+            content: ''; position: absolute; inset: 0;
+            background-image:
+                radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.3) 0%, transparent 100%),
+                radial-gradient(1px 1px at 30% 60%, rgba(255,255,255,0.2) 0%, transparent 100%),
+                radial-gradient(1.5px 1.5px at 50% 10%, rgba(255,255,255,0.25) 0%, transparent 100%),
+                radial-gradient(1px 1px at 70% 80%, rgba(255,255,255,0.15) 0%, transparent 100%),
+                radial-gradient(1.2px 1.2px at 85% 30%, rgba(255,255,255,0.2) 0%, transparent 100%),
+                radial-gradient(1px 1px at 15% 85%, rgba(255,255,255,0.15) 0%, transparent 100%),
+                radial-gradient(1.5px 1.5px at 90% 70%, rgba(255,255,255,0.2) 0%, transparent 100%),
+                radial-gradient(1px 1px at 45% 45%, rgba(255,255,255,0.1) 0%, transparent 100%);
+            background-size: 200% 200%;
+            animation: driftParticles 20s ease-in-out infinite alternate;
+            z-index: 1; pointer-events: none; opacity: 0.6;
+        }
+        @keyframes driftParticles {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
+        }
+        .hero-content {
+        }
+        .hero-content h1 { font-size: 2.6rem; font-weight: 800; margin-bottom: 8px; line-height: 1.15; }
+        .hero-content p { color: #FFFFFF; font-size: 1.1rem; margin-bottom: 16px; line-height: 1.5; }
+        .hero-banner .live-dot { width: 8px; height: 8px; }
+        .hero-badge-pill {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 5px 14px; border-radius: 20px; margin-bottom: 12px;
+            background: linear-gradient(135deg, rgba(0,134,255,0.2), rgba(0,134,255,0.08));
+            color: var(--azul-01); font-weight: 800; font-size: 0.7rem;
+            text-transform: uppercase; letter-spacing: 1px; margin-bottom: 18px;
+            border: 1px solid rgba(0,134,255,0.25);
+            backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+            animation: pulseGlow 3s ease-in-out infinite;
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(0,134,255,0.2); }
+            50% { box-shadow: 0 0 20px 4px rgba(0,134,255,0.08); }
+        }
+        /* .hero-stats-row removido a pedido */
 
         /* =========================================
-           CARDS E TILT 3D
+            CARDS E TILT 3D
            ========================================= */
         .section-title { font-size: 1.5rem; color: var(--text-main); margin-bottom: 20px; font-weight: 700; border-bottom: 2px solid var(--border-color); padding-bottom: 10px;}
         .grid-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; margin-bottom: 40px; perspective: 1000px;}
@@ -354,6 +408,10 @@
             .hero-consorcio-content { max-width: 100%; padding: 0 30px; text-align: center;}
             .hero-consorcio-content h1 { font-size: 3rem; }
             .calc-tool-container { grid-template-columns: 1fr !important; }
+        }
+        @media (max-width: 768px) {
+            .orbit-system { display: none; }
+            .hero-content { max-width: 100%; }
         }
 
         /* =========================================
@@ -1086,12 +1144,88 @@
         .home-quick-card .material-symbols-outlined { font-size: 32px; color: var(--azul-01); margin-bottom: 10px; }
         .home-quick-card h4 { font-size: 0.85rem; margin-bottom: 4px; }
         .home-quick-card p { font-size: 0.7rem; color: var(--text-muted); margin: 0; }
+        .quick-option-row { display:flex;align-items:center;gap:8px;padding:6px 10px;border-radius:8px;border:1px solid var(--border-color);cursor:pointer;transition:0.15s;user-select:none; }
+        .quick-option-row:hover { border-color:var(--azul-01);background:rgba(0,134,255,0.03); }
+        .quick-option-row .material-symbols-outlined { font-size:18px;color:var(--azul-01); }
+        .quick-option-row .q-info { flex:1; }
+        .quick-option-row .q-info h4 { font-size:0.78rem;margin:0;color:var(--text-main); }
+        .quick-option-row .q-info p { font-size:0.62rem;margin:0;color:var(--text-muted); }
+        .quick-option-row .q-check { width:18px;height:18px;border-radius:4px;border:2px solid var(--border-color);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:0.2s; }
+        .quick-option-row.selected .q-check { border-color:var(--azul-01);background:var(--azul-01); }
+        .quick-option-row.selected .q-check .material-symbols-outlined { display:block;font-size:14px !important; }
+        .quick-option-row .q-check .material-symbols-outlined { display:none; }
+        .quick-modal-overlay { display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:9999;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);align-items:center;justify-content:center;margin:0;padding:0; }
+        .quick-modal-box { background:var(--bg-card);border-radius:16px;padding:22px;max-width:400px;width:92%;border:1px solid var(--border-color);box-shadow:0 20px 60px rgba(0,0,0,0.3);max-height:80vh;overflow-y:auto; }
+
+        /* Search dropdown */
+        .search-dropdown { position:absolute;top:100%;left:0;right:0;margin-top:8px;background:var(--bg-card);border:1px solid var(--border-color);border-radius:16px;box-shadow:0 16px 48px rgba(0,0,0,0.12);max-height:420px;overflow-y:auto;z-index:9999;display:none; }
+        .search-dropdown.active { display:block; }
+        .search-dropdown .sd-section { padding:8px 12px 4px;font-size:0.6rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted); }
+        .search-dropdown .sd-item { display:flex;align-items:center;gap:12px;padding:10px 14px;cursor:pointer;transition:0.15s;border-radius:8px;margin:2px 6px; }
+        .search-dropdown .sd-item:hover { background:rgba(0,134,255,0.06); }
+        .search-dropdown .sd-item .sd-icon { font-size:18px;color:var(--azul-01);flex-shrink:0; }
+        .search-dropdown .sd-item .sd-info h4 { font-size:0.82rem;margin:0;color:var(--text-main);font-weight:600; }
+        .search-dropdown .sd-item .sd-info p { font-size:0.7rem;margin:0;color:var(--text-muted); }
+        .search-dropdown .sd-empty { padding:24px;text-align:center;color:var(--text-muted);font-size:0.85rem; }
         .home-tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin-bottom: 40px; }
         .home-tool-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 20px; cursor: pointer; transition: 0.3s; display: flex; align-items: center; gap: 16px; }
         .home-tool-card:hover { border-color: var(--azul-01); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,134,255,0.1); }
         .home-tool-card .material-symbols-outlined { font-size: 36px; color: var(--azul-01); flex-shrink: 0; }
         .home-tool-card h4 { font-size: 0.95rem; margin-bottom: 2px; }
         .home-tool-card p { font-size: 0.78rem; color: var(--text-muted); margin: 0; line-height: 1.4; }
+
+        /* =========================================
+           HOME — NOVAS SEÇÕES (EDUCAÇÃO, VÍDEOS, NOTÍCIAS)
+           ========================================= */
+        .home-section-divider { margin: 48px 0 24px; border: none; border-top: 1px solid var(--border-color); opacity: 0.4; }
+        .home-edu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; margin-bottom: 10px; }
+        .home-edu-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; overflow: hidden; cursor: pointer; transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94); position: relative; }
+        .home-edu-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,134,255,0.12); border-color: var(--azul-01); }
+        .home-edu-card .thumb { width: 100%; height: 150px; object-fit: cover; display: block; transition: transform 0.5s; }
+        .home-edu-card:hover .thumb { transform: scale(1.06); }
+        .home-edu-card .body { padding: 16px 18px 18px; }
+        .home-edu-card .badge { display: inline-block; padding: 3px 10px; border-radius: 4px; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; background: rgba(0,134,255,0.1); color: var(--azul-01); }
+        .home-edu-card h4 { font-size: 0.95rem; margin-bottom: 4px; color: var(--text-main); }
+        .home-edu-card p { font-size: 0.78rem; color: var(--text-muted); margin: 0; line-height: 1.4; }
+        .home-edu-card .meta { display: flex; align-items: center; gap: 12px; margin-top: 10px; font-size: 0.72rem; color: var(--text-muted); }
+        .home-edu-card .meta .material-symbols-outlined { font-size: 14px; }
+        .home-edu-card .price-tag { position: absolute; top: 10px; right: 10px; background: var(--azul-01); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: 700; }
+
+        .home-video-strip { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 18px; margin-bottom: 10px; }
+        .home-video-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; overflow: hidden; cursor: pointer; transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+        .home-video-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,134,255,0.1); border-color: var(--azul-01); }
+        .home-video-card .thumb-wrap { position: relative; width: 100%; aspect-ratio: 16/9; overflow: hidden; background: var(--azul-03); }
+        .home-video-card .thumb-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+        .home-video-card:hover .thumb-wrap img { transform: scale(1.06); }
+        .home-video-card .play-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.2); transition: 0.3s; }
+        .home-video-card:hover .play-overlay { background: rgba(0,0,0,0.35); }
+        .home-video-card .play-overlay .material-symbols-outlined { font-size: 48px; color: white; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4)); }
+        .home-video-card .body { padding: 14px 18px 16px; }
+        .home-video-card .body h4 { font-size: 0.9rem; margin-bottom: 4px; color: var(--text-main); }
+        .home-video-card .body p { font-size: 0.75rem; color: var(--text-muted); margin: 0; }
+        .home-video-card .thumb-wrap .duration { position: absolute; bottom: 6px; right: 6px; background: rgba(0,0,0,0.85); color: white; font-size: 0.65rem; padding: 1px 7px; border-radius: 5px; z-index: 2; }
+
+        .home-news-strip { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-bottom: 10px; }
+        .home-news-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 14px; padding: 18px; cursor: pointer; transition: all 0.3s; display: flex; flex-direction: column; gap: 8px; }
+        .home-news-card:hover { border-color: var(--azul-01); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,134,255,0.08); }
+        .home-news-card .n-tag { font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--azul-01); }
+        .home-news-card h4 { font-size: 0.88rem; color: var(--text-main); margin: 0; line-height: 1.35; }
+        .home-news-card p { font-size: 0.75rem; color: var(--text-muted); margin: 0; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .home-news-card .n-source { font-size: 0.65rem; color: var(--text-muted); margin-top: auto; }
+
+        .home-section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+        .home-section-header .section-title { margin-bottom: 0; border-bottom: none; padding-bottom: 0; }
+        .home-section-header .link-all { font-size: 0.8rem; color: var(--azul-01); font-weight: 600; cursor: pointer; text-decoration: none; display: flex; align-items: center; gap: 4px; transition: 0.2s; }
+        .home-section-header .link-all:hover { gap: 8px; }
+        .home-section-header .link-all .material-symbols-outlined { font-size: 16px; }
+
+        .home-ferr-enhanced { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
+        .home-ferr-card { background: linear-gradient(135deg, var(--bg-card), rgba(0,134,255,0.03)); border: 1px solid var(--border-color); border-radius: 14px; padding: 20px; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; gap: 14px; }
+        .home-ferr-card:hover { border-color: var(--azul-01); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,134,255,0.1); }
+        .home-ferr-card .icon-wrap { width: 44px; height: 44px; border-radius: 12px; background: rgba(0,134,255,0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .home-ferr-card .icon-wrap .material-symbols-outlined { font-size: 24px; color: var(--azul-01); }
+        .home-ferr-card h4 { font-size: 0.85rem; margin-bottom: 2px; }
+        .home-ferr-card p { font-size: 0.7rem; color: var(--text-muted); margin: 0; }
 
         /* ===== NOTÍCIAS ===== */
         .noticias-hero { position: relative; border-radius: 24px; overflow: hidden; margin-bottom: 32px; min-height: 280px; display: flex; align-items: center; }
@@ -1260,22 +1394,8 @@
         .home-curso-card .hover-reveal .instructor-label { font-size: 0.55rem; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
         .home-curso-card .hover-reveal .btn-account { font-size: 0.7rem; padding: 6px 16px; }
 
-        /* ===== HOME SEÇÃO VÍDEOS ===== */
-        .home-videos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin-bottom: 30px; }
-        .home-video-card { border-radius: 12px; overflow: hidden; cursor: pointer; background: #0d0d0d; border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s; }
-        .home-video-card:hover { border-color: var(--azul-01); box-shadow: 0 8px 20px rgba(0,134,255,0.1); }
-        .home-video-card .thumb-wrap { position: relative; aspect-ratio: 16/9; overflow: hidden; background: #0d0d0d; }
-        .home-video-card .thumb-wrap img { width: 100%; height: 100%; object-fit: cover; }
-        .home-video-card .thumb-wrap .duration { position: absolute; bottom: 6px; right: 6px; background: rgba(0,0,0,0.85); color: white; font-size: 0.6rem; padding: 1px 6px; border-radius: 4px; z-index: 2; }
-        .home-video-card .thumb-wrap .play-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.15); opacity: 0; transition: 0.25s; z-index: 2; }
-        .home-video-card:hover .thumb-wrap .play-overlay { opacity: 1; }
-        .home-video-card .thumb-wrap .play-overlay .material-symbols-outlined { font-size: 36px; color: white; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
-        .home-video-card .info { padding: 8px 12px 10px; }
-        .home-video-card .info .cat { font-size: 0.5rem; font-weight: 700; color: var(--azul-01); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
-        .home-video-card .info h3 { font-size: 0.7rem; font-weight: 700; color: #eee; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-
         /* ===== HOME HERO ROTATING TEXT ===== */
-        .hero-rotator { display: inline-block; min-width: 180px; text-align: left; }
+        .hero-rotator { display: inline; }
         .hero-rotator .rotating-text { background: linear-gradient(90deg, var(--azul-01), #60b0ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 800; transition: opacity 0.5s; }
 
         /* ===== HOME VER MAIS LINK ===== */
@@ -1283,6 +1403,110 @@
         .home-ver-mais:hover { gap: 10px; opacity: 0.8; }
         .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
         .section-header .section-title { margin-bottom: 0; border-bottom: none; padding-bottom: 0; }
+
+        /* ===== FOOTER ===== */
+        .site-footer { border-top: 1px solid rgba(255,255,255,0.06); background: #060912; padding: 40px 0 0; margin: 0; color: rgba(255,255,255,0.5); font-size: 0.82rem; }
+        .site-footer .f-inner { max-width: 1100px; margin: 0 auto; padding: 0 40px 24px; display: flex; flex-wrap: wrap; justify-content: center; gap: 40px 60px; }
+        .site-footer .f-brand { display: flex; flex-direction: column; gap: 6px; align-items: center; text-align: center; min-width: 200px; }
+        .site-footer .f-contact { display: flex; flex-direction: column; gap: 8px; align-items: center; text-align: center; min-width: 200px; }
+        .site-footer .f-social { display: flex; flex-direction: column; gap: 8px; align-items: center; text-align: center; min-width: 140px; }
+        .site-footer .f-brand .f-logo { display: flex; align-items: center; }
+        .site-footer .f-brand .f-logo img { height: 38px; filter: brightness(0) invert(1); }
+        .site-footer .f-brand .f-slogan { font-size: 0.75rem; color: rgba(255,255,255,0.4); font-style: italic; max-width: 280px; line-height: 1.4; }
+        .site-footer .f-contact { display: flex; flex-direction: column; gap: 8px; text-align: left; }
+        .site-footer .f-contact .f-label { font-weight: 700; color: rgba(255,255,255,0.7); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
+        .site-footer .f-contact a { color: rgba(255,255,255,0.5); text-decoration: none; transition: 0.2s; display: flex; align-items: flex-start; gap: 8px; line-height: 1.4; }
+        .site-footer .f-contact a:hover { color: var(--azul-01); }
+        .site-footer .f-contact .material-symbols-outlined { font-size: 16px; }
+        .site-footer .f-social { display: flex; flex-direction: column; gap: 8px; }
+        .site-footer .f-social .f-label { font-weight: 700; color: rgba(255,255,255,0.7); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
+        .site-footer .f-social .f-icons { display: flex; gap: 10px; flex-wrap: wrap; }
+        .site-footer .f-social .f-icons a { display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); text-decoration: none; transition: 0.2s; }
+        .site-footer .f-social .f-icons a:hover { background: var(--azul-01); color: white; border-color: var(--azul-01); transform: translateY(-2px); }
+        .site-footer .f-site-link { margin-top: 4px; }
+        .site-footer .f-site-link a { display: inline-flex; align-items: center; gap: 4px; color: var(--azul-01); font-weight: 600; text-decoration: none; font-size: 0.82rem; }
+        .site-footer .f-site-link a:hover { text-decoration: underline; }
+        .site-footer .f-bottom { border-top: 1px solid rgba(255,255,255,0.05); padding: 14px 40px; text-align: center; font-size: 0.7rem; color: rgba(255,255,255,0.35); }
+        @media (max-width: 768px) { .site-footer .f-inner { grid-template-columns: 1fr; gap: 24px; } .site-footer { padding: 24px 0 0; } }
+
+        /* =========================================
+           CARTEIRAS RECOMENDADAS
+           ========================================= */
+        .carteiras-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 24px; margin-bottom: 40px; }
+        .carteira-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; overflow: hidden; cursor: pointer; transition: all 0.3s; }
+        .carteira-card:hover { border-color: var(--azul-01); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,134,255,0.15); }
+        .carteira-card .cc-img { width: 100%; height: 120px; object-fit: cover; border-bottom: 1px solid var(--border-color); }
+        .carteira-card .cc-body { padding: 18px 20px 20px; }
+        .carteira-card .cc-badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; border-radius: 20px; background: rgba(0,134,255,0.1); color: var(--azul-01); font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
+        .carteira-card .cc-name { font-size: 1.05rem; font-weight: 700; color: var(--text-main); margin-bottom: 6px; line-height: 1.25; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .carteira-card .cc-meta { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 12px; }
+        .carteira-card .cc-author { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+        .carteira-card .cc-author img { width: 26px; height: 26px; border-radius: 50%; object-fit: cover; }
+        .carteira-card .cc-author span { font-size: 0.78rem; color: var(--text-muted); }
+        .carteira-card .cc-stats { display: flex; gap: 12px; padding-top: 12px; border-top: 1px solid var(--border-color); }
+        .carteira-card .cc-stat { flex: 1; text-align: center; }
+        .carteira-card .cc-stat .val { font-size: 1.1rem; font-weight: 800; }
+        .carteira-card .cc-stat .val.positive { color: #00C853; }
+        .carteira-card .cc-stat .val.negative { color: #FF5252; }
+        .carteira-card .cc-stat .lbl { font-size: 0.62rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.3px; font-weight: 600; margin-top: 2px; }
+
+        .carteira-loading { text-align: center; padding: 60px 20px; color: var(--text-muted); }
+        .carteira-loading .n-spinner { display: inline-block; width: 28px; height: 28px; border: 3px solid var(--border-color); border-top-color: var(--azul-01); border-radius: 50%; animation: spin 0.8s linear infinite; margin-bottom: 12px; }
+        .carteira-error { text-align: center; padding: 60px 20px; }
+        .carteira-error .material-symbols-outlined { font-size: 40px; color: var(--text-muted); margin-bottom: 12px; }
+        .carteira-error h3 { color: var(--text-main); margin-bottom: 6px; }
+        .carteira-error p { color: var(--text-muted); font-size: 0.9rem; }
+
+        /* Detail */
+        .carteira-detail { padding: 0; }
+        .carteira-detail .cd-back { display: inline-flex; align-items: center; gap: 6px; color: var(--azul-01); font-weight: 600; font-size: 0.9rem; cursor: pointer; text-decoration: none; margin-bottom: 20px; }
+        .carteira-detail .cd-back:hover { text-decoration: underline; }
+        .carteira-detail .cd-header { position: relative; padding: 36px 40px; border-radius: 24px; overflow: hidden; margin-bottom: 28px; }
+        .carteira-detail .cd-header-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.3); z-index: 1; }
+        .carteira-detail .cd-header-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, var(--azul-04), rgba(0,3,32,0.85), var(--azul-08)); z-index: 2; }
+        .carteira-detail .cd-header-content { position: relative; z-index: 3; }
+        .carteira-detail .cd-header h1 { color: white; font-size: 2.2rem; font-weight: 800; line-height: 1.1; margin-bottom: 10px; }
+        .carteira-detail .cd-header .cd-subtitle { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 14px; color: #CDCDCD; font-size: 0.85rem; }
+        .carteira-detail .cd-header .cd-subtitle span { display: flex; align-items: center; gap: 6px; }
+        .carteira-detail .cd-header .cd-desc { color: #CDCDCD; font-size: 0.92rem; line-height: 1.6; margin-bottom: 18px; max-width: 700px; }
+        .carteira-detail .cd-authors { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; }
+        .carteira-detail .cd-author { display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.08); padding: 8px 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); }
+        .carteira-detail .cd-author img { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; }
+        .carteira-detail .cd-author .cd-author-info { display: flex; flex-direction: column; }
+        .carteira-detail .cd-author .cd-author-name { font-size: 0.82rem; font-weight: 700; color: white; }
+        .carteira-detail .cd-author .cd-author-occ { font-size: 0.68rem; color: rgba(255,255,255,0.55); }
+        .carteira-detail .cd-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin-bottom: 28px; }
+        .carteira-detail .cd-stat-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 18px; text-align: center; }
+        .carteira-detail .cd-stat-card .val { font-size: 1.5rem; font-weight: 800; }
+        .carteira-detail .cd-stat-card .val.positive { color: #00C853; }
+        .carteira-detail .cd-stat-card .val.negative { color: #FF5252; }
+        .carteira-detail .cd-stat-card .lbl { font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; margin-top: 4px; }
+        .carteira-detail .cd-section-title { font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+        .carteira-detail .cd-holdings-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; margin-bottom: 28px; }
+        .carteira-detail .cd-holding { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 14px; padding: 14px; transition: 0.2s; }
+        .carteira-detail .cd-holding:hover { border-color: var(--azul-01); }
+        .carteira-detail .cd-holding-top { display: flex; align-items: center; gap: 12px; }
+        .carteira-detail .cd-holding .cd-hold-img { width: 40px; height: 40px; border-radius: 8px; object-fit: contain; background: rgba(255,255,255,0.05); padding: 4px; flex-shrink: 0; }
+        .carteira-detail .cd-holding .cd-hold-info { flex: 1; min-width: 0; }
+        .carteira-detail .cd-holding .cd-hold-info .cd-hold-ticker { font-size: 0.72rem; font-weight: 800; color: var(--azul-01); text-transform: uppercase; letter-spacing: 0.5px; }
+        .carteira-detail .cd-holding .cd-hold-info .cd-hold-company { font-size: 0.85rem; font-weight: 600; color: var(--text-main); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .carteira-detail .cd-holding .cd-hold-info .cd-hold-sector { font-size: 0.68rem; color: var(--text-muted); }
+        .carteira-detail .cd-holding .cd-hold-weight-box { text-align: right; flex-shrink: 0; }
+        .carteira-detail .cd-holding .cd-hold-weight-box .cd-hold-weight { font-size: 1rem; font-weight: 800; color: var(--azul-01); }
+        .carteira-detail .cd-holding .cd-hold-weight-box .cd-hold-weight-lbl { font-size: 0.6rem; color: var(--text-muted); text-transform: uppercase; }
+        .carteira-detail .cd-holding .cd-hold-fundamentals { margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--border-color); display: flex; gap: 12px; font-size: 0.7rem; color: var(--text-muted); flex-wrap: wrap; }
+        .carteira-detail .cd-holding .cd-hold-fundamentals span { background: rgba(255,255,255,0.04); padding: 3px 8px; border-radius: 6px; }
+        .carteira-detail .cd-holding .cd-hold-fundamentals span strong { color: var(--text-main); font-weight: 600; }
+        .carteira-detail .cd-sector-bars { display: flex; flex-direction: column; gap: 8px; margin-bottom: 28px; }
+        .carteira-detail .cd-sector-bar-row { display: flex; align-items: center; gap: 12px; }
+        .carteira-detail .cd-sector-bar-row .sector-name { min-width: 150px; font-size: 0.8rem; color: var(--text-main); font-weight: 600; }
+        .carteira-detail .cd-sector-bar-row .sector-bar-bg { flex: 1; height: 22px; background: rgba(255,255,255,0.05); border-radius: 11px; overflow: hidden; }
+        .carteira-detail .cd-sector-bar-row .sector-bar { height: 100%; border-radius: 11px; background: linear-gradient(90deg, var(--azul-01), var(--azul-04)); transition: width 0.6s ease; }
+        .carteira-detail .cd-sector-bar-row .sector-pct { min-width: 48px; text-align: right; font-size: 0.82rem; font-weight: 700; color: var(--azul-01); }
+        .carteira-detail .cd-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
+        .carteira-detail .cd-actions a, .carteira-detail .cd-actions button { display: inline-flex; align-items: center; gap: 8px; }
+        .carteira-detail .cd-empty { text-align: center; padding: 40px; color: var(--text-muted); }
+        .carteira-detail .cd-empty .material-symbols-outlined { font-size: 36px; margin-bottom: 10px; }
     </style>
     
     <script src="https://unpkg.com/globe.gl"></script>
@@ -1321,6 +1545,7 @@
                     <li><a class="nav-link" data-target="seguros"><span class="material-symbols-outlined">shield</span> <span class="menu-text">Seguros</span></a></li>
                     <li><a class="nav-link" data-target="terminal"><span class="material-symbols-outlined">terminal</span> <span class="menu-text">Terminal</span></a></li>
                     <li><a class="nav-link" data-target="carteiras"><span class="material-symbols-outlined">folder</span> <span class="menu-text">Carteiras</span></a></li>
+                    <li><a class="nav-link" data-target="cripto"><span class="material-symbols-outlined">currency_bitcoin</span> <span class="menu-text">Cripto</span></a></li>
                 </ul>
             </div>
 
@@ -1368,7 +1593,7 @@
         <header class="topbar">
             <span class="material-symbols-outlined action-icon" id="sidebar-toggle" style="margin-right: 20px; font-size: 28px;">menu</span>
             
-            <div class="topbar-search"><input type="text" placeholder="Buscar ativos, cursos, artigos..."></div>
+            <div class="topbar-search" style="position:relative;"><input type="text" id="global-search-input" placeholder="Buscar ativos, cursos, artigos..." autocomplete="off" oninput="executarBusca()"><div class="search-dropdown" id="search-dropdown"></div></div>
             <div style="display: flex; gap: 20px; align-items: center; margin-left: auto;">
                 <span class="material-symbols-outlined action-icon" id="theme-toggle" title="Alternar Tema">dark_mode</span>
                 <span class="material-symbols-outlined action-icon">notifications</span>
@@ -1376,37 +1601,23 @@
             </div>
         </header>
 
+        <div class="hero-banner" id="home-hero">
+            <video class="hero-video-bg" autoplay muted loop playsinline poster="https://raw.githubusercontent.com/Diversa-Academy/Images/725ca77b2774b887536795f5495ca14a2956b852/S%C3%ADmbolo%20Preto%20e%20Azul%2001.png">
+                <source src="https://raw.githubusercontent.com/Diversa-Academy/Images/3ebe7b4bbc5ccedfb892ef69a559aeda55d1d76d/Logo%20review.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Ecossistema Diversa</h1>
+                <p>Cuidado que vai além dos seus investimentos</p>
+                <div style="display:flex;gap:12px;flex-wrap:wrap;">
+                    <button class="btn-account" style="width: max-content; padding: 12px 30px;" onclick="document.querySelector('.home-live-strip').scrollIntoView({behavior:'smooth'})">Explore a Plataforma</button>
+                </div>
+            </div>
+        </div>
+
         <div class="page-container">
             
             <section id="home" class="page-section active-section">
-                <div class="hero-banner">
-                    <div class="hero-content">
-                        <div style="display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:20px;background:rgba(0,134,255,0.16);color:var(--azul-01);font-weight:800;font-size:0.75rem;text-transform:uppercase;margin-bottom:16px;border:1px solid rgba(0,134,255,0.3);letter-spacing:1px;">
-                            <span class="live-dot"></span> Plataforma Multi-Ativos
-                        </div>
-                        <h1>Ecossistema <span style="color: var(--azul-01);">Diversa</span></h1>
-                        <p style="font-size:1.15rem;">O centro gravitacional do seu patrimônio. 
-                            <span class="hero-rotator">
-                                <span class="rotating-text" id="hero-rotating-text">Educação</span>
-                            </span>, 
-                            análise e assessoria 360 orbitando seus objetivos financeiros.
-                        </p>
-                        <div style="display:flex;gap:12px;flex-wrap:wrap;">
-                            <button class="btn-account" style="width: max-content; padding: 12px 30px;" onclick="document.getElementById('home-mercado').scrollIntoView({behavior:'smooth'})">Explore a Plataforma</button>
-                            <button onclick="navigate('noticias')" style="padding:12px 24px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:transparent;color:white;font-weight:600;cursor:pointer;font-family:inherit;font-size:0.9rem;transition:0.2s;">Últimas Notícias <span class="material-symbols-outlined" style="font-size:16px;vertical-align:middle;">open_in_new</span></button>
-                        </div>
-                    </div>
-                    <div class="orbit-system">
-                        <div class="orbit-ring"></div>
-                        <div class="orbit-ring" style="width: 300px; height: 300px; top: 0; left: 0;">
-                            <div class="orbit-item i1"><span class="material-symbols-outlined" style="color: white; font-size: 20px;">trending_up</span></div>
-                            <div class="orbit-item i2"><span class="material-symbols-outlined" style="color: white; font-size: 20px;">real_estate_agent</span></div>
-                            <div class="orbit-item i3"><span class="material-symbols-outlined" style="color: white; font-size: 20px;">public</span></div>
-                            <div class="orbit-item i4"><span class="material-symbols-outlined" style="color: white; font-size: 20px;">school</span></div>
-                        </div>
-                        <div class="orbit-center"><img src="https://raw.githubusercontent.com/Diversa-Academy/Images/725ca77b2774b887536795f5495ca14a2956b852/S%C3%ADmbolo%20Preto%20e%20Azul%2001.png" alt="Logo"></div>
-                    </div>
-                </div>
 
                 <div class="tradingview-widget-container" id="home-ticker-container" style="margin-bottom: 40px; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);"></div>
 
@@ -1439,31 +1650,28 @@
                     </div>
                 </div>
 
-                <div class="section-title">Acesse Rapidamente</div>
-                <div class="home-quick-grid">
-                    <div class="home-quick-card" onclick="navigate('acoes')"><span class="material-symbols-outlined">trending_up</span><h4>Ações</h4><p>Painel de ações ao vivo</p></div>
-                    <div class="home-quick-card" onclick="navigate('fiis')"><span class="material-symbols-outlined">domain</span><h4>Fundos Imobiliários</h4><p>Dividendos e carteiras</p></div>
-                    <div class="home-quick-card" onclick="navigate('rendafixa')"><span class="material-symbols-outlined">account_balance</span><h4>Renda Fixa</h4><p>CDB, LCA, Tesouro</p></div>
-                    <div class="home-quick-card" onclick="navigate('internacional')"><span class="material-symbols-outlined">language</span><h4>Internacional</h4><p>Mercados globais</p></div>
-                    <div class="home-quick-card" onclick="navigate('cripto')"><span class="material-symbols-outlined">currency_bitcoin</span><h4>Cripto</h4><p>Ativos digitais</p></div>
-                    <div class="home-quick-card" onclick="navigate('agro')"><span class="material-symbols-outlined">eco</span><h4>Agro</h4><p>LCA & commodities</p></div>
-                    <div class="home-quick-card" onclick="navigate('banking')"><span class="material-symbols-outlined">account_balance_wallet</span><h4>Banking</h4><p>Conta e cartão</p></div>
-                    <div class="home-quick-card" onclick="navigate('previdencia')"><span class="material-symbols-outlined">savings</span><h4>Previdência</h4><p>Planejamento futuro</p></div>
+                <div class="section-title" style="display:flex;align-items:center;justify-content:space-between;">
+                    <span>Acesse Rapidamente</span>
+                    <div style="display:flex;align-items:center;gap:4px;cursor:pointer;color:var(--text-muted);font-size:0.75rem;font-weight:500;" onclick="abrirCustomQuick()">
+                        <span class="material-symbols-outlined" id="quick-customize-btn" title="Personalizar" style="font-size:18px;cursor:pointer;color:var(--text-muted);transition:0.2s;">tune</span>
+                        <span>Editar</span>
+                    </div>
                 </div>
+                <div class="home-quick-grid" id="quick-access-grid"></div>
 
-                <div class="section-title">Conteúdos em Destaque</div>
+                <div class="section-title" id="conteudos-destaque">Conteúdos em Destaque</div>
                 <div class="grid-cards">
-                    <article class="card tilt-card" onclick="navigate('noticias')">
-                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Notícias" class="card-img">
-                        <div class="card-body"><span class="tag">Notícias</span><h3>Mercado em Tempo Real</h3><p>Acompanhe as principais notícias do mercado financeiro em tempo real.</p></div>
+                    <article class="card tilt-card" onclick="navigate('educ-curso-opcoes')">
+                        <img src="https://static-media.hotmart.com/2sXP6CxqCfjuZDs1daDfG5dCFRc=/300x300/filters:quality(100)/hotmart/product_pictures/d9776e27-a2d5-4e1c-a2a6-378bff2c5e5c/cursodeopcoesdiversaacademy.png" alt="Curso" class="card-img" style="object-fit:contain;background:var(--azul-04);padding:20px;">
+                        <div class="card-body"><span class="tag">Curso</span><h3>Código das Opções</h3><p>Domine CALL, PUT, gregas, travas e Iron Condor. 40h com certificado.</p></div>
                     </article>
-<article class="card tilt-card" onclick="navigate('edu-cursos')">
-                        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Curso" class="card-img">
-                        <div class="card-body"><span class="tag">Curso</span><h3>Análise Técnica Avançada</h3><p>Aprenda padrões gráficos e indicadores para suas operações.</p></div>
+                    <article class="card tilt-card" onclick="navigate('edu-ebook-ir')">
+                        <img src="https://drive.google.com/thumbnail?id=1xoUYandMHlDhK1g6w8SCIfysgv6YFig4&sz=w600" alt="Guia IR" class="card-img" style="object-fit:contain;background:var(--azul-04);padding:20px;">
+                        <div class="card-body"><span class="tag" style="background:rgba(76,175,80,0.15);color:#4CAF50;">Guia Gratuito</span><h3>Guia IR para Investidores 2026</h3><p>Declare Ações, FIIs, Criptoativos e Investimentos no Exterior. +1.249 downloads.</p></div>
                     </article>
-                    <article class="card tilt-card" onclick="navigate('relatorios')">
-                        <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Bolsa" class="card-img">
-                        <div class="card-body"><span class="tag">Relatório</span><h3>Morning Call Global</h3><p>O que você precisa saber antes da abertura dos mercados hoje.</p></div>
+                    <article class="card tilt-card" onclick="navigate('edu-videos')">
+                        <img src="https://i.ytimg.com/vi/vFghEs_kZLM/hqdefault.jpg" alt="Vídeo" class="card-img">
+                        <div class="card-body"><span class="tag" style="background:rgba(255,179,0,0.15);color:#FFB300;">Vídeo</span><h3>Vale a pena investir em ações?</h3><p>Descubra como montar sua carteira do zero com análise fundamentalista e gestão de risco.</p></div>
                     </article>
                 </div>
 
@@ -1492,6 +1700,131 @@
                     <div class="home-tool-card" onclick="navigate('agro')">
                         <span class="material-symbols-outlined">agriculture</span>
                         <div><h4>Calculadora Agro</h4><p>Compare CDB vs LCA com IR e descubra o melhor.</p></div>
+                    </div>
+                </div>
+
+                <hr class="home-section-divider">
+
+                <!-- NOVA SEÇÃO: EDUCAÇÃO & CURSOS -->
+                <div class="home-section-header">
+                    <div class="section-title" style="border:none;padding:0;margin:0;"><span class="material-symbols-outlined" style="font-size:22px;vertical-align:middle;margin-right:6px;color:var(--azul-01);">school</span> Educação &amp; Cursos</div>
+                    <span class="link-all" onclick="navigate('edu-cursos')">Ver todos <span class="material-symbols-outlined">arrow_forward</span></span>
+                </div>
+                <div class="home-edu-grid">
+                    <div class="home-edu-card" onclick="navigate('educ-curso-opcoes')">
+                        <img class="thumb" src="https://static-media.hotmart.com/2sXP6CxqCfjuZDs1daDfG5dCFRc=/300x300/filters:quality(100)/hotmart/product_pictures/d9776e27-a2d5-4e1c-a2a6-378bff2c5e5c/cursodeopcoesdiversaacademy.png" alt="" loading="lazy">
+                        <div class="price-tag">12x R$ 30,72</div>
+                        <div class="body">
+                            <span class="badge">Curso</span>
+                            <h4>Código das Opções</h4>
+                            <p>CALL, PUT, gregas, travas, Iron Condor e gestão de risco profissional.</p>
+                            <div class="meta"><span class="material-symbols-outlined">schedule</span> 40h · Certificado</div>
+                        </div>
+                    </div>
+                    <div class="home-edu-card" onclick="navigate('educ-ebook-callput')">
+                        <img class="thumb" src="https://static-media.hotmart.com/_Jkre4h5wo3ZIxKgeoeYcpPhVd8=/filters:quality(1):format(webp)/klickart-prod/uploads/media/file/9362146/call_e_put_mockup_sf.png" alt="" loading="lazy">
+                        <div class="body">
+                            <span class="badge" style="background:rgba(255,179,0,0.15);color:#FFB300;">E-book</span>
+                            <h4>E-book Call e Put</h4>
+                            <p>Estratégias de compra e venda de opções para lucrar em qualquer cenário.</p>
+                            <div class="meta"><span class="material-symbols-outlined">menu_book</span> 60 páginas · R$ 37</div>
+                        </div>
+                    </div>
+                    <div class="home-edu-card" onclick="navigate('educ-ebook-ir')">
+                        <img class="thumb" src="https://drive.google.com/thumbnail?id=1xoUYandMHlDhK1g6w8SCIfysgv6YFig4&sz=w600" alt="" loading="lazy">
+                        <div class="body">
+                            <span class="badge" style="background:rgba(76,175,80,0.15);color:#4CAF50;">Gratuito</span>
+                            <h4>Guia IR para Investidores 2026</h4>
+                            <p>Declare Ações, FIIs, Criptoativos e Investimentos no Exterior.</p>
+                            <div class="meta"><span class="material-symbols-outlined">description</span> PDF · Atualizado</div>
+                        </div>
+                    </div>
+                    <div class="home-edu-card" onclick="navigate('educ-mentoria')">
+                        <img class="thumb" src="https://static-media.hotmart.com/HV8BjqdJSrWBndmrMflVhy1GzO4=/300x300/filters:quality(100)/hotmart/product_pictures/7d9c682a-1a30-4556-8975-7b70df69525d/BANNER600x600.png" alt="" loading="lazy">
+                        <div class="price-tag">12x R$ 103</div>
+                        <div class="body">
+                            <span class="badge" style="background:rgba(156,39,176,0.15);color:#9C27B0;">Mentoria</span>
+                            <h4>Mentoria Investidor Visionário</h4>
+                            <p>Método prático para gerar renda passiva e fazer o dinheiro trabalhar.</p>
+                            <div class="meta"><span class="material-symbols-outlined">school</span> 12 módulos</div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="home-section-divider">
+
+                <!-- NOVA SEÇÃO: VÍDEOS -->
+                <div class="home-section-header">
+                    <div class="section-title" style="border:none;padding:0;margin:0;"><span class="material-symbols-outlined" style="font-size:22px;vertical-align:middle;margin-right:6px;color:var(--azul-01);">smart_display</span> Vídeos Recentes</div>
+                    <span class="link-all" onclick="navigate('edu-videos')">Ver todos <span class="material-symbols-outlined">arrow_forward</span></span>
+                </div>
+                <div class="home-video-strip">
+                    <div class="home-video-card" onclick="navigate('edu-videos')">
+                        <div class="thumb-wrap">
+                            <img src="https://i.ytimg.com/vi/yJc5IPdKq2Y/hqdefault.jpg" alt="" loading="lazy">
+                            <div class="play-overlay"><span class="material-symbols-outlined">play_circle</span></div>
+                            <span class="duration">5:02</span>
+                        </div>
+                        <div class="body">
+                            <h4>Top escritórios Necton: experiência em Las Vegas</h4>
+                            <p>Conheça a experiência dos top escritórios Necton e como a Diversa se destaca.</p>
+                        </div>
+                    </div>
+                    <div class="home-video-card" onclick="navigate('edu-videos')">
+                        <div class="thumb-wrap">
+                            <img src="https://i.ytimg.com/vi/QY9bGZmKMMg/hqdefault.jpg" alt="" loading="lazy">
+                            <div class="play-overlay"><span class="material-symbols-outlined">play_circle</span></div>
+                            <span class="duration">6:40</span>
+                        </div>
+                        <div class="body">
+                            <h4>Aprenda como operar no Home Broker da Necton</h4>
+                            <p>Guia passo a passo do login à execução de ordens como um profissional.</p>
+                        </div>
+                    </div>
+                    <div class="home-video-card" onclick="navigate('edu-videos')">
+                        <div class="thumb-wrap">
+                            <img src="https://i.ytimg.com/vi/vFghEs_kZLM/hqdefault.jpg" alt="" loading="lazy">
+                            <div class="play-overlay"><span class="material-symbols-outlined">play_circle</span></div>
+                            <span class="duration">14:37</span>
+                        </div>
+                        <div class="body">
+                            <h4>Vale a pena investir em ações?</h4>
+                            <p>Descubra como montar sua carteira do zero com análise fundamentalista.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="home-section-divider">
+
+                <!-- NOVA SEÇÃO: NOTÍCIAS RECENTES -->
+                <div class="home-section-header">
+                    <div class="section-title" style="border:none;padding:0;margin:0;"><span class="material-symbols-outlined" style="font-size:22px;vertical-align:middle;margin-right:6px;color:var(--azul-01);">newspaper</span> Notícias Recentes</div>
+                    <span class="link-all" onclick="navigate('noticias')">Ver todas <span class="material-symbols-outlined">arrow_forward</span></span>
+                </div>
+                <div class="home-news-strip">
+                    <div class="home-news-card" onclick="navigate('noticias')">
+                        <span class="n-tag">Mercado</span>
+                        <h4>Ibovespa opera em alta com exterior positivo</h4>
+                        <p>Principal índice da bolsa brasileira acompanha otimismo internacional.</p>
+                        <span class="n-source">InfoMoney · 14 mai</span>
+                    </div>
+                    <div class="home-news-card" onclick="navigate('noticias')">
+                        <span class="n-tag">Economia</span>
+                        <h4>IPCA sobe 0,45% em abril, abaixo do esperado</h4>
+                        <p>Índice de inflação fica abaixo das projeções do mercado.</p>
+                        <span class="n-source">Suno Notícias · 12 mai</span>
+                    </div>
+                    <div class="home-news-card" onclick="navigate('noticias')">
+                        <span class="n-tag">Investimentos</span>
+                        <h4>Fundos imobiliários: IFIX sobe com expectativa de corte de juros</h4>
+                        <p>Índice de FIIs impulsionado por expectativa de redução da Selic.</p>
+                        <span class="n-source">InfoMoney · 11 mai</span>
+                    </div>
+                    <div class="home-news-card" onclick="navigate('noticias')">
+                        <span class="n-tag">Mercado</span>
+                        <h4>PETR4 lidera ganhos do Ibovespa com alta do petróleo</h4>
+                        <p>Ações da Petrobras acompanham valorização do petróleo internacional.</p>
+                        <span class="n-source">InfoMoney · 12 mai</span>
                     </div>
                 </div>
             </section>
@@ -3507,30 +3840,29 @@
                     <img src="https://images.unsplash.com/photo-1642790106117-e829e14a795f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1800&q=80" alt="Carteiras recomendadas" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter:brightness(0.34); z-index:1;">
                     <div style="position:absolute; inset:0; background:linear-gradient(to right,var(--azul-04) 0%,rgba(0,3,32,0.82) 48%,rgba(0,134,255,0.16) 100%); z-index:2;"></div>
                     <div class="hero-content" style="position:relative; z-index:3; max-width:68%;">
-                        <span style="display:inline-flex; align-items:center; gap:8px; padding:6px 14px; border-radius:20px; background:rgba(0,134,255,0.16); color:var(--azul-01); font-weight:800; font-size:0.8rem; text-transform:uppercase; margin-bottom:20px; border:1px solid rgba(0,134,255,0.35);"><span class="material-symbols-outlined" style="font-size:16px;">analytics</span> Research mensal</span>
-                        <h1 style="color:white; font-size:3.4rem; font-weight:800; line-height:1.08; margin-bottom:18px;">Carteiras recomendadas com fonte real.</h1>
-                        <p style="color:#CDCDCD; font-size:1.12rem; line-height:1.65; margin-bottom:26px;">Acompanhe carteiras de research publicadas e rebalanceadas mensalmente. Os links abaixo apontam para fontes externas que concentram as carteiras e relatórios mais recentes.</p>
-                        <div style="display:flex; gap:14px; flex-wrap:wrap;">
-                            <a href="https://atlasinvest.com.br/carteiras-recomendadas-btg/" target="_blank" class="btn-account" style="width:auto; padding:14px 28px; text-decoration:none;">Abrir fonte BTG</a>
-                            <a href="https://www.investidordefiis.com/fiis-recomendados/" target="_blank" class="btn-account" style="width:auto; padding:14px 28px; text-decoration:none; background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.2);">Ver FIIs públicos</a>
-                        </div>
+                        <span style="display:inline-flex; align-items:center; gap:8px; padding:6px 14px; border-radius:20px; background:rgba(0,134,255,0.16); color:var(--azul-01); font-weight:800; font-size:0.8rem; text-transform:uppercase; margin-bottom:20px; border:1px solid rgba(0,134,255,0.35);"><span class="material-symbols-outlined" style="font-size:16px;">analytics</span> Research BTG Pactual</span>
+                        <h1 style="color:white; font-size:3.4rem; font-weight:800; line-height:1.08; margin-bottom:18px;">Carteiras Recomendadas</h1>
+                        <p style="color:#CDCDCD; font-size:1.12rem; line-height:1.65; margin-bottom:26px;">Seleções estruturadas e atualizadas pelo time de Research do BTG Pactual. Acompanhe, analise e tome decisões informadas.</p>
                     </div>
                 </div>
 
-                <div class="calc-container" style="display:flex; align-items:center; justify-content:space-between; gap:24px; background:var(--bg-card); border-radius:20px;">
-                    <div><span style="display:block; font-size:0.75rem; color:var(--text-muted); font-weight:800; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">Calendário de atualização</span><h3 style="font-size:1.5rem; color:var(--text-main); margin-bottom:6px;">Primeiro dia útil de cada mês</h3><p style="color:var(--text-muted); margin:0;">A página mostra links para fontes reais. O campo ao lado calcula o próximo primeiro dia útil para revisão interna da vitrine.</p></div>
-                    <div style="min-width:260px; background:rgba(0,134,255,0.08); border:1px solid rgba(0,134,255,0.25); border-radius:16px; padding:22px; text-align:right;"><span style="display:block; color:var(--text-muted); font-size:0.75rem; font-weight:800; text-transform:uppercase; margin-bottom:6px;">Próxima revisão</span><strong id="carteiras-proxima-atualizacao" style="font-size:1.35rem; color:var(--azul-01);">--</strong></div>
+                <div id="carteiras-grid" class="carteiras-grid">
+                    <div class="carteira-loading"><div class="n-spinner"></div><p>Carregando carteiras...</p></div>
                 </div>
 
-                <div class="section-title">Vitrine de carteiras recomendadas</div>
-                <div class="grid-cards" style="grid-template-columns:repeat(3,1fr);">
-                    <article class="card tilt-card"><img src="https://images.unsplash.com/photo-1642543348745-03b1219733d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" class="card-img" alt="Carteira de ações"><div class="card-body"><span class="tag">BTG Research</span><h3>Ações</h3><p>Carteira mensal voltada a oportunidades em empresas listadas na B3, com seleção do time de análise.</p><a href="https://atlasinvest.com.br/carteiras-recomendadas-btg/" target="_blank" class="btn-account" style="margin-top:15px; text-decoration:none;">Acessar Fonte</a></div></article>
-                    <article class="card tilt-card"><img src="https://images.unsplash.com/photo-1621947081720-86970823b77a?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" class="card-img" alt="Carteira de dividendos"><div class="card-body"><span class="tag">Renda Variável</span><h3>Dividendos</h3><p>Seleção focada em empresas com geração de caixa, qualidade operacional e potencial de distribuição.</p><a href="https://atlasinvest.com.br/carteiras-recomendadas-btg/" target="_blank" class="btn-account" style="margin-top:15px; text-decoration:none;">Acessar Fonte</a></div></article>
-                    <article class="card tilt-card"><img src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" class="card-img" alt="Carteira de FIIs"><div class="card-body"><span class="tag">FIIs</span><h3>Fundos Imobiliários</h3><p>Carteiras públicas e relatórios de FIIs, FI-Infra e Fiagros consolidados a partir de casas de análise.</p><a href="https://www.investidordefiis.com/fiis-recomendados/" target="_blank" class="btn-account" style="margin-top:15px; text-decoration:none;">Ver FIIs</a></div></article>
-                    <article class="card tilt-card"><img src="https://images.unsplash.com/photo-1559526324-593bc073d938?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" class="card-img" alt="Small caps"><div class="card-body"><span class="tag">Estratégia</span><h3>Small Caps</h3><p>Exposição a empresas menores, com maior potencial de crescimento e maior volatilidade.</p><a href="https://atlasinvest.com.br/carteiras-recomendadas-btg/" target="_blank" class="btn-account" style="margin-top:15px; text-decoration:none;">Acessar Fonte</a></div></article>
-                    <article class="card tilt-card"><img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" class="card-img" alt="BDRs"><div class="card-body"><span class="tag">Global</span><h3>BDRs</h3><p>Carteiras para diversificação internacional por meio de recibos negociados na bolsa brasileira.</p><a href="https://atlasinvest.com.br/carteiras-recomendadas-btg/" target="_blank" class="btn-account" style="margin-top:15px; text-decoration:none;">Acessar Fonte</a></div></article>
-                    <article class="card tilt-card"><img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" class="card-img" alt="Renda mensal"><div class="card-body"><span class="tag">Renda</span><h3>Renda Mensal</h3><p>Combina ativos geradores de fluxo como FIIs, crédito, FI-Infra e estratégias de distribuição recorrente.</p><a href="https://www.investidordefiis.com/fiis-recomendados/" target="_blank" class="btn-account" style="margin-top:15px; text-decoration:none;">Ver Relatórios</a></div></article>
+                <div class="section-title" style="margin-top:40px;">O que são Carteiras Recomendadas?</div>
+                <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:20px; margin-bottom:40px;">
+                    <div style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:20px; padding:24px;"><div style="width:40px; height:40px; border-radius:12px; background:rgba(0,134,255,0.1); display:flex; align-items:center; justify-content:center; margin-bottom:14px;"><span class="material-symbols-outlined" style="color:var(--azul-01); font-size:22px;">verified</span></div><h4 style="font-size:1rem; color:var(--text-main); margin-bottom:6px;">Seleção Profissional de Ativos</h4><p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5; margin:0;">Analistas certificados selecionam ativos com base em critérios rigorosos de análise fundamentalista, macroeconômica e de risco.</p></div>
+                    <div style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:20px; padding:24px;"><div style="width:40px; height:40px; border-radius:12px; background:rgba(0,134,255,0.1); display:flex; align-items:center; justify-content:center; margin-bottom:14px;"><span class="material-symbols-outlined" style="color:var(--azul-01); font-size:22px;">account_tree</span></div><h4 style="font-size:1rem; color:var(--text-main); margin-bottom:6px;">Diversificação Estratégica</h4><p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5; margin:0;">Distribuição de risco entre diferentes setores, classes de ativos e horizontes para maximizar o retorno ajustado ao risco.</p></div>
+                    <div style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:20px; padding:24px;"><div style="width:40px; height:40px; border-radius:12px; background:rgba(0,134,255,0.1); display:flex; align-items:center; justify-content:center; margin-bottom:14px;"><span class="material-symbols-outlined" style="color:var(--azul-01); font-size:22px;">update</span></div><h4 style="font-size:1rem; color:var(--text-main); margin-bottom:6px;">Atualização Periódica</h4><p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5; margin:0;">Carteiras revisadas e ajustadas pelo Research conforme novas oportunidades surgem ou o cenário macroeconômico evolui.</p></div>
+                    <div style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:20px; padding:24px;"><div style="width:40px; height:40px; border-radius:12px; background:rgba(0,134,255,0.1); display:flex; align-items:center; justify-content:center; margin-bottom:14px;"><span class="material-symbols-outlined" style="color:var(--azul-01); font-size:22px;">trending_up</span></div><h4 style="font-size:1rem; color:var(--text-main); margin-bottom:6px;">Transparência e Metodologia</h4><p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5; margin:0;">Cada carteira inclui justificativa das escolhas, benchmark de referência e rentabilidade acumulada para total transparência.</p></div>
+                    <div style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:20px; padding:24px;"><div style="width:40px; height:40px; border-radius:12px; background:rgba(0,134,255,0.1); display:flex; align-items:center; justify-content:center; margin-bottom:14px;"><span class="material-symbols-outlined" style="color:var(--azul-01); font-size:22px;">insights</span></div><h4 style="font-size:1rem; color:var(--text-main); margin-bottom:6px;">Adequação ao Perfil</h4><p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5; margin:0;">Carteiras para diferentes objetivos e perfis — desde estratégias conservadoras até alocações mais arrojadas.</p></div>
+                    <div style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:20px; padding:24px;"><div style="width:40px; height:40px; border-radius:12px; background:rgba(0,134,255,0.1); display:flex; align-items:center; justify-content:center; margin-bottom:14px;"><span class="material-symbols-outlined" style="color:var(--azul-01); font-size:22px;">support_agent</span></div><h4 style="font-size:1rem; color:var(--text-main); margin-bottom:6px;">Como Utilizar na Prática</h4><p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5; margin:0;">Use como referência para montar sua alocação ou ponto de partida para conversas com seu assessor. Conteúdo educacional e de orientação.</p></div>
                 </div>
+            </section>
+
+            <section id="carteira-detail" class="page-section">
+                <div class="carteira-detail" id="carteira-detail-content"></div>
             </section>
             <section id="noticias" class="page-section">
                 <div class="noticias-hero">
@@ -4293,7 +4625,47 @@
 
         </div>
 
+        <footer class="site-footer">
+            <div class="f-inner">
+                <div class="f-brand">
+                    <div class="f-logo">
+                        <img src="https://raw.githubusercontent.com/Diversa-Academy/Images/725ca77b2774b887536795f5495ca14a2956b852/SY.Diversa%20Preto%20e%20Azul%2001.png" alt="Diversa" style="height:38px;">
+                    </div>
+                    <div class="f-slogan">Cuidado que vai além dos seus investimentos</div>
+                    <div class="f-site-link"><a href="https://diversainvestimentos.com.br/" target="_blank"><span class="material-symbols-outlined">open_in_new</span> Site</a></div>
+                </div>
+                <div class="f-contact">
+                    <div class="f-label">Contato</div>
+                    <a href="https://maps.google.com/?q=Avenida+Cerro+Azul+1661+Maring%C3%A1+PR" target="_blank"><span class="material-symbols-outlined">location_on</span> Av. Cerro Azul, 1661, Paseo Cerro Azul - Unid. 4, Maringá-PR</a>
+                    <a href="mailto:contato@diversainvestimentos.com.br"><span class="material-symbols-outlined">mail</span> contato@diversainvestimentos.com.br</a>
+                    <a href="tel:+4433466200"><span class="material-symbols-outlined">call</span> (44) 3346-6200</a>
+                </div>
+                <div class="f-social">
+                    <div class="f-label">Redes Sociais</div>
+                    <div class="f-icons">
+                        <a href="https://www.instagram.com/diversa_investimentos/" target="_blank" title="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.805.248 2.227.413.562.216.963.477 1.384.898.421.421.682.822.898 1.384.165.422.359 1.057.413 2.227.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.248 1.805-.413 2.227-.216.562-.477.963-.898 1.384-.421.421-.822.682-1.384.898-.422.165-1.057.359-2.227.413-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.805-.248-2.227-.413-.562-.216-.963-.477-1.384-.898-.421-.421-.682-.822-.898-1.384-.165-.422-.359-1.057-.413-2.227-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.054-1.17.248-1.805.413-2.227.216-.562.477-.963.898-1.384.421-.421.822-.682 1.384-.898.422-.165 1.057-.359 2.227-.413 1.266-.058 1.646-.07 4.85-.07zM12 0C8.741 0 8.332.014 7.052.072 5.78.13 4.909.323 4.164.628c-.756.314-1.424.732-2.032 1.34C1.524 2.576 1.106 3.244.792 4 .487 4.745.294 5.616.236 6.888.178 8.168.164 8.577.164 12s.014 3.832.072 5.112c.058 1.272.251 2.143.556 2.888.314.756.732 1.424 1.34 2.032.608.608 1.276 1.026 2.032 1.34.745.305 1.616.498 2.888.556 1.28.058 1.689.072 5.112.072s3.832-.014 5.112-.072c1.272-.058 2.143-.251 2.888-.556.756-.314 1.424-.732 2.032-1.34.608-.608 1.026-1.276 1.34-2.032.305-.745.498-1.616.556-2.888.058-1.28.072-1.689.072-5.112s-.014-3.832-.072-5.112c-.058-1.272-.251-2.143-.556-2.888-.314-.756-.732-1.424-1.34-2.032C20.576 1.524 19.908 1.106 19.164.792 18.419.487 17.548.294 16.276.236 15.008.178 14.599.164 12 .164zm0 5.838a6 6 0 100 12 6 6 0 000-12zm0 9.9a3.9 3.9 0 110-7.8 3.9 3.9 0 010 7.8zm6.406-10.308a1.4 1.4 0 100 2.8 1.4 1.4 0 000-2.8z"/></svg></a>
+                        <a href="https://www.linkedin.com/company/diversa-investimentos/" target="_blank" title="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                        <a href="https://www.youtube.com/channel/UCGiAjvPCH0oYFwr92da1P5w" target="_blank" title="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="f-bottom">&copy; 2026 Diversa Investimentos. Todos os direitos reservados.</div>
+        </footer>
+
     </main>
+
+    <div class="quick-modal-overlay" id="quick-customize-modal">
+        <div class="quick-modal-box">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
+                <h3 style="margin:0;font-size:1.1rem;">Editar Atalhos</h3>
+                <span class="material-symbols-outlined" onclick="fecharCustomQuick()" style="cursor:pointer;color:var(--text-muted);font-size:22px;">close</span>
+            </div>
+            <p style="font-size:0.75rem;color:var(--text-muted);margin-bottom:10px;">Selecione até 4 para o acesso rápido.</p>
+            <div id="quick-options-list" style="display:flex;flex-direction:column;gap:4px;"></div>
+            <p id="quick-limit-msg" style="display:none;font-size:0.7rem;color:#E53935;margin:6px 0 0;text-align:center;">Máximo de 4 — remova um antes de adicionar outro.</p>
+            <button onclick="salvarCustomQuick()" class="btn-account" style="margin-top:10px;width:100%;text-align:center;font-size:0.8rem;padding:8px 0;">Salvar</button>
+        </div>
+    </div>
 
     <!-- Player bar + Mini player + YouTube wrap (fora do main-content, para evitar perspective quebrar position:fixed) -->
     <div class="edu-player-bar" id="edu-player-bar">
@@ -4424,6 +4796,178 @@
             });
         }
 
+        // =========================================
+        // BUSCA GLOBAL
+        // =========================================
+        var searchIndex = [];
+        function buildSearchIndex() {
+            searchIndex = [];
+            videosData.forEach(function(v) { searchIndex.push({ type:'Vídeo', icon:'smart_display', title:v.title, desc:v.desc, target:'edu-videos' }); });
+            artigosData.forEach(function(a) { searchIndex.push({ type:'Artigo', icon:'article', title:a.title, desc:(a.summary||'').substring(0,120), target:'edu-artigos' }); });
+            var cursos = [
+                { title:'Código das Opções', desc:'CALL, PUT, gregas, travas, Iron Condor', target:'educ-curso-opcoes' },
+                { title:'E-book Call e Put', desc:'Estratégias de compra e venda de opções', target:'educ-ebook-callput' },
+                { title:'Guia IR para Investidores 2026', desc:'Declare Ações, FIIs, Criptoativos', target:'educ-ebook-ir' },
+                { title:'Lucrando com Opções', desc:'Carteira como máquina de renda mensal', target:'educ-ebook-1' },
+                { title:'Mentoria Investidor Visionário', desc:'Método prático para renda passiva', target:'educ-mentoria' }
+            ];
+            cursos.forEach(function(c) { searchIndex.push({ type:'Curso', icon:'school', title:c.title, desc:c.desc, target:c.target }); });
+            var paginas = [
+                { title:'Ações', desc:'Painel de ações ao vivo B3', target:'acoes', icon:'trending_up' },
+                { title:'Fundos Imobiliários', desc:'Dividendos e carteiras de FIIs', target:'fiis', icon:'apartment' },
+                { title:'Renda Fixa', desc:'CDB, LCA, Tesouro Direto', target:'rendafixa', icon:'account_balance' },
+                { title:'Internacional', desc:'Mercados globais, câmbio e moedas', target:'internacional', icon:'language' },
+                { title:'Cripto', desc:'Bitcoin, ETFs e ativos digitais', target:'cripto', icon:'currency_bitcoin' },
+                { title:'Agro', desc:'LCA, commodities e agronegócio', target:'agro', icon:'eco' },
+                { title:'Banking', desc:'Conta e cartão inteligente', target:'banking', icon:'account_balance_wallet' },
+                { title:'Previdência', desc:'Planejamento de aposentadoria', target:'previdencia', icon:'elderly' },
+                { title:'Consórcio', desc:'Consórcio vs financiamento', target:'consorcio', icon:'groups' },
+                { title:'Notícias', desc:'Últimas notícias do mercado', target:'noticias', icon:'newspaper' },
+                { title:'Seguros', desc:'Simulador de coberturas', target:'seguros', icon:'shield' },
+                { title:'Carteiras', desc:'Carteiras recomendadas', target:'carteiras', icon:'folder' },
+                { title:'CNR', desc:'Conta de Não Residente', target:'cnr', icon:'public' },
+                { title:'Ferramentas', desc:'Calculadoras e simuladores', target:'ferramentas', icon:'build' },
+                { title:'Cursos', desc:'Cursos e e-books Diversa', target:'edu-cursos', icon:'book' },
+                { title:'Artigos', desc:'Artigos e análises', target:'edu-artigos', icon:'article' },
+                { title:'Vídeos', desc:'Vídeos educacionais', target:'edu-videos', icon:'play_circle' },
+                { title:'Relatórios', desc:'Relatórios de mercado', target:'relatorios', icon:'insert_chart' }
+            ];
+            paginas.forEach(function(p) { searchIndex.push({ type:'Página', icon:p.icon, title:p.title, desc:p.desc, target:p.target }); });
+        }
+
+        function executarBusca() {
+            var q = (document.getElementById('global-search-input').value||'').toLowerCase().trim();
+            var dd = document.getElementById('search-dropdown');
+            if(!q) { dd.classList.remove('active'); return; }
+            var results = [];
+            searchIndex.forEach(function(item) {
+                if(item.title.toLowerCase().includes(q) || item.desc.toLowerCase().includes(q)) {
+                    if(results.length < 8) results.push(item);
+                }
+            });
+            if(results.length === 0) {
+                dd.innerHTML = '<div class="sd-empty"><span class="material-symbols-outlined" style="font-size:28px;display:block;margin-bottom:8px;">search_off</span>Nenhum resultado encontrado para "<strong>'+q+'</strong>"</div>';
+                dd.classList.add('active');
+                return;
+            }
+            var html = '';
+            var lastType = '';
+            results.forEach(function(r) {
+                if(r.type !== lastType) { html += '<div class="sd-section">'+r.type+'</div>'; lastType = r.type; }
+                html += '<div class="sd-item" onclick="fecharBusca();navigate(\''+r.target+'\')">'+
+                    '<span class="material-symbols-outlined sd-icon">'+r.icon+'</span>'+
+                    '<div class="sd-info"><h4>'+r.title+'</h4><p>'+r.desc+'</p></div></div>';
+            });
+            dd.innerHTML = html;
+            dd.classList.add('active');
+        }
+        function fecharBusca() {
+            document.getElementById('search-dropdown').classList.remove('active');
+            document.getElementById('global-search-input').value = '';
+        }
+        document.addEventListener('click', function(e) {
+            var dd = document.getElementById('search-dropdown');
+            var inp = document.getElementById('global-search-input');
+            if(dd && inp && !e.target.closest('.topbar-search')) dd.classList.remove('active');
+        });
+        document.addEventListener('keydown', function(e) {
+            if(e.key === 'Escape') fecharBusca();
+        });
+
+        // =========================================
+        // ACESSO RÁPIDO CUSTOMIZÁVEL
+        // =========================================
+        var quickOptions = [
+            { id:'acoes', icon:'trending_up', label:'Ações', desc:'Painel de ações ao vivo' },
+            { id:'fiis', icon:'domain', label:'Fundos Imobiliários', desc:'Dividendos e carteiras' },
+            { id:'rendafixa', icon:'account_balance', label:'Renda Fixa', desc:'CDB, LCA, Tesouro' },
+            { id:'internacional', icon:'language', label:'Internacional', desc:'Mercados globais' },
+            { id:'cripto', icon:'currency_bitcoin', label:'Cripto', desc:'Ativos digitais' },
+            { id:'agro', icon:'eco', label:'Agro', desc:'LCA & commodities' },
+            { id:'banking', icon:'account_balance_wallet', label:'Banking', desc:'Conta e cartão' },
+            { id:'previdencia', icon:'savings', label:'Previdência', desc:'Planejamento futuro' },
+            { id:'consorcio', icon:'groups', label:'Consórcio', desc:'Consórcio vs financiamento' },
+            { id:'financiamento', icon:'real_estate_agent', label:'Financiamento', desc:'Simulações imobiliárias' },
+            { id:'cnr', icon:'public', label:'CNR', desc:'Conta Não Residente' },
+            { id:'seguros', icon:'shield', label:'Seguros', desc:'Simulador de coberturas' },
+            { id:'terminal', icon:'terminal', label:'Terminal', desc:'Gráficos e análises' },
+            { id:'carteiras', icon:'folder', label:'Carteiras', desc:'Carteiras recomendadas' },
+            { id:'educacional', icon:'school', label:'Educacional', desc:'Cursos, artigos e vídeos' },
+            { id:'noticias', icon:'newspaper', label:'Notícias', desc:'Últimas do mercado' },
+            { id:'relatorios', icon:'insert_chart', label:'Relatórios', desc:'Relatórios de mercado' }
+        ];
+        var quickSelected = [];
+
+        function renderQuickAccess() {
+            try {
+                var saved = localStorage.getItem('diversa_quick_access');
+                quickSelected = saved ? JSON.parse(saved) : ['acoes','fiis','rendafixa','internacional'];
+                if(!Array.isArray(quickSelected) || quickSelected.length===0) quickSelected = ['acoes','fiis','rendafixa','internacional'];
+            } catch(e) { quickSelected = ['acoes','fiis','rendafixa','internacional']; }
+            var grid = document.getElementById('quick-access-grid');
+            if(!grid) return;
+            var html = '';
+            quickSelected.forEach(function(id) {
+                var opt = quickOptions.find(function(o){return o.id===id;});
+                if(opt) html += '<div class="home-quick-card" onclick="navigate(\''+opt.id+'\')"><span class="material-symbols-outlined">'+opt.icon+'</span><h4>'+opt.label+'</h4><p>'+opt.desc+'</p></div>';
+            });
+            grid.innerHTML = html;
+        }
+
+        function abrirCustomQuick() {
+            if(!quickSelected || !quickSelected.length) {
+                quickSelected = ['acoes','fiis','rendafixa','internacional'];
+            }
+            var modal = document.getElementById('quick-customize-modal');
+            var list = document.getElementById('quick-options-list');
+            if(!modal || !list) return;
+            var html = '';
+            quickOptions.forEach(function(o) {
+                var sel = quickSelected.includes(o.id);
+                html += '<div class="quick-option-row'+(sel?' selected':'')+'" data-id="'+o.id+'" onclick="toggleQuickOption(this)">'+
+                    '<span class="material-symbols-outlined">'+o.icon+'</span>'+
+                    '<div class="q-info"><h4>'+o.label+'</h4><p>'+o.desc+'</p></div>'+
+                    '<div class="q-check"><span class="material-symbols-outlined" style="font-size:14px;color:white;">check</span></div></div>';
+            });
+            list.innerHTML = html;
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function toggleQuickOption(el) {
+            var id = el.getAttribute('data-id');
+            var idx = quickSelected.indexOf(id);
+            if(idx >= 0) {
+                quickSelected.splice(idx,1);
+                el.classList.remove('selected');
+            } else if(quickSelected.length < 4) {
+                quickSelected.push(id);
+                el.classList.add('selected');
+            } else {
+                var aviso = document.getElementById('quick-limit-msg');
+                if(aviso) { aviso.style.display='block'; setTimeout(function(){aviso.style.display='none';},2000); }
+            }
+        }
+
+        function fecharModalQuick() {
+            var m = document.getElementById('quick-customize-modal');
+            if(m) m.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+        function salvarCustomQuick() {
+            if(quickSelected.length === 0) { quickSelected = ['acoes']; }
+            localStorage.setItem('diversa_quick_access', JSON.stringify(quickSelected));
+            fecharModalQuick();
+            renderQuickAccess();
+        }
+
+        function fecharCustomQuick() {
+            fecharModalQuick();
+            renderQuickAccess();
+        }
+
+        document.body.classList.add('in-home');
+
         // 2. NAVEGAÇÃO SPA (Modificada para o Globo 3D e Consórcio)
         const navLinks = document.querySelectorAll('.nav-link');
         const pages = document.querySelectorAll('.page-section');
@@ -4436,6 +4980,8 @@
             
             const targetPage = document.getElementById(targetId);
             if (targetPage) targetPage.classList.add('active-section');
+
+            document.body.classList.toggle('in-home', targetId === 'home');
             
             document.querySelector('.main-content').scrollTop = 0;
             
@@ -4478,6 +5024,13 @@
 
             if(targetId === 'ferramentas') {
                 setTimeout(() => { renderFerramentas(); }, 50);
+            }
+
+            if(targetId === 'carteiras') {
+                setTimeout(function() {
+                    if (!carteirasData.length) carregarCarteiras();
+                    else renderizarCarteiras();
+                }, 50);
             }
 
             // Atualiza status dos mercados na aba internacional
@@ -5041,6 +5594,255 @@
         }
         simularRendaFixa();
 
+        // 6b. CARTEIRAS RECOMENDADAS
+        var carteirasData = [];
+
+        function carregarCarteiras() {
+            var grid = document.getElementById('carteiras-grid');
+            if (!grid) return;
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'carteiras.json', true);
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    try {
+                        carteirasData = JSON.parse(xhr.responseText);
+                        renderizarCarteiras();
+                    } catch(e) {
+                        grid.innerHTML = '<div class="carteira-error"><span class="material-symbols-outlined">error_outline</span><h3>Erro ao processar dados</h3><p>Formato inválido do arquivo de carteiras.</p></div>';
+                    }
+                } else {
+                    grid.innerHTML = '<div class="carteira-error"><span class="material-symbols-outlined">cloud_off</span><h3>Não foi possível carregar</h3><p>Verifique se o arquivo carteiras.json está no diretório correto.</p></div>';
+                }
+            };
+            xhr.onerror = function() {
+                grid.innerHTML = '<div class="carteira-error"><span class="material-symbols-outlined">cloud_off</span><h3>Erro de conexão</h3><p>Não foi possível acessar o arquivo de dados.</p></div>';
+            };
+            xhr.send();
+        }
+
+        function renderizarCarteiras() {
+            var grid = document.getElementById('carteiras-grid');
+            if (!grid || !carteirasData.length) {
+                if (grid) grid.innerHTML = '<div class="carteira-error"><span class="material-symbols-outlined">inventory_2</span><h3>Nenhuma carteira disponível</h3></div>';
+                return;
+            }
+            grid.innerHTML = carteirasData.map(function(c) {
+                var initials = c.portfolioType && c.portfolioType.initials ? c.portfolioType.initials : '';
+                var typeName = c.portfolioType && c.portfolioType.name ? c.portfolioType.name : '';
+                var typeImg = c.portfolioType && c.portfolioType.image ? c.portfolioType.image : '';
+                var authorName = c.authors && c.authors.length ? c.authors[0].name : '';
+                var authorImg = c.authors && c.authors[0] && c.authors[0].image ? c.authors[0].image : '';
+                var accProf = c.accumulatedProfitability || 0;
+                var accIdx = c.accumulatedIndex || 0;
+                var compIdx = c.comparativeIndex || '';
+                var profClass = accProf >= 0 ? 'positive' : 'negative';
+                var idxClass = accIdx >= 0 ? 'positive' : 'negative';
+                var profStr = (accProf >= 0 ? '+' : '') + accProf.toFixed(1) + '%';
+                var idxStr = (accIdx >= 0 ? '+' : '') + accIdx.toFixed(1) + '%';
+                return '<div class="carteira-card" onclick="abrirCarteira(\'' + c.id + '\')">' +
+                    (typeImg ? '<img class="cc-img" src="' + typeImg + '" alt="" loading="lazy" onerror="this.style.display=\'none\'">' : '<div class="cc-img" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--azul-04),var(--azul-08));"><span class="material-symbols-outlined" style="font-size:40px;color:rgba(255,255,255,0.3);">folder</span></div>') +
+                    '<div class="cc-body">' +
+                    (initials ? '<div class="cc-badge">' + initials + '</div>' : '') +
+                    '<div class="cc-name">' + c.name + '</div>' +
+                    (authorName ? '<div class="cc-author">' + (authorImg ? '<img src="' + authorImg + '" alt="" onerror="this.style.display=\'none\'">' : '<span class="material-symbols-outlined" style="font-size:20px;color:var(--text-muted);">person</span>') + '<span>' + authorName + '</span></div>' : '') +
+                    '<div class="cc-stats">' +
+                    '<div class="cc-stat"><div class="val ' + profClass + '">' + profStr + '</div><div class="lbl">Retorno</div></div>' +
+                    (compIdx ? '<div class="cc-stat"><div class="val ' + idxClass + '">' + idxStr + '</div><div class="lbl">' + compIdx + '</div></div>' : '') +
+                    '<div class="cc-stat"><div class="val">' + (c.portfolioAsset ? c.portfolioAsset.length : 0) + '</div><div class="lbl">Ativos</div></div>' +
+                    '</div>' +
+                    '</div></div>';
+            }).join('');
+        }
+
+        function abrirCarteira(id) {
+            var c = null;
+            for (var i = 0; i < carteirasData.length; i++) {
+                if (carteirasData[i].id === id) { c = carteirasData[i]; break; }
+            }
+            if (!c) return;
+            navigate('carteira-detail');
+            var container = document.getElementById('carteira-detail-content');
+            if (!container) return;
+
+            var initials = c.portfolioType && c.portfolioType.initials ? c.portfolioType.initials : '';
+            var typeName = c.portfolioType && c.portfolioType.name ? c.portfolioType.name : '';
+            var typeImg = c.portfolioType && c.portfolioType.image ? c.portfolioType.image : '';
+            var desc = c.noTagsDescription || c.description || '';
+            var accProf = c.accumulatedProfitability || 0;
+            var accIdx = c.accumulatedIndex || 0;
+            var compIdx = c.comparativeIndex || '';
+            var prevProf = c.previousProfitability;
+            var prevIdx = c.previousIndex;
+            var pdfUrl = c.fileName || '';
+            var assets = c.portfolioAsset || [];
+            var inAssets = c.inAssets || [];
+            var outAssets = c.outAssets || [];
+            var sectors = c.sectorAllocation || [];
+            var authors = c.authors || [];
+            var vInit = c.validityInitial || '';
+            var vFinal = c.validityFinal || '';
+            var freq = c.portfolioType && c.portfolioType.frequency ? c.portfolioType.frequency : '';
+
+            function fmtPct(v) { return (v >= 0 ? '+' : '') + Number(v).toFixed(2) + '%'; }
+            function fmtClass(v) { return Number(v) >= 0 ? 'positive' : 'negative'; }
+
+            var html = '<a class="cd-back" onclick="navigate(\'carteiras\')"><span class="material-symbols-outlined">arrow_back</span> Voltar para Carteiras</a>';
+
+            // Header
+            html += '<div class="cd-header" style="background:linear-gradient(135deg,var(--azul-04),rgba(0,3,32,0.85),var(--azul-08));">';
+            if (typeImg) html += '<img class="cd-header-bg" src="' + typeImg + '" alt="" onerror="this.style.display=\'none\'">';
+            html += '<div class="cd-header-overlay"></div><div class="cd-header-content">';
+            if (initials) html += '<div style="display:inline-flex;align-items:center;gap:8px;padding:5px 14px;border-radius:20px;background:rgba(0,134,255,0.16);color:var(--azul-01);font-weight:800;font-size:0.75rem;text-transform:uppercase;margin-bottom:14px;border:1px solid rgba(0,134,255,0.35);">' + initials + '</div>';
+            html += '<h1>' + c.name + '</h1>';
+            html += '<div class="cd-subtitle">';
+            if (freq) html += '<span><span class="material-symbols-outlined" style="font-size:16px;">calendar_repeat</span> ' + freq + '</span>';
+            if (vInit) html += '<span><span class="material-symbols-outlined" style="font-size:16px;">date_range</span> ' + vInit.split('T')[0].split('-').reverse().join('/') + (vFinal ? ' — ' + vFinal.split('T')[0].split('-').reverse().join('/') : '') + '</span>';
+            if (compIdx) html += '<span><span class="material-symbols-outlined" style="font-size:16px;">compare_arrows</span> Benchmark: ' + compIdx + '</span>';
+            html += '</div>';
+            html += '<div class="cd-desc">' + desc + '</div>';
+
+            // Authors
+            if (authors.length) {
+                html += '<div class="cd-authors">';
+                for (var a = 0; a < authors.length; a++) {
+                    var au = authors[a];
+                    html += '<div class="cd-author">' +
+                        (au.image ? '<img src="' + au.image + '" alt="" onerror="this.style.display=\'none\'">' : '<span class="material-symbols-outlined" style="color:rgba(255,255,255,0.5);">person</span>') +
+                        '<div class="cd-author-info"><span class="cd-author-name">' + au.name + '</span>' +
+                        (au.occupation ? '<span class="cd-author-occ">' + au.occupation + '</span>' : '') +
+                        '</div></div>';
+                }
+                html += '</div>';
+            }
+
+            // Actions
+            html += '<div class="cd-actions">';
+            if (pdfUrl) html += '<a href="' + pdfUrl + '" target="_blank" class="btn-account" style="width:auto;padding:10px 22px;font-size:0.82rem;text-decoration:none;"><span class="material-symbols-outlined" style="font-size:16px;">picture_as_pdf</span> Baixar Relatório</a>';
+            html += '</div></div></div>';
+
+            // Stats
+            html += '<div class="cd-stats">';
+            html += '<div class="cd-stat-card"><div class="val ' + fmtClass(accProf) + '">' + fmtPct(accProf) + '</div><div class="lbl">Retorno Acumulado</div></div>';
+            if (compIdx) html += '<div class="cd-stat-card"><div class="val ' + fmtClass(accIdx) + '">' + fmtPct(accIdx) + '</div><div class="lbl">' + compIdx + ' (Benchmark)</div></div>';
+            if (prevProf !== undefined && prevProf !== null) html += '<div class="cd-stat-card"><div class="val ' + fmtClass(prevProf) + '">' + fmtPct(prevProf) + '</div><div class="lbl">Retorno Anterior</div></div>';
+            if (prevIdx !== undefined && prevIdx !== null) html += '<div class="cd-stat-card"><div class="val ' + fmtClass(prevIdx) + '">' + fmtPct(prevIdx) + '</div><div class="lbl">Benchmark Anterior</div></div>';
+            html += '<div class="cd-stat-card"><div class="val" style="color:var(--azul-01);">' + assets.length + '</div><div class="lbl">Ativos na Carteira</div></div>';
+            if (inAssets.length) html += '<div class="cd-stat-card"><div class="val" style="color:#00C853;">+' + inAssets.length + '</div><div class="lbl">Novos Ativos</div></div>';
+            if (outAssets.length) html += '<div class="cd-stat-card"><div class="val" style="color:#FF5252;">-' + outAssets.length + '</div><div class="lbl">Ativos Removidos</div></div>';
+            html += '</div>';
+
+            // Current Holdings
+            if (assets.length) {
+                html += '<div class="cd-section-title"><span class="material-symbols-outlined" style="color:var(--azul-01);">pie_chart</span> Composição da Carteira</div>';
+                html += '<div class="cd-holdings-grid">';
+                for (var h = 0; h < assets.length; h++) {
+                    var item = assets[h];
+                    var aitem = item.asset || {};
+                    var w = item.weight || 0;
+                    var ticker = aitem.ticker || '';
+                    var company = aitem.company || '';
+                    var aimg = aitem.image || '';
+                    var sector = aitem.sector && aitem.sector.name ? aitem.sector.name : '';
+                    var fund = aitem.currentFundamentals || {};
+                    var pl = fund.pl;
+                    var pvp = fund.pvp;
+                    var evEbitda = fund.evEbitda;
+
+                    html += '<div class="cd-holding">';
+                    html += '<div class="cd-holding-top">';
+                    html += aimg ? '<img class="cd-hold-img" src="' + aimg + '" alt="" loading="lazy" onerror="this.style.display=\'none\'">' : '<div class="cd-hold-img" style="background:rgba(0,134,255,0.08);display:flex;align-items:center;justify-content:center;"><span class="material-symbols-outlined" style="font-size:20px;color:var(--azul-01);">monitoring</span></div>';
+                    html += '<div class="cd-hold-info">';
+                    if (ticker) html += '<div class="cd-hold-ticker">' + ticker + '</div>';
+                    html += '<div class="cd-hold-company">' + company + '</div>';
+                    if (sector) html += '<div class="cd-hold-sector">' + sector + '</div>';
+                    html += '</div>';
+                    html += '<div class="cd-hold-weight-box"><div class="cd-hold-weight">' + w + '%</div><div class="cd-hold-weight-lbl">Peso</div></div>';
+                    html += '</div>';
+                    // Fundamentals
+                    var hasFunds = (pl !== undefined && pl !== null) || (pvp !== undefined && pvp !== null) || (evEbitda !== undefined && evEbitda !== null);
+                    if (hasFunds && Object.keys(fund).length > 0) {
+                        html += '<div class="cd-hold-fundamentals">';
+                        if (pl !== undefined && pl !== null && !isNaN(pl)) html += '<span>P/L: <strong>' + Number(pl).toFixed(1) + 'x</strong></span>';
+                        if (pvp !== undefined && pvp !== null && !isNaN(pvp)) html += '<span>P/VP: <strong>' + Number(pvp).toFixed(2) + 'x</strong></span>';
+                        if (evEbitda !== undefined && evEbitda !== null && !isNaN(evEbitda)) html += '<span>EV/EBITDA: <strong>' + Number(evEbitda).toFixed(1) + 'x</strong></span>';
+                        html += '</div>';
+                    }
+                    html += '</div>';
+                }
+                html += '</div>';
+            }
+
+            // New Assets
+            if (inAssets.length) {
+                html += '<div class="cd-section-title"><span class="material-symbols-outlined" style="color:#00C853;">add_circle</span> Novos Ativos (' + inAssets.length + ')</div>';
+                html += '<div class="cd-holdings-grid">';
+                for (var ia = 0; ia < inAssets.length; ia++) {
+                    var item2 = inAssets[ia];
+                    var a2 = item2.asset || {};
+                    var w2 = item2.weight || 0;
+                    html += '<div class="cd-holding"><div class="cd-holding-top">' +
+                        (a2.image ? '<img class="cd-hold-img" src="' + a2.image + '" alt="" loading="lazy" onerror="this.style.display=\'none\'">' : '<div class="cd-hold-img" style="background:rgba(0,200,83,0.08);display:flex;align-items:center;justify-content:center;"><span class="material-symbols-outlined" style="font-size:20px;color:#00C853;">add</span></div>') +
+                        '<div class="cd-hold-info">' +
+                        (a2.ticker ? '<div class="cd-hold-ticker">' + a2.ticker + '</div>' : '') +
+                        '<div class="cd-hold-company">' + (a2.company || '') + '</div>' +
+                        (a2.sector && a2.sector.name ? '<div class="cd-hold-sector">' + a2.sector.name + '</div>' : '') +
+                        '</div>' +
+                        '<div class="cd-hold-weight-box"><div class="cd-hold-weight">' + w2 + '%</div><div class="cd-hold-weight-lbl">Peso</div></div>' +
+                        '</div></div>';
+                }
+                html += '</div>';
+            }
+
+            // Removed Assets
+            if (outAssets.length) {
+                html += '<div class="cd-section-title"><span class="material-symbols-outlined" style="color:#FF5252;">remove_circle</span> Ativos Removidos (' + outAssets.length + ')</div>';
+                html += '<div class="cd-holdings-grid">';
+                for (var oa = 0; oa < outAssets.length; oa++) {
+                    var item3 = outAssets[oa];
+                    var a3 = item3.asset || {};
+                    var w3 = item3.weight || 0;
+                    html += '<div class="cd-holding"><div class="cd-holding-top">' +
+                        (a3.image ? '<img class="cd-hold-img" src="' + a3.image + '" alt="" loading="lazy" onerror="this.style.display=\'none\'">' : '<div class="cd-hold-img" style="background:rgba(255,82,82,0.08);display:flex;align-items:center;justify-content:center;"><span class="material-symbols-outlined" style="font-size:20px;color:#FF5252;">remove</span></div>') +
+                        '<div class="cd-hold-info">' +
+                        (a3.ticker ? '<div class="cd-hold-ticker">' + a3.ticker + '</div>' : '') +
+                        '<div class="cd-hold-company">' + (a3.company || '') + '</div>' +
+                        (a3.sector && a3.sector.name ? '<div class="cd-hold-sector">' + a3.sector.name + '</div>' : '') +
+                        '</div>' +
+                        '<div class="cd-hold-weight-box"><div class="cd-hold-weight">' + w3 + '%</div><div class="cd-hold-weight-lbl">Peso</div></div>' +
+                        '</div></div>';
+                }
+                html += '</div>';
+            }
+
+            // Sector Allocation
+            if (sectors.length) {
+                html += '<div class="cd-section-title"><span class="material-symbols-outlined" style="color:var(--azul-01);">donut_small</span> Alocação por Setor</div>';
+                html += '<div class="cd-sector-bars">';
+                for (var s = 0; s < sectors.length; s++) {
+                    var sec = sectors[s];
+                    var pct = sec.percent || 0;
+                    var secName = sec.sector && sec.sector.name ? sec.sector.name : 'Outros';
+                    html += '<div class="cd-sector-bar-row">' +
+                        '<div class="sector-name">' + secName + '</div>' +
+                        '<div class="sector-bar-bg"><div class="sector-bar" style="width:' + pct + '%;"></div></div>' +
+                        '<div class="sector-pct">' + pct + '%</div>' +
+                        '</div>';
+                }
+                html += '</div>';
+            }
+
+            // Empty state
+            if (!assets.length && !inAssets.length && !outAssets.length) {
+                html += '<div class="cd-empty"><span class="material-symbols-outlined">inventory_2</span><p>Detalhes da carteira não disponíveis no momento.</p></div>';
+            }
+
+            container.innerHTML = html;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(carregarCarteiras, 200);
+        });
+
         // 7. TOGGLE SIDEBAR E ACCORDION
         const sidebar = document.getElementById('sidebar');
         const sidebarToggle = document.getElementById('sidebar-toggle');
@@ -5060,9 +5862,6 @@
         });
 
         function toggleCategorias() {
-            if (sidebar.classList.contains('collapsed')) {
-                sidebar.classList.remove('collapsed');
-            }
             const list = document.getElementById('categorias-list');
             const icon = document.getElementById('cat-icon');
             if (list.style.display === 'none' || list.style.display === '') {
@@ -5075,9 +5874,6 @@
         }
 
         function toggleFerramentas() {
-            if (sidebar.classList.contains('collapsed')) {
-                sidebar.classList.remove('collapsed');
-            }
             const list = document.getElementById('ferramentas-list');
             const icon = document.getElementById('ferr-icon');
             if (list.style.display === 'none' || list.style.display === '') {
@@ -5866,14 +6662,7 @@
             }
         }
 
-        function primeiroDiaUtilCarteiras(baseDate = new Date()) {
-            let ano = baseDate.getFullYear();
-            let mes = baseDate.getMonth();
-            let candidato = new Date(ano, mes, 1);
-            if (baseDate.getDate() > 1) candidato = new Date(ano, mes + 1, 1);
-            while (candidato.getDay() === 0 || candidato.getDay() === 6) candidato.setDate(candidato.getDate() + 1);
-            return candidato;
-        }
+
 
         function atualizarCarteirasMeta() {
             const el = document.getElementById('carteiras-proxima-atualizacao');
@@ -6018,17 +6807,18 @@
                 `${typeNames[type]} — Cobertura de ${fBr(cover)} por ${term} anos. Pagamento único ou parcelado em até 12x. Consulte coberturas adicionais.`;
         }
 
+        injectHomeTicker();
+        buildSearchIndex();
+        renderQuickAccess();
         setTimeout(() => {
-            injectHomeTicker();
             calcularFii();
-            atualizarCarteirasMeta();
             calcDevaluation(2025);
             convertCurrency();
             updatePrevClock();
             calcPrevidencia();
             fetchBtcPrice();
             calcSeguro();
-        }, 500);
+        }, 100);
         setInterval(updatePrevClock, 1000);
 
         // 9. TRADINGVIEW TICKER TAPE (theme-aware)
